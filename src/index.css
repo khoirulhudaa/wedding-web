@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.gr1 {
+  position: fixed;
+  width: 150%;
+  height: 150%;
+  top: -20%;
+  right: -20%;
+  animation: gr1 4s ease-in infinite;
+}
+
+@keyframes gr1 {
+  0% {
+    opacity: 160%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+      opacity: 160%;
+    }
+  }
+  
+.gr2 {
+    position: fixed;
+    width: 150%;
+    height: 150%;
+    top: -20%;
+    right: -20%;
+    animation: gr2 4s ease-in infinite;
+}
+
+@keyframes gr2 {
+    0% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 160%;
+    }
+    100% {
+      opacity: 0%;
+    }
+}
+
+.gr3 {
+  position: fixed;
+  width: 65%;
+  top: 32%;
+  opacity: 60%;
+  left: -7%;
+}
