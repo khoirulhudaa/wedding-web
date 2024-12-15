@@ -1,5 +1,7 @@
 // Standart images
 import Ballroom from './ballroom.jpg'
+import Ballroom2 from './ballroom2.jpg'
+import Ballroom3 from './ballroom3.jpg'
 import Gal1 from './gal1.jpg'
 import Gal2 from './gal2.jpg'
 import Gradient1 from './gr.svg'
@@ -24,6 +26,8 @@ import Logo from './Icons/logo.svg'
 
 export {
     Ballroom,
+    Ballroom2,
+    Ballroom3,
     Gal1,
     Gal2,
     // Standart images
