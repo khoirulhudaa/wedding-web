@@ -12,6 +12,7 @@ import {
   EyeIcon,
   LinkSquare02Icon,
   SparklesIcon,
+  FavouriteIcon,
   Time01Icon,
 } from "hugeicons-react";
 import { useRef, useState } from "react";
@@ -110,7 +111,7 @@ const App = () => {
 
                 {/* Main Content - Hero */}
                 <div className="relative w-full mt-0 h-max lg:h-[80vh] mb-4 lg:text-center mx-auto flex flex-col justify-center lg:items-center">
-                    <div className="absolute top-0 lg bg-white flex border-b border-b-black lg:text-[16px] text-[13px] text-black h-max w-full lg:w-screen lg:px-3 px-5 py-3 lg:py-2 mb-6 lg:mb-2 items-center lg:justify-center">
+                    <div className="absolute top-0 lg bg-white flex border-b border-b-black lg:text-[16px] text-[13px] text-black h-max w-full lg:w-screen lg:px-3 px-5 py-3 mb-6 lg:mb-2 items-center lg:justify-center">
                         <AiMagicIcon className="mr-1" />
                         Version 1.0.0 - new released
                         <AiMagicIcon className="ml-1" />
@@ -126,7 +127,7 @@ const App = () => {
                     </p>
                     <div
                         onClick={() => playAUdio()}
-                        className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3 lg:py-2.5 font-medium text-[14px] lg:text-[15px] z-[9999] border border-black text-black lg cursor-pointer"
+                        className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] z-[9999] border border-black text-black lg cursor-pointer"
                     >
                         Start Planning Now
                         <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
@@ -305,33 +306,41 @@ const App = () => {
                 </div>
             </section>
 
-            <section className="relative w-screen h-[100vh] mt-[0px]">
+            <section className="relative w-screen h-max overflow-hidden mt-[0px]">
                 <div className="w-[70%]">
                     <h2 className="text-[50px] font-normal w-[80%] ml-16">
                         The Modern Way to Share Wedding Day.
                     </h2>
-                    <div>
-                        <div className="w-max h-[160px] ml-16 flex items-center my-4 border-l border-l-black">
-                            <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] mb-5   text-black">
+                    <div className="relative top-5">
+                        <div className="w-max h-[160px] ml-16 flex my-4 border-l border-l-black">
+                            <div className="h-[200px] flex flex-col justify-between">
+                              <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                  <p>Free domain</p>
+                              </div>
+                              <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                  <p>Free domain</p>
+                              </div>
+                              <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                  <p>Free domain</p>
+                              </div>
+                            </div>
+                            <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] mb-5 text-black">
                                 <p>Free domain</p>
                             </div>
-                            <div className="relative w-max h-max ml-4 border border-black p-3 flex items-center justify-center text-[14px] mb-5   text-black">
-                                <p>Free domain</p>
-                            </div>
-                            <div className="relative w-max h-max ml-4 border border-black p-3 flex items-center justify-center text-[14px] mb-5   text-black">
+                            <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] mb-5 text-black">
                                 <p>Free domain</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="relative w-[70%] ml-auto h-[200px] px-14 pt-10 bg-[#FFD476] border border-black text-[#030605]">
+                <div className="relative w-[70%] ml-auto mt-[-30px] h-[200px] px-14 pt-8 bg-[#FFD476] border border-black text-[#030605]">
                     <div className="w-[80%]">
-                        <p className="text-[14px] leading-loose w-[70%] ml-12 mb-4">
+                        <p className="text-[14px] leading-loose w-[70%] mb-4">
                             Spread your wedding invitations quickly and
                             digitally, invite them and share this happy news now
                         </p>
                     </div>
-                    <div className="relative text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3 lg:py-2.5 font-medium text-[14px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
+                    <div className="relative text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
                         Order now{" "}
                         <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                     </div>
@@ -344,7 +353,7 @@ const App = () => {
             </section>
 
             {/* Section 1 */}
-            <section className="relative flex items-center overflow-x-auto px-16 w-full mt-[0px] h-max py-14">
+            <section className="relative flex items-center overflow-x-auto px-16 w-full h-max mt-16 py-14">
                 <div className="relative w-1/2 h-[380px] pt-12 border border-black">
                     <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
@@ -425,7 +434,7 @@ const App = () => {
                                 of your wedding day with care and high quality
                             </p>
                         </div>
-                        <div className="relative text-center active:scale-[0.98] hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3 lg:py-2.5 font-medium text-[14px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
+                        <div className="relative text-center active:scale-[0.98] hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
                             Explore images
                             <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                         </div>
@@ -433,7 +442,8 @@ const App = () => {
                 </div>
             </section>
 
-            <section className="relative w-screen px-16 h-[40vh] mt-[20px] flex items-center">
+            <section className="relative w-screen px-16 h-[40vh] pt-[26px] flex items-center">
+                <div className='absolute top-0 left-16 w-[1px] h-[400px] bg-black'></div>
                 <div className="relative w-[55%]">
                     <div className="relative mb-3 w-max flex items-center">
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
@@ -619,13 +629,13 @@ const App = () => {
                     <div className="w-max flex items-center absolute right-6 top-3">
                         <div
                             onClick={() => setShowModalBuild(true)}
-                            className="mr-5 z-[9999] text-center active:scale-[0.98] hover:brightness-90 lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 p-3 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
+                            className="mr-5 z-[9999] text-center active:scale-[0.98] hover:brightness-90 lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 p-4 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
                         >
                             <EyeIcon className="w-4 h-4 relative" />
                         </div>
 
                         <a
-                            className="z-[9999] text-center lg:w-max w-max flex active:scale-[0.98] hover:brightness-90 no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3 lg:py-2 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
+                            className="z-[9999] text-center lg:w-max w-max flex active:scale-[0.98] hover:brightness-90 no-underline lg:ml-0 ml-5 mt-4 px-6 py-3 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
                             href="https://wa.me/6289513093406"
                             target="__blank"
                         >
@@ -637,7 +647,7 @@ const App = () => {
                     </div>
 
                     {/* Benefit Hotels */}
-                    <div className="absolute bottom-3 right-6 w-max text-[12.5px] border border-black z-[999999] bg-white py-2 mb-4 px-4 shadow-md flex items-start mt-3">
+                    <div className="absolute bottom-3 right-6 w-max text-[12.5px] border border-black z-[999999] bg-white py-3 mb-4 px-4 shadow-md flex items-start mt-3">
                         <div className="flex items-center border-b border-white">
                             <div className="w-[24px] h-[24px] text-[14px] p-1 flex items-center justify-center bg-transparent">
                                 <CheckmarkCircle02Icon className="text-blue-700 w-8 h-8" />
@@ -695,11 +705,72 @@ const App = () => {
                         </div>
                     </div>
                 </div>
-                <div className="ml-auto h-full w-1/2 border-b border-b-slate-500"></div>
+                <div className='w-full flex items-center justify-between mt-[40px]'>
+                  <div className='w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]'>
+                    <h2 className="text-[20px] mb-1">The Elegance</h2>
+                    <p>300 Guests</p>
+                    <div className="w-full h-[1px] bg-black my-6"></div>
+
+                    <ul className="list-style-desc">
+                      <li className='mb-4'>Simple and delicious menu options</li>
+                      <li className='mb-4'>Buffet-style menu - local dishes</li>
+                      <li className='mb-4'>Simple table decoration</li>
+                      <li className='mb-4'>Service by trained staff</li>
+                      <li className='mb-4'>Buffet-style food presentation</li>
+                      <li className='mb-4'>Standart drinks </li>
+                      <li className='mb-4'>Cold and hot beverages available</li>
+                    </ul>
+                    <div className='border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8'>
+                      <p>Detail</p>
+                    </div>
+                  </div>
+                  <div className='relative w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]'>
+                    <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[50px] h-[50px]">
+                      <FavouriteIcon />
+                    </div>
+                    <h2 className="text-[20px] mb-1">Royal Prestige</h2>
+                    <p>600 Guests</p>
+                    <div className="w-full h-[1px] bg-black my-6"></div>
+
+                    <ul className="list-style-desc">
+                      <li className='mb-4'>Premium menu with more variety</li>
+                      <li className='mb-4'>Buffet menu and international </li>
+                      <li className='mb-4'>Elegant and beautiful table decorations</li>
+                      <li className='mb-4'>Professional and friendly staff</li>
+                      <li className='mb-4'>Buffet and à la carte food service</li>
+                      <li className='mb-4'>Specialty drinks </li>
+                      <li className='mb-4'>wardrobeFood service for VIP guests</li>
+                    </ul>
+                    <div className='border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8'>
+                      <p>Detail</p>
+                    </div>
+                  </div>
+                  <div className='w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]'>
+                    <h2 className="text-[20px] mb-1">Opulent Bliss</h2>
+                    <p>900 Guests</p>
+                    <div className="w-full h-[1px] bg-black my-6"></div>
+
+                    <ul className="list-style-desc">
+                      <li className='mb-4'>Exclusive and luxurious menu</li>
+                      <li className='mb-4'>Direct table service with personal chefs</li>
+                      <li className='mb-4'>Luxurious and detailed table decorations</li>
+                      <li className='mb-4'>Highly trained staff attending throughout</li>
+                      <li className='mb-4'>Buffet, à la carte, premium dishes</li>
+                      <li className='mb-4'>Gourmet dessert options</li>
+                      <li className='mb-4'>Special food delivery for VIP guests</li>
+                    </ul>
+                    <div className='border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8'>
+                      <p>Detail</p>
+                    </div>
+                  </div>
+                </div>
             </section>
 
-            <section className="relative w-screen h-[80vh] flex items-center justify-between overflow-hidden px-16 my-[40px]">
-                <div className="w-full bg-[#FFD476] h-full flex justify-center border border-black">
+            <section className="relative w-screen min-h-[80vh] flex flex-col items-center justify-between overflow-hidden px-16 mt-[52px] mb-[40px]">
+                <h1 className="text-[50px] text-end mb-10 w-full text-black">
+                  Acrylic and luxurious decorations
+                </h1>
+                <div className="w-full bg-[#FFD476] h-[480px] flex justify-center border border-black">
                     <div className="w-1/2 h-full flex pl-16">
                         <div className="w-[30%] border-l-[10px] border-y-[10px] mt-auto border-b-0 border-white bg-[#FFD476] h-[80%] rounded-tl-full"></div>
                         <div className="w-[10px] h-full bg-white"></div>
