@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
             </footer>
             <div className="w-full overflow-x-hidden h-max py-8 border-t border-t-black text-black lg:text-[15px] text-[16px] flex items-center px-5 lg:justify-center">
-                <small>#Framework css from Indonesia 2024</small>
+                <small>#LuvlyWed - Olimpik - Muhammad Khoirulhuda</small>
             </div>
         </React.Fragment>
     );
