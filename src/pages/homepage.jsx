@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import {
     Agreement02Icon,
     AiMagicIcon,
-    ArrowDown01Icon,
     ArrowLeft01Icon,
     ArrowRight01Icon,
     ArrowUp01Icon,
     Blockchain04Icon,
+    Cancel01Icon,
     CheckmarkCircle02Icon,
     CheckmarkSquare01Icon,
     CommandIcon,
@@ -25,10 +25,16 @@ import {
     Ballroom3,
     Gal1,
     Gal2,
+    Gl1,
+    Gl3,
+    Gl4,
     Gradient1,
     Gradient2,
     Gradient4,
     HP,
+    Jk1,
+    Jk2,
+    Jk3,
     Lines,
     Petik,
     Spon1,
@@ -36,7 +42,7 @@ import {
     Spon3,
     User1,
     User2,
-    User3,
+    User3
 } from "../assets";
 import Footer from "../components/footer.jsx";
 import ModalBuild from "../components/modalBuild.jsx";
@@ -48,6 +54,9 @@ const Homepage = () => {
     const [showModalBuild, setShowModalBuild] = useState(false);
     const [start, setStart] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [showJunkFood, setShowJunkFood] = useState(false);
+    const [showHealthFood, setShowHealthFood] = useState(false);
+    const [showGallery, setShowGallery] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
 
     const toggleCollapse = (index) => {
@@ -108,6 +117,18 @@ const Homepage = () => {
         };
     }, []);
 
+    const images = [
+        Gl1,
+        Gl3,
+        Gl4,
+        Gl1,
+        Gl1,
+        Gl3,
+        Gl4,
+        Gl1,
+       
+    ];
+
     return (
         <main className="relative mt-16 overflow-x-hidden">
             {/* Backsound */}
@@ -149,16 +170,25 @@ const Homepage = () => {
                 {/* Gradient Effects - Background */}
                 <img
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-                 src={Gradient1} alt="gradient" className="gr3" />
+                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
+                    src={Gradient1}
+                    alt="gradient"
+                    className="gr3"
+                />
                 <img
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-                 src={Gradient4} alt="gradient1" className="gr1" />
+                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
+                    src={Gradient4}
+                    alt="gradient1"
+                    className="gr1"
+                />
                 <img
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-                 src={Gradient2} alt="gradient2" className="gr2" />
+                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
+                    src={Gradient2}
+                    alt="gradient2"
+                    className="gr2"
+                />
 
                 {/* Main Content - Hero */}
                 <div className="relative w-full mt-0 h-max lg:h-[80vh] mb-4 lg:text-center mx-auto flex flex-col justify-center lg:items-center">
@@ -183,7 +213,7 @@ const Homepage = () => {
                         unforgettable moments
                     </p>
                     <a href="#start">
-                        <div className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] z-[9999] border border-black text-black lg cursor-pointer">
+                        <div className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] z-[99] border border-black text-black lg cursor-pointer">
                             Start Planning Now
                             <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                         </div>
@@ -196,7 +226,9 @@ const Homepage = () => {
                         </div>
                         <div className="w-full lg:w-max lg:justify-center lg:mx-4 flex items-center px-3 py-3 lg:py-1.5 lg text-green-500 bg-green-100">
                             <CommandIcon className="w-4 h-4 relative mr-2" />
-                            <p className="select-none flex w-max">Venue wedding</p>
+                            <p className="select-none flex w-max">
+                                Venue wedding
+                            </p>
                         </div>
                         <div className="w-full lg:w-max lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-purple-500 bg-purple-100">
                             <Blockchain04Icon className="w-4 h-4 relative mr-2" />
@@ -338,8 +370,7 @@ const Homepage = () => {
             <div className="absolute h-[100vh] w-screen overflow-hidden top-[0%]">
                 <img
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-
+                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                     src={Lines}
                     alt="lines-descoration"
                     className="w-[100%] scale-[2] opacity-[0.3]"
@@ -445,8 +476,7 @@ const Homepage = () => {
                     </div>
                     <img
                         draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-
+                        onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                         src={HP}
                         alt="handphone"
                         className="select-none absolute top-[-177%] right-16 w-[32%] h-auto"
@@ -455,7 +485,10 @@ const Homepage = () => {
             </section>
 
             {/* Section 1 */}
-            <section id="photography" className="relative flex items-center overflow-x-auto px-16 w-full h-max mt-16 py-14">
+            <section
+                id="photography"
+                className="relative flex items-center overflow-x-auto px-16 w-full h-max mt-16 py-14"
+            >
                 <div className="relative w-1/2 h-[380px] pt-12 border border-black">
                     <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
@@ -474,7 +507,9 @@ const Homepage = () => {
                     </div>
                     <h2 className="select-none font-normal text-[40px]">
                         Photography Services for Your
-                        <span className="text-orange-500 ml-3">Event Needs</span>
+                        <span className="text-orange-500 ml-3">
+                            Event Needs
+                        </span>
                     </h2>
                     <p className="select-none text-[13px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black">
                         Bringing Your Vision to Life with Exceptional
@@ -497,8 +532,7 @@ const Homepage = () => {
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
                                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-
+                                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                     src={Gal1}
                                     alt="gallery"
                                     className="w-full h-full object-cover cursor-pointer duration-300 hover:grayscale-[100%]"
@@ -507,8 +541,7 @@ const Homepage = () => {
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
                                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-
+                                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                     src={Gal2}
                                     alt="gallery"
                                     className="w-full h-full object-cover cursor-pointer duration-300 hover:grayscale-[100%]"
@@ -520,8 +553,7 @@ const Homepage = () => {
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
                                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-
+                                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                     src={Gal1}
                                     alt="gallery"
                                     className="w-full h-full object-cover cursor-pointer duration-300 hover:grayscale-[100%]"
@@ -530,8 +562,7 @@ const Homepage = () => {
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
                                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-
+                                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                     src={Gal2}
                                     alt="gallery"
                                     className="w-full h-full object-cover cursor-pointer duration-300 hover:grayscale-[100%]"
@@ -550,13 +581,51 @@ const Homepage = () => {
                                 of your wedding day with care and high quality
                             </p>
                         </div>
-                        <div className="relative text-center active:scale-[0.98] hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
+                        <div
+                            onClick={() => setShowGallery(true)}
+                            className="relative text-center active:scale-[0.98] hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer"
+                        >
                             Explore images
                             <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                         </div>
                     </div>
                 </div>
             </section>
+
+            {
+                showGallery ? (
+                    <div className="fixed top-0 left-0 z-[999999] w-screen h-screen bg-black bg-opacity-70 flex items-center justify-center">
+                        <div className="bg-white w-[70vw] h-[85vh] overflow-hidden p-6">
+                        <div className='w-full flex items-baseline pr-1 justify-between'>
+                            <h2 className="border-b border-black pb-3 text-[32px] mb-6 ml-3">
+                                Gallery LuvlyWed
+                            </h2>
+                            <div
+                                    onClick={() => setShowGallery(false)}
+                                    className="cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 text-black border border-black w-[40px] h-[40px] flex items-center justify-center"
+                                >
+                                    <Cancel01Icon className="w-6 h-6" />
+                                </div>
+                        </div>
+
+                            <div className="w-full h-[80%] flex flex-wrap justify-between overflow-auto">
+
+                                {images.map((src, index) => (
+                                    <div className='w-1/2 border border-white h-1/2 overflow-hidden'>
+                                        <img
+                                            key={index}
+                                            src={src}
+                                            alt={`Image ${index}`}
+                                            className="w-full h-full hover:scale-[1.1] duration-300 hover:grayscale-[60%] object-cover"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ):
+                    <></>
+            }
 
             <section className="select-none relative w-screen px-16 h-[40vh] mt-20 flex items-center">
                 <div className="relative w-[55%]">
@@ -676,14 +745,18 @@ const Homepage = () => {
                 <div className="flex items-center ml-auto w-max">
                     <div className="w-[1px] h-[140px] bg-black mx-20"></div>
                     <div className="w-max h-max">
-                        <h2 className="select-none font-bold text-[50px] mb-3">1.304</h2>
+                        <h2 className="select-none font-bold text-[50px] mb-3">
+                            1.304
+                        </h2>
                         <p>
                             satisfied male <br /> customer
                         </p>
                     </div>
                     <div className="w-[1px] h-[160px] bg-black mx-20"></div>
                     <div className="w-max h-max">
-                        <h2 className="select-none font-bold text-[50px] mb-3">1.304</h2>
+                        <h2 className="select-none font-bold text-[50px] mb-3">
+                            1.304
+                        </h2>
                         <p>
                             satisfied female <br /> customer
                         </p>
@@ -696,7 +769,9 @@ const Homepage = () => {
 
             <section className="select-none relative my-[100px] px-16 overflow-hidden flex items-center justify-center h-[80vh] border-y border-y-black">
                 <div className="w-[70%] py-16 h-full">
-                    <h2 className="select-none text-[40px]">Why are we recommended?</h2>
+                    <h2 className="select-none text-[40px]">
+                        Why are we recommended?
+                    </h2>
 
                     <div className="mt-10 w-full flex items-center justify-between pr-16">
                         <div className="w-[28%] h-[200px] p-4 border border-black">
@@ -712,7 +787,9 @@ const Homepage = () => {
                         </div>
                         <div className="w-[28%] h-[200px] p-4 border border-black">
                             <Time01Icon />
-                            <p className="select-none text-[16px] mt-2">Fast process</p>
+                            <p className="select-none text-[16px] mt-2">
+                                Fast process
+                            </p>
                             <div className="w-full h-[1px] bg-black my-2"></div>
                             <p className="select-none text-[13px] mt-10">
                                 Friendly service with a quick response to
@@ -721,7 +798,9 @@ const Homepage = () => {
                         </div>
                         <div className="w-[28%] h-[200px] p-4 border border-black">
                             <CheckmarkSquare01Icon />
-                            <p className="select-none text-[16px] mt-2">Many templates</p>
+                            <p className="select-none text-[16px] mt-2">
+                                Many templates
+                            </p>
                             <div className="w-full h-[1px] bg-black my-2"></div>
                             <p className="select-none text-[13px] mt-10">
                                 We offer a variety of modern themes that are
@@ -738,7 +817,10 @@ const Homepage = () => {
             </section>
 
             {/* Section 2 */}
-            <section id="building" className="relative px-16 w-screen min-h-[100vh] mt-[70px]">
+            <section
+                id="building"
+                className="relative px-16 w-screen min-h-[100vh] mt-[70px]"
+            >
                 <div className="relative text-center w-ful h-max">
                     <div className="w-full relative z-[99]">
                         <h2 className="select-none font-normal text-[40px]">
@@ -754,7 +836,7 @@ const Homepage = () => {
 
                 <div className="relative w-full h-[500px] border border-black overflow-hidden">
                     {/* Images */}
-                    <div className="absolute top-6 left-6 z-[9999] h-full w-max">
+                    <div className="absolute top-6 left-6 z-[99] h-full w-max">
                         <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
                             <img
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -787,13 +869,13 @@ const Homepage = () => {
                     <div className="w-max flex items-center absolute right-6 top-3">
                         <div
                             onClick={() => setShowModalBuild(true)}
-                            className="mr-5 z-[9999] text-center active:scale-[0.98] hover:brightness-90 lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 p-4 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
+                            className="mr-5 z-[99] text-center active:scale-[0.98] hover:brightness-90 lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 p-4 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
                         >
                             <EyeIcon className="w-4 h-4 relative" />
                         </div>
 
                         <a
-                            className="z-[9999] text-center lg:w-max w-max flex active:scale-[0.98] hover:brightness-90 no-underline lg:ml-0 ml-5 mt-4 px-6 py-3 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
+                            className="z-[99] text-center lg:w-max w-max flex active:scale-[0.98] hover:brightness-90 no-underline lg:ml-0 ml-5 mt-4 px-6 py-3 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
                             href="https://wa.me/6289513093406"
                             target="__blank"
                         >
@@ -805,7 +887,7 @@ const Homepage = () => {
                     </div>
 
                     {/* Benefit Hotels */}
-                    <div className="absolute bottom-3 right-6 w-max text-[12.5px] border border-black z-[999999] bg-white py-3 mb-4 px-4 shadow-md flex items-start mt-3">
+                    <div className="absolute bottom-3 right-6 w-max text-[12.5px] border border-black z-[99] bg-white py-3 mb-4 px-4 shadow-md flex items-start mt-3">
                         <div className="flex items-center border-b border-white">
                             <div className="w-[24px] h-[24px] text-[14px] p-1 flex items-center justify-center bg-transparent">
                                 <CheckmarkCircle02Icon className="text-blue-700 w-8 h-8" />
@@ -828,8 +910,7 @@ const Homepage = () => {
                     {/* <div className="relative z-[33] w-full h-full bg-black bg-opacity-60"></div> */}
                     <img
                         draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-
+                        onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                         src={Ballroom2}
                         alt="ballroom background"
                         className="absolute top-0 left-0 hover:scale-[1.1] brightness-[40%] duration-300 object-cover w-full h-full"
@@ -840,16 +921,184 @@ const Homepage = () => {
             <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
 
             {/* Section 2 */}
-            <section id="catering" className="relative my-10 px-16 min-h-[70vh] pb-10 overflow-hidden">
+            <section
+                id="catering"
+                className="relative my-10 px-16 min-h-[70vh] pb-10 overflow-hidden"
+            >
+                {/* Junk Food */}
+                {showJunkFood ? (
+                    <div
+                        className={`duration-300 w-full z-[99] flex h-[90vh] fixed ${
+                            showJunkFood ? "left-0" : "left-[-100%]"
+                        } bottom-0 bg-white  border-t border-r border-black shadow-lg`}
+                    >
+                        <div className="w-[65%] flex justify-between items-center overflow-hidden">
+                            <div className="flex w-full h-full relative -left-10">
+                                <div className="relative w-[40%] skew-x-6 h-full border-r border-white mb-4 overflow-hidden">
+                                    <div className="absolute z-[99] top-6 right-6 text-white">
+                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                            Truffle Fries
+                                        </h3>
+                                    </div>
+                                    <img
+                                        src={Jk1}
+                                        alt="image-food"
+                                        className="w-full brightness-50 h-full object-cover duration-300"
+                                    />
+                                </div>
+                                <div className="relative w-1/3 skew-x-6 h-full mb-4 overflow-hidden">
+                                    <div className="absolute z-[99] top-6 right-6 text-white">
+                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                            Truffle Fries
+                                        </h3>
+                                    </div>
+                                    <img
+                                        src={Jk3}
+                                        alt="image-food"
+                                        className="w-full brightness-50 h-full object-cover duration-300"
+                                    />
+                                </div>
+                                <div className="relative w-1/3 skew-x-6 h-full mb-4 overflow-hidden">
+                                    <div className="absolute z-[99] top-6 right-6 text-white">
+                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                            Truffle Fries
+                                        </h3>
+                                    </div>
+                                    <img
+                                        src={Jk2}
+                                        alt="image-food"
+                                        className="w-full brightness-50 h-full object-cover duration-300"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-[35%] h-full text-end flex flex-col justify-between py-6 pr-8 mr-16 border-r border-r-black">
+                            <div className="w-full">
+                                <h2 className="border-b border-black pb-3 text-[32px] mb-6 ml-3">
+                                    Junk Food Menus
+                                </h2>
+                                <ul className="w-max ml-auto">
+                                    <li className="mb-8 text-end list-none">
+                                        Truffle Fries
+                                    </li>
+                                    <li className="mb-8 text-end list-none">
+                                        Burger King
+                                    </li>
+                                    <li className="mb-8 text-end list-none">
+                                        Lobster Red
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                onClick={() => setShowJunkFood(false)}
+                                className="flex justify-end items-center"
+                            >
+                                <p className="mr-4 text-[14px]">Close</p>
+                                <div className="relative border border-black p-1 w-[50px] h-[50px] flex items-center justify-center">
+                                    <LinkSquare02Icon className="w-6 h-6" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    <></>
+                )}
+
+                {showHealthFood ? (
+                    <div
+                        className={`duration-300 w-full z-[99] flex h-[90vh] fixed ${
+                            showHealthFood
+                                ? "left-[0%] duration-300"
+                                : "left-[-100%]"
+                        } bottom-0 bg-white border-t border-r border-black shadow-lg`}
+                    >
+                        <div className="w-[35%] h-full pl-8 ml-16 border-l border-l-black flex flex-col justify-between p-6">
+                            <div className="w-full">
+                                <h2 className="border-b border-black pb-3 text-[32px] mb-6 ml-3">
+                                    Health Food Menus
+                                </h2>
+                                <ul>
+                                    <li className="mb-8 list-none">
+                                        Truffle Fries
+                                    </li>
+                                    <li className="mb-8 list-none">
+                                        Burger King
+                                    </li>
+                                    <li className="mb-8 list-none">
+                                        Lobster Red
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                onClick={() => setShowHealthFood(false)}
+                                className="flex items-center"
+                            >
+                                <div className="relative border border-black p-1 w-[50px] h-[50px] flex items-center justify-center">
+                                    <LinkSquare02Icon className="w-6 h-6" />
+                                </div>
+                                <p className="ml-4 text-[14px]">Close</p>
+                            </div>
+                        </div>
+                        <div className="w-[65%] flex justify-between items-center overflow-hidden">
+                            <div className="flex w-full h-full relative left-10">
+                                <div className="relative w-1/3 -skew-x-6 h-full border-r border-white mb-4 overflow-hidden">
+                                    <div className="absolute z-[99] top-6 left-6 text-white">
+                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                            Truffle Fries
+                                        </h3>
+                                    </div>
+                                    <img
+                                        src={Jk1}
+                                        alt="image-food"
+                                        className="w-full brightness-50 h-full object-cover duration-300"
+                                    />
+                                </div>
+                                <div className="relative w-1/3 -skew-x-6 h-full mb-4 overflow-hidden">
+                                    <div className="absolute z-[99] top-6 left-6 text-white">
+                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                            Truffle Fries
+                                        </h3>
+                                    </div>
+                                    <img
+                                        src={Jk3}
+                                        alt="image-food"
+                                        className="w-full brightness-50 h-full object-cover duration-300"
+                                    />
+                                </div>
+                                <div className="relative w-[40%] -skew-x-6 h-full mb-4 overflow-hidden">
+                                    <div className="absolute z-[99] top-6 left-6 text-white">
+                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                            Truffle Fries
+                                        </h3>
+                                    </div>
+                                    <img
+                                        src={Jk2}
+                                        alt="image-food"
+                                        className="w-full brightness-50 h-full object-cover duration-300"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    <></>
+                )}
+
                 <h1 className="text-[50px] w-[72%] text-black">
                     Serving Delicious Meals, Making Every Moment.
                 </h1>
                 <div className="relative overflow-hidden px-16 mt-12 ml-auto w-full flex items-center justify-between border-y border-black h-[70%]">
-                    <div className="flex items-center w-max h-full cursor-pointer active:scale-[0.98]">
-                        <p className="select-none flex w-max">Junk Food</p>
-                        <div className="border ml-4 border-black p-1 w-[50px] h-[50px] flex items-center justify-center">
-                            <LinkSquare02Icon className="w-6 h-6" />
+                    <div
+                        onClick={() => {
+                            setShowJunkFood(true);
+                            setShowHealthFood(false);
+                        }}
+                        className="flex items-center w-max h-full cursor-pointer active:scale-[0.98]"
+                    >
+                        <div className="border mr-4 border-blue-700 p-1 w-[50px] h-[50px] flex items-center justify-center">
+                            <LinkSquare02Icon className="w-6 h-6 text-blue-700" />
                         </div>
+                        <p className="select-none flex w-max">Junk Food</p>
                     </div>
                     <div className="relative h-[200px] top-[30px]">
                         <ThreeDModel
@@ -859,16 +1108,24 @@ const Homepage = () => {
                             scaleCustom={[2.4, 2.4, 2.4]}
                         />
                     </div>
-                    <div className="flex items-center w-max h-full cursor-pointer active:scale-[0.98]">
+                    <div
+                        onClick={() => {
+                            setShowJunkFood(false);
+                            setShowHealthFood(true);
+                        }}
+                        className="flex items-center w-max h-full cursor-pointer active:scale-[0.98]"
+                    >
                         <p className="select-none flex w-max">Health Food</p>
-                        <div className="border ml-4 border-black p-1 w-[50px] h-[50px] flex items-center justify-center">
-                            <LinkSquare02Icon className="w-6 h-6" />
+                        <div className="border ml-4 border-blue-700 p-1 w-[50px] h-[50px] flex items-center justify-center">
+                            <LinkSquare02Icon className="w-6 h-6 text-blue-700" />
                         </div>
                     </div>
                 </div>
                 <div className="w-full flex items-center justify-between mt-[40px]">
                     <div className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
-                        <h2 className="select-none text-[20px] mb-1">The Elegance</h2>
+                        <h2 className="select-none text-[20px] mb-1">
+                            The Elegance
+                        </h2>
                         <p>300 Guests</p>
                         <div className="w-full h-[1px] bg-black my-6"></div>
 
@@ -897,7 +1154,9 @@ const Homepage = () => {
                         <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[50px] h-[50px]">
                             <FavouriteIcon />
                         </div>
-                        <h2 className="select-none text-[20px] mb-1">Royal Prestige</h2>
+                        <h2 className="select-none text-[20px] mb-1">
+                            Royal Prestige
+                        </h2>
                         <p>600 Guests</p>
                         <div className="w-full h-[1px] bg-black my-6"></div>
 
@@ -927,7 +1186,9 @@ const Homepage = () => {
                         </div>
                     </div>
                     <div className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
-                        <h2 className="select-none text-[20px] mb-1">Opulent Bliss</h2>
+                        <h2 className="select-none text-[20px] mb-1">
+                            Opulent Bliss
+                        </h2>
                         <p>900 Guests</p>
                         <div className="w-full h-[1px] bg-black my-6"></div>
 
@@ -991,8 +1252,7 @@ const Homepage = () => {
             <section className="select-none relative border-r border-r-black w-screen overflow-hidden px-16 mt-[100px] min-h-[70vh]">
                 <img
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
-                                onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
-
+                    onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                     src={Petik}
                     alt="petik"
                     className="absolute w-[120px] top-0 right-[10%]"

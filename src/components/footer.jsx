@@ -1,6 +1,5 @@
 import React from "react";
 import { Logo } from "../assets";
-import { ArrowUp01Icon } from "hugeicons-react";
 
 const Footer = () => {
     return (

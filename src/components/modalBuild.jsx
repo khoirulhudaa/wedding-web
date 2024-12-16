@@ -42,7 +42,7 @@ const ModalBuild = ({ handleClose }) => {
 
                             <div
                                 onClick={() => handleClose()}
-                                className="absolute cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 rounded-md right-[16px] top-[16px] bg-red-500 text-white w-[40px] h-[40px] shadow-md flex items-center justify-center"
+                                className="absolute cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 right-[16px] top-[16px] text-black border border-black w-[40px] h-[40px] flex items-center justify-center"
                             >
                                 <Cancel01Icon className="w-6 h-6" />
                             </div>

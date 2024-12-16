@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/drei": "^9.120.4",
     "@react-three/fiber": "^8.17.10",
+    "flexbin": "^0.2.0",
     "framer-motion": "^11.14.4",
     "hugeicons-react": "^0.3.0",
     "prop-types": "^15.8.1",
