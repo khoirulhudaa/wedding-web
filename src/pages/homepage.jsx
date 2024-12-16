@@ -164,6 +164,13 @@ const Homepage = () => {
             {/* Hero Component */}
             <section className="relative w-full h-full overflow-hidden flex justify-center">
                 <div className="absolute w-full h-full overflow-hidden">
+
+                    <div id='asteroid1b'></div>
+                    <div id='asteroid2b'></div>
+                    <div id='asteroid3b'></div>
+                    <div id='asteroid4b'></div>
+                    <div id='asteroid5b'></div>
+                    
                     {/* Square Line's */}
                     <div className="w-screen h-[1px] absolute left-0 top-[10%] bg-slate-100"></div>
                     <div className="w-screen h-[1px] absolute left-0 top-[20%] bg-slate-100"></div>
