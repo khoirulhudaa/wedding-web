@@ -7,11 +7,59 @@
 }
 
 * {
-  font-family: "Lora", serif;
+  /* font-family: "Lora", serif; */
+  font-family: "Strait", serif;
 }
+
+/* .strait-regular {
+  font-family: "Strait", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
 
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, p, span, small {
+  cursor: default;
+}
+
+.container-mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.mask {
+  position: absolute;
+  mask-image: url("/public/mask.svg");
+  background: #FFD476;
+  mask-repeat: no-repeat;
+  mask-size: 50px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #006a5a;
+}
+
+.mask2 {
+  position: absolute;
+  mask-image: url("/public/mask.svg");
+  background: rgba(255, 255, 255, 0.523);
+  mask-repeat: no-repeat;
+  mask-size: 50px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
 }
 
 /* Pastikan canvas mengisi seluruh layar atau container */

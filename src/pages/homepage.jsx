@@ -129,6 +129,26 @@ const Homepage = () => {
        
     ];
 
+    // define cursor coordinates
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+    // define if mouse is hovered on element
+    const [isHovered, setIsHovered] = useState(false);
+
+    // define location of mouse
+    useEffect(() => {
+        const setFromEvent = (e) => {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+        };
+        window.addEventListener("mousemove", setFromEvent);
+
+        return () => {
+            window.removeEventListener("mousemove", setFromEvent);
+        };
+    }, []);
+
+    const size = isHovered ? "180" : "30";
+
     return (
         <main className="relative mt-16 overflow-x-hidden">
             {/* Backsound */}
@@ -142,7 +162,7 @@ const Homepage = () => {
             <Navbar />
 
             {/* Hero Component */}
-            <section className="select-none relative w-full h-full overflow-hidden flex justify-center">
+            <section className="relative w-full h-full overflow-hidden flex justify-center">
                 <div className="absolute w-full h-full overflow-hidden">
                     {/* Square Line's */}
                     <div className="w-screen h-[1px] absolute left-0 top-[10%] bg-slate-100"></div>
@@ -169,6 +189,7 @@ const Homepage = () => {
 
                 {/* Gradient Effects - Background */}
                 <img
+                    loading="lazy"
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                     src={Gradient1}
@@ -176,6 +197,7 @@ const Homepage = () => {
                     className="gr3"
                 />
                 <img
+                    loading="lazy"
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                     src={Gradient4}
@@ -183,6 +205,7 @@ const Homepage = () => {
                     className="gr1"
                 />
                 <img
+                    loading="lazy"
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                     src={Gradient2}
@@ -191,22 +214,49 @@ const Homepage = () => {
                 />
 
                 {/* Main Content - Hero */}
-                <div className="relative w-full mt-0 h-max lg:h-[80vh] mb-4 lg:text-center mx-auto flex flex-col justify-center lg:items-center">
+                <div className="relative w-full mt-0 h-max lg:h-[80vh] mb-4 lg:text-center z-[98888] mx-auto flex flex-col justify-center lg:items-center">
                     <div className="absolute top-0 lg bg-white flex border-b border-b-black lg:text-[16px] text-[13px] text-black h-max w-full lg:w-screen lg:px-3 px-5 py-3 mb-6 lg:mb-2 items-center lg:justify-center">
                         <AiMagicIcon className="mr-1" />
                         Version 1.0.0 - new released
                         <AiMagicIcon className="ml-1" />
                     </div>
-                    <h1 className="text-[2.6rem] lg:ml-0 ml-5 lg:text-[3.7rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
-                        From{" "}
-                        <span className="border-b border-b-black">
-                            Planning
-                        </span>{" "}
-                        to Celebration, <br /> We’ve Got You
-                        <span className="ml-4 border-b border-b-black">
-                            Covered
-                        </span>
-                    </h1>
+                    <div className="container-mask">
+                        <motion.div
+                            className={isHovered ? 'mask' : 'mask2'}
+                            animate={{
+                                WebkitMaskPosition: `${mousePosition.x - size / 2}px ${
+                                    mousePosition.y - size / 30
+                                }px`,
+                                WebkitMaskSize: `${size}px`,
+                            }}
+                            transition={{ ease: "backOut", duration: 0.6 }}
+                        >
+                        <h1
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        className="normal text-[2.6rem] lg:ml-0 ml-5 lg:text-[3.7rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
+                            From{" "}
+                            <span className="border-b border-b-black">
+                                Planning
+                            </span>{" "}
+                            to Celebration, <br /> We’ve Got You
+                            <span className="ml-4 border-b border-b-black">
+                                Covered
+                            </span>
+                        </h1>
+                        </motion.div>
+                        <h1
+                        className="normal text-[2.6rem] lg:ml-0 ml-5 lg:text-[3.7rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
+                            From{" "}
+                            <span className="border-b border-b-black">
+                                Planning
+                            </span>{" "}
+                            to Celebration, <br /> We’ve Got You
+                            <span className="ml-4 border-b border-b-black">
+                                Covered
+                            </span>
+                        </h1>
+                    </div>
                     <p className="select-none text-black my-3 lg:ml-0 ml-5 lg:text-[16px] text-[14px] w-[90%] lg:w-[50%]">
                         Bringing your special day to life with love and ease.
                         LuvlyWed, the place for elegant wedding planning and
@@ -243,6 +293,7 @@ const Homepage = () => {
                     <div className="sponsor-items">
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon1}
@@ -252,6 +303,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon2}
@@ -261,6 +313,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon3}
@@ -272,6 +325,7 @@ const Homepage = () => {
                     <div className="sponsor-items">
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon1}
@@ -281,6 +335,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon2}
@@ -290,6 +345,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon3}
@@ -308,6 +364,7 @@ const Homepage = () => {
                     <div className="sponsor-items">
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon1}
@@ -317,6 +374,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon2}
@@ -326,6 +384,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon3}
@@ -338,6 +397,7 @@ const Homepage = () => {
                     <div className="sponsor-items">
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon1}
@@ -347,6 +407,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon2}
@@ -356,6 +417,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Spon3}
@@ -369,6 +431,7 @@ const Homepage = () => {
 
             <div className="absolute h-[100vh] w-screen overflow-hidden top-[0%]">
                 <img
+                    loading="lazy"
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                     src={Lines}
@@ -475,6 +538,7 @@ const Homepage = () => {
                         <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                     </div>
                     <img
+                        loading="lazy"
                         draggable="false" // Mencegah gambar agar tidak bisa di-drag
                         onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                         src={HP}
@@ -531,6 +595,7 @@ const Homepage = () => {
                         <div className="w-[120px] h-full">
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
+                                    loading="lazy"
                                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                     src={Gal1}
@@ -540,6 +605,7 @@ const Homepage = () => {
                             </div>
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
+                                    loading="lazy"
                                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                     src={Gal2}
@@ -552,6 +618,7 @@ const Homepage = () => {
                         <div className="w-[120px] h-full">
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
+                                    loading="lazy"
                                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                     src={Gal1}
@@ -561,6 +628,7 @@ const Homepage = () => {
                             </div>
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
+                                    loading="lazy"
                                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                     src={Gal2}
@@ -613,6 +681,7 @@ const Homepage = () => {
                                 {images.map((src, index) => (
                                     <div className='w-1/2 border border-white h-1/2 overflow-hidden'>
                                         <img
+                                            loading="lazy"
                                             key={index}
                                             src={src}
                                             alt={`Image ${index}`}
@@ -632,6 +701,7 @@ const Homepage = () => {
                     <div className="relative mb-3 w-max flex items-center">
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User1}
@@ -641,6 +711,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User1}
@@ -650,6 +721,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User2}
@@ -659,6 +731,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User3}
@@ -668,6 +741,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User1}
@@ -677,6 +751,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User2}
@@ -688,6 +763,7 @@ const Homepage = () => {
                     <div className="relative w-max flex items-center">
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User1}
@@ -697,6 +773,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User2}
@@ -706,6 +783,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User3}
@@ -715,6 +793,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User1}
@@ -724,6 +803,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User2}
@@ -733,6 +813,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User3}
@@ -839,6 +920,7 @@ const Homepage = () => {
                     <div className="absolute top-6 left-6 z-[99] h-full w-max">
                         <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Ballroom}
@@ -848,6 +930,7 @@ const Homepage = () => {
                         </div>
                         <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Ballroom2}
@@ -857,6 +940,7 @@ const Homepage = () => {
                         </div>
                         <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={Ballroom3}
@@ -909,6 +993,7 @@ const Homepage = () => {
                     </div>
                     {/* <div className="relative z-[33] w-full h-full bg-black bg-opacity-60"></div> */}
                     <img
+                        loading="lazy"
                         draggable="false" // Mencegah gambar agar tidak bisa di-drag
                         onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                         src={Ballroom2}
@@ -941,6 +1026,7 @@ const Homepage = () => {
                                         </h3>
                                     </div>
                                     <img
+                                        loading="lazy"
                                         src={Jk1}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
@@ -953,6 +1039,7 @@ const Homepage = () => {
                                         </h3>
                                     </div>
                                     <img
+                                        loading="lazy"
                                         src={Jk3}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
@@ -965,6 +1052,7 @@ const Homepage = () => {
                                         </h3>
                                     </div>
                                     <img
+                                        loading="lazy"
                                         src={Jk2}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
@@ -1048,6 +1136,7 @@ const Homepage = () => {
                                         </h3>
                                     </div>
                                     <img
+                                        loading="lazy"
                                         src={Jk1}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
@@ -1060,6 +1149,7 @@ const Homepage = () => {
                                         </h3>
                                     </div>
                                     <img
+                                        loading="lazy"
                                         src={Jk3}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
@@ -1072,6 +1162,7 @@ const Homepage = () => {
                                         </h3>
                                     </div>
                                     <img
+                                        loading="lazy"
                                         src={Jk2}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
@@ -1226,9 +1317,9 @@ const Homepage = () => {
                 </h1>
                 <div className="w-full bg-[#FFD476] h-[480px] flex justify-center border border-black">
                     <div className="w-1/2 h-full flex pl-16">
-                        <div className="w-[30%] border-l-[10px] border-y-[10px] mt-auto border-b-0 border-white bg-[#FFD476] h-[80%] rounded-tl-full"></div>
-                        <div className="w-[10px] h-full bg-white"></div>
-                        <div className="w-[30%] border-r-[10px] border-y-[10px] border-t-0 border-white bg-[#FFD476] h-[80%] rounded-br-full"></div>
+                        <div className="w-[30%] border-l-[2px] border-y-[2px] mt-auto border-b-0 border-white bg-[#FFD476] h-[80%] rounded-tl-full"></div>
+                        <div className="w-[2px] h-full bg-white"></div>
+                        <div className="w-[30%] border-r-[2px] border-y-[2px] border-t-0 border-white bg-[#FFD476] h-[80%] rounded-br-full"></div>
                     </div>
                     <div className="relative w-1/2 flex flex-col justify-between">
                         <h2 className="select-none text-[30px] relative mt-16 w-[80%]">
@@ -1251,6 +1342,7 @@ const Homepage = () => {
 
             <section className="select-none relative border-r border-r-black w-screen overflow-hidden px-16 mt-[100px] min-h-[70vh]">
                 <img
+                    loading="lazy"
                     draggable="false" // Mencegah gambar agar tidak bisa di-drag
                     onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                     src={Petik}
@@ -1265,6 +1357,7 @@ const Homepage = () => {
                     <div className="w-[30%]">
                         <div className="relative w-full mt-8 p-10 h-[400px] border border-black overflow-hidden">
                             <img
+                                loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
                                 onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                                 src={User2}
@@ -1310,12 +1403,11 @@ const Homepage = () => {
             <section className="select-none relative w-screen overflow-hidden min-h-[70vh] px-16 mt-[40px] flex flex-col z-[99]">
                 <h3 className="text-[50px]">All Your Questions Answered</h3>
                 <p className="select-none text-lg text-gray-500">
-                    Pertanyaan yang paling sering ditanyakan oleh customer kami
+                    Frequently Asked Questions by our customers
                 </p>
-                <br />
 
                 {/* First FAQ */}
-                <div>
+                <div className="mt-12">
                     <div
                         className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
                         onClick={() => toggleCollapse(1)}
@@ -1449,7 +1541,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            {start ? (
+            {/* {start ? (
                 <section className="select-none select-none fixed top-0 left-0 z-[999999999] w-screen h-screen overflow-hidden bg-black bg-opacity-70 flex items-center justify-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -1505,7 +1597,7 @@ const Homepage = () => {
                 </section>
             ) : (
                 <></>
-            )}
+            )} */}
 
             {/* Modal */}
             {showModalBuild ? (
