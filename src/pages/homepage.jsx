@@ -288,7 +288,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <section className="select-none relative flex items-center overflow-x-hidden px-16 w-full mb-[70px] h-max">
+            <section className="select-none relative flex items-center overflow-x-hidden px-16 w-full mt-12 mb-[70px] h-max">
                 <div className="sponsor-container">
                     <div className="sponsor-items">
                         <div className="w-[150px] h-[50px] border border-black relative mx-4">
@@ -1541,7 +1541,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            {/* {start ? (
+            {start ? (
                 <section className="select-none select-none fixed top-0 left-0 z-[999999999] w-screen h-screen overflow-hidden bg-black bg-opacity-70 flex items-center justify-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -1597,7 +1597,7 @@ const Homepage = () => {
                 </section>
             ) : (
                 <></>
-            )} */}
+            )}
 
             {/* Modal */}
             {showModalBuild ? (
