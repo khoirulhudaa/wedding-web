@@ -57,7 +57,7 @@ const Homepage = () => {
     const [showJunkFood, setShowJunkFood] = useState(false);
     const [showHealthFood, setShowHealthFood] = useState(false);
     const [showGallery, setShowGallery] = useState(false);
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(2);
 
     const toggleCollapse = (index) => {
         setActiveIndex(activeIndex === index ? null : index); // Toggle collapse
@@ -1541,7 +1541,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            {/* {start ? (
+            {start ? (
                 <section className="select-none select-none fixed top-0 left-0 z-[999999999] w-screen h-screen overflow-hidden bg-black bg-opacity-70 flex items-center justify-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -1597,7 +1597,7 @@ const Homepage = () => {
                 </section>
             ) : (
                 <></>
-            )} */}
+            )}
 
             {/* Modal */}
             {showModalBuild ? (
