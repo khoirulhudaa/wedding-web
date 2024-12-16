@@ -215,7 +215,7 @@ const Homepage = () => {
 
                 {/* Main Content - Hero */}
                 <div className="relative w-full mt-0 h-max lg:h-[80vh] mb-4 lg:text-center z-[98888] mx-auto flex flex-col justify-center lg:items-center">
-                    <div className="absolute top-0 lg bg-white flex border-b border-b-black lg:text-[16px] text-[13px] text-black h-max w-full lg:w-screen lg:px-3 px-5 py-3 mb-6 lg:mb-2 items-center lg:justify-center">
+                    <div className="absolute top-0 lg bg-white flex border-b border-b-black lg:text-[16px] text-[15px] text-black h-max w-full lg:w-screen lg:px-3 px-5 py-3 mb-6 lg:mb-2 items-center lg:justify-center">
                         <AiMagicIcon className="mr-1" />
                         Version 1.0.0 - new released
                         <AiMagicIcon className="ml-1" />
@@ -234,7 +234,7 @@ const Homepage = () => {
                         <h1
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
-                        className="normal text-[2.6rem] lg:ml-0 ml-5 lg:text-[3.7rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
+                        className="normal text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
                             From{" "}
                             <span className="border-b border-b-black">
                                 Planning
@@ -246,7 +246,7 @@ const Homepage = () => {
                         </h1>
                         </motion.div>
                         <h1
-                        className="normal text-[2.6rem] lg:ml-0 ml-5 lg:text-[3.7rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
+                        className="normal text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
                             From{" "}
                             <span className="border-b border-b-black">
                                 Planning
@@ -257,19 +257,19 @@ const Homepage = () => {
                             </span>
                         </h1>
                     </div>
-                    <p className="select-none text-black my-3 lg:ml-0 ml-5 lg:text-[16px] text-[14px] w-[90%] lg:w-[50%]">
+                    <p className="select-none text-black my-3 lg:ml-0 ml-5 lg:text-[16px] text-[16px] w-[90%] lg:w-[50%]">
                         Bringing your special day to life with love and ease.
                         LuvlyWed, the place for elegant wedding planning and
                         unforgettable moments
                     </p>
                     <a href="#start">
-                        <div className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] z-[99] border border-black text-black lg cursor-pointer">
+                        <div className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] z-[99] border border-black text-black lg cursor-pointer">
                             Start Planning Now
                             <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                         </div>
                     </a>
 
-                    <div className="text-[14px] mt-6 px-5 lg:px-0 w-max lg:w-max flex items-center mx-auto">
+                    <div className="text-[16px] mt-6 px-5 lg:px-0 w-max lg:w-max flex items-center mx-auto">
                         <div className="w-full lg:w-[30%] lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-red-500 bg-red-100">
                             <EthereumRectangleIcon className="w-4 h-4 relative mr-2" />
                             Fotografi
@@ -291,7 +291,7 @@ const Homepage = () => {
             <section className="select-none relative flex items-center overflow-x-hidden px-16 w-full mt-12 mb-[70px] h-max">
                 <div className="sponsor-container">
                     <div className="sponsor-items">
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -301,7 +301,7 @@ const Homepage = () => {
                                 className="grayscale-[100%] object-contain w-full h-full"
                             />
                         </div>
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -311,7 +311,7 @@ const Homepage = () => {
                                 className="grayscale-[100%] object-contain w-full h-full"
                             />
                         </div>
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -323,7 +323,7 @@ const Homepage = () => {
                         </div>
                     </div>
                     <div className="sponsor-items">
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -333,7 +333,7 @@ const Homepage = () => {
                                 className="grayscale-[100%] object-contain w-full h-full"
                             />
                         </div>
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -343,7 +343,7 @@ const Homepage = () => {
                                 className="grayscale-[100%] object-contain w-full h-full"
                             />
                         </div>
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -356,13 +356,13 @@ const Homepage = () => {
                     </div>
                 </div>
 
-                <div className="relative w-[50px] border-[1px] flex pb-2 items-end justify-center border-black bg-slate-100 h-[40px] mx-4">
-                    <div className="relative w-[6px] h-[14px] rounded-full bg-red-500"></div>
+                <div className="relative w-[54px] border-[1px] flex pb-2 items-end justify-center border-black bg-slate-100 h-[44px] mx-4">
+                    <div className="relative w-[6px] h-[16px] rounded-full bg-red-500"></div>
                 </div>
 
                 <div className="sponsor-container">
                     <div className="sponsor-items">
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -372,7 +372,7 @@ const Homepage = () => {
                                 className="grayscale-[100%] object-contain w-full h-full"
                             />
                         </div>
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -382,7 +382,7 @@ const Homepage = () => {
                                 className="grayscale-[100%] object-contain w-full h-full"
                             />
                         </div>
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -395,7 +395,7 @@ const Homepage = () => {
                     </div>
 
                     <div className="sponsor-items">
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -405,7 +405,7 @@ const Homepage = () => {
                                 className="grayscale-[100%] object-contain w-full h-full"
                             />
                         </div>
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -415,7 +415,7 @@ const Homepage = () => {
                                 className="grayscale-[100%] object-contain w-full h-full"
                             />
                         </div>
-                        <div className="w-[150px] h-[50px] border border-black relative mx-4">
+                        <div className="w-[154px] h-[54px] border border-black relative mx-4">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -460,32 +460,32 @@ const Homepage = () => {
 
                 <div className="relative w-[70%] pl-8 h-full flex flex-col justify-center">
                     <div className="w-max flex items-center absolute bottom-[-2%] right-0">
-                        <div className="relative w-max h-max border-l border-b border-black p-3 flex items-center justify-center text-[14px] text-black">
+                        <div className="relative w-max h-max border-l border-b border-black p-3 flex items-center justify-center text-[16px] text-black">
                             <p>100 types of dresses</p>
                         </div>
-                        <div className="relative w-max h-max border-b border-l border-black p-3 flex items-center justify-center text-[14px] text-black">
+                        <div className="relative w-max h-max border-b border-l border-black p-3 flex items-center justify-center text-[16px] text-black">
                             <p>100 types of traditional clothing</p>
                         </div>
                     </div>
 
-                    <div className="w-max h-max border border-black p-3 flex items-center justify-center text-[14px] mb-3 text-black">
+                    <div className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black">
                         <SparklesIcon className="w-5 h-5 mr-2" />
                         <p>Make-up Artist - Best of 2025</p>
                     </div>
-                    <h2 className="select-none font-normal text-[40px] w-full">
+                    <h2 className="select-none font-normal text-[44px] w-full">
                         Flawless Make-Up and Dresses <br /> for Your
                         <span className="text-orange-500 ml-2">
                             Special Day
                         </span>
                     </h2>
-                    <p className="select-none text-[13px] w-[70%] my-6 leading-loose text-black">
+                    <p className="select-none text-[15px] w-[70%] my-6 leading-loose text-black">
                         Create unforgettable memories with our exquisite
                         collection of professional make-up and stunning wedding
                         dresses, tailored to make your special day even more
                         magical
                     </p>
 
-                    <div className="absolute top-6 right-0 text-[14px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                    <div className="absolute top-6 right-0 text-[16px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
                         <p>
                             100 Outfits, Shirts, Accessories & Professional
                             Make-Up
@@ -501,26 +501,26 @@ const Homepage = () => {
 
             <section className="select-none relative w-screen h-max mt-[120px]">
                 <div className="w-[70%]">
-                    <h2 className="select-none text-[50px] font-normal w-[80%] ml-16">
+                    <h2 className="select-none text-[54px] font-normal w-[80%] ml-16">
                         The Modern Way to Share Wedding Day.
                     </h2>
                     <div className="relative top-5">
                         <div className="w-max h-[140px] ml-16 flex my-4 border-l border-l-black">
                             <div className="h-[200px] flex flex-col justify-between">
-                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
                                     <p>Free domain</p>
                                 </div>
-                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
                                     <p>Free domain</p>
                                 </div>
-                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
                                     <p>Free domain</p>
                                 </div>
                             </div>
-                            <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] mb-5 text-black">
+                            <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
                                 <p>Free domain</p>
                             </div>
-                            <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] mb-5 text-black">
+                            <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
                                 <p>Free domain</p>
                             </div>
                         </div>
@@ -528,12 +528,12 @@ const Homepage = () => {
                 </div>
                 <div className="relative w-[80%] ml-auto mt-[-30px] h-[200px] px-14 pt-8 bg-[#FFD476] border border-black text-[#030605]">
                     <div className="w-[80%]">
-                        <p className="select-none text-[14px] leading-loose w-[70%] mb-4">
+                        <p className="select-none text-[16px] leading-loose w-[70%] mb-4">
                             Spread your wedding invitations quickly and
                             digitally, invite them and share this happy news now
                         </p>
                     </div>
-                    <div className="relative text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
+                    <div className="relative text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
                         Order now{" "}
                         <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                     </div>
@@ -565,17 +565,17 @@ const Homepage = () => {
                     />
                 </div>
                 <div className="w-1/2 px-8 h-max">
-                    <div className="w-max h-max border border-black p-3 flex items-center justify-center text-[14px] mb-3 text-black">
+                    <div className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black">
                         <SparklesIcon className="w-5 h-5 mr-2" />
                         <p>Photo & Videography</p>
                     </div>
-                    <h2 className="select-none font-normal text-[40px]">
+                    <h2 className="select-none font-normal text-[44px]">
                         Photography Services for Your
                         <span className="text-orange-500 ml-3">
                             Event Needs
                         </span>
                     </h2>
-                    <p className="select-none text-[13px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black">
+                    <p className="select-none text-[15px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black">
                         Bringing Your Vision to Life with Exceptional
                         Photography and <br /> Videography Services for Every
                         Event
@@ -583,8 +583,8 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <section className="select-none relative w-screen h-max mt-[40px]">
-                <h2 className="select-none text-[50px] font-normal w-[65%] ml-16">
+            <section className="select-none relative w-screen h-max mt-[44px]">
+                <h2 className="select-none text-[54px] font-normal w-[65%] ml-16">
                     Timeless in the sophistication <br /> of our equipment.
                 </h2>
                 <div>
@@ -640,7 +640,7 @@ const Homepage = () => {
                     </div>
                     <div className="w-[80%] pr-2 ml-auto flex items-center">
                         <div className="w-[75%]">
-                            <h2 className="select-none text-[40px] w-max mb-4">
+                            <h2 className="select-none text-[44px] w-max mb-4">
                                 Servive Quality
                             </h2>
                             <p className="select-none text-[13.2px] leading-loose w-[80%]">
@@ -651,7 +651,7 @@ const Homepage = () => {
                         </div>
                         <div
                             onClick={() => setShowGallery(true)}
-                            className="relative text-center active:scale-[0.98] hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer"
+                            className="relative text-center active:scale-[0.98] hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer"
                         >
                             Explore images
                             <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
@@ -670,7 +670,7 @@ const Homepage = () => {
                             </h2>
                             <div
                                     onClick={() => setShowGallery(false)}
-                                    className="cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 text-black border border-black w-[40px] h-[40px] flex items-center justify-center"
+                                    className="cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 text-black border border-black w-[44px] h-[44px] flex items-center justify-center"
                                 >
                                     <Cancel01Icon className="w-6 h-6" />
                                 </div>
@@ -826,7 +826,7 @@ const Homepage = () => {
                 <div className="flex items-center ml-auto w-max">
                     <div className="w-[1px] h-[140px] bg-black mx-20"></div>
                     <div className="w-max h-max">
-                        <h2 className="select-none font-bold text-[50px] mb-3">
+                        <h2 className="select-none font-bold text-[54px] mb-3">
                             1.304
                         </h2>
                         <p>
@@ -835,7 +835,7 @@ const Homepage = () => {
                     </div>
                     <div className="w-[1px] h-[160px] bg-black mx-20"></div>
                     <div className="w-max h-max">
-                        <h2 className="select-none font-bold text-[50px] mb-3">
+                        <h2 className="select-none font-bold text-[54px] mb-3">
                             1.304
                         </h2>
                         <p>
@@ -850,7 +850,7 @@ const Homepage = () => {
 
             <section className="select-none relative my-[100px] px-16 overflow-hidden flex items-center justify-center h-[80vh] border-y border-y-black">
                 <div className="w-[70%] py-16 h-full">
-                    <h2 className="select-none text-[40px]">
+                    <h2 className="select-none text-[44px]">
                         Why are we recommended?
                     </h2>
 
@@ -861,7 +861,7 @@ const Homepage = () => {
                                 Affordable prices
                             </p>
                             <div className="w-full h-[1px] bg-black my-2"></div>
-                            <p className="select-none text-[13px] mt-10">
+                            <p className="select-none text-[15px] mt-10">
                                 No need for printing costs, just create once and
                                 share
                             </p>
@@ -872,7 +872,7 @@ const Homepage = () => {
                                 Fast process
                             </p>
                             <div className="w-full h-[1px] bg-black my-2"></div>
-                            <p className="select-none text-[13px] mt-10">
+                            <p className="select-none text-[15px] mt-10">
                                 Friendly service with a quick response to
                                 customer
                             </p>
@@ -883,7 +883,7 @@ const Homepage = () => {
                                 Many templates
                             </p>
                             <div className="w-full h-[1px] bg-black my-2"></div>
-                            <p className="select-none text-[13px] mt-10">
+                            <p className="select-none text-[15px] mt-10">
                                 We offer a variety of modern themes that are
                                 perfect
                             </p>
@@ -904,11 +904,11 @@ const Homepage = () => {
             >
                 <div className="relative text-center w-ful h-max">
                     <div className="w-full relative z-[99]">
-                        <h2 className="select-none font-normal text-[40px]">
+                        <h2 className="select-none font-normal text-[44px]">
                             - The Ideal Place to Celebrate - <br /> Your True{" "}
                             <span className="text-orange-500">Love</span>
                         </h2>
-                        <p className="select-none text-[13px] text-black mx-auto my-6 leading-loose w-[70%]">
+                        <p className="select-none text-[15px] text-black mx-auto my-6 leading-loose w-[70%]">
                             Make your dream wedding come true at our elegant
                             venue, with complete facilities.
                         </p>
@@ -918,7 +918,7 @@ const Homepage = () => {
                 <div className="relative w-full h-[500px] border border-black overflow-hidden">
                     {/* Images */}
                     <div className="absolute top-6 left-6 z-[99] h-full w-max">
-                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
+                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -928,7 +928,7 @@ const Homepage = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
+                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -938,7 +938,7 @@ const Homepage = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
+                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -953,13 +953,13 @@ const Homepage = () => {
                     <div className="w-max flex items-center absolute right-6 top-3">
                         <div
                             onClick={() => setShowModalBuild(true)}
-                            className="mr-5 z-[99] text-center active:scale-[0.98] hover:brightness-90 lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 p-4 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
+                            className="mr-5 z-[99] text-center active:scale-[0.98] hover:brightness-90 lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 p-4 font-medium text-[16px] lg:text-[15px] bg-white text-black lg cursor-pointer"
                         >
                             <EyeIcon className="w-4 h-4 relative" />
                         </div>
 
                         <a
-                            className="z-[99] text-center lg:w-max w-max flex active:scale-[0.98] hover:brightness-90 no-underline lg:ml-0 ml-5 mt-4 px-6 py-3 font-medium text-[14px] lg:text-[15px] bg-white text-black lg cursor-pointer"
+                            className="z-[99] text-center lg:w-max w-max flex active:scale-[0.98] hover:brightness-90 no-underline lg:ml-0 ml-5 mt-4 px-6 py-3 font-medium text-[16px] lg:text-[15px] bg-white text-black lg cursor-pointer"
                             href="https://wa.me/6289513093406"
                             target="__blank"
                         >
@@ -973,19 +973,19 @@ const Homepage = () => {
                     {/* Benefit Hotels */}
                     <div className="absolute bottom-3 right-6 w-max text-[12.5px] border border-black z-[99] bg-white py-3 mb-4 px-4 shadow-md flex items-start mt-3">
                         <div className="flex items-center border-b border-white">
-                            <div className="w-[24px] h-[24px] text-[14px] p-1 flex items-center justify-center bg-transparent">
+                            <div className="w-[24px] h-[24px] text-[16px] p-1 flex items-center justify-center bg-transparent">
                                 <CheckmarkCircle02Icon className="text-blue-700 w-8 h-8" />
                             </div>
                             <p>Book A Hotel Service</p>
                         </div>
                         <div className="flex items-center border-b border-white">
-                            <div className="w-[24px] h-[24px] text-[14px] ml-4 p-1 flex items-center justify-center bg-transparent">
+                            <div className="w-[24px] h-[24px] text-[16px] ml-4 p-1 flex items-center justify-center bg-transparent">
                                 <CheckmarkCircle02Icon className="text-blue-700 w-8 h-8" />
                             </div>
                             <p>Book A Car Service</p>
                         </div>
                         <div className="flex items-center border-b border-white">
-                            <div className="w-[24px] h-[24px] text-[14px] ml-4 p-1 flex items-center justify-center bg-transparent">
+                            <div className="w-[24px] h-[24px] text-[16px] ml-4 p-1 flex items-center justify-center bg-transparent">
                                 <CheckmarkCircle02Icon className="text-blue-700 w-8 h-8" />
                             </div>
                             <p>Book Spa Service</p>
@@ -1081,8 +1081,8 @@ const Homepage = () => {
                                 onClick={() => setShowJunkFood(false)}
                                 className="flex justify-end items-center"
                             >
-                                <p className="mr-4 text-[14px]">Close</p>
-                                <div className="relative border border-black p-1 w-[50px] h-[50px] flex items-center justify-center">
+                                <p className="mr-4 text-[16px]">Close</p>
+                                <div className="relative border border-black p-1 w-[54px] h-[54px] flex items-center justify-center">
                                     <LinkSquare02Icon className="w-6 h-6" />
                                 </div>
                             </div>
@@ -1121,10 +1121,10 @@ const Homepage = () => {
                                 onClick={() => setShowHealthFood(false)}
                                 className="flex items-center"
                             >
-                                <div className="relative border border-black p-1 w-[50px] h-[50px] flex items-center justify-center">
+                                <div className="relative border border-black p-1 w-[54px] h-[54px] flex items-center justify-center">
                                     <LinkSquare02Icon className="w-6 h-6" />
                                 </div>
-                                <p className="ml-4 text-[14px]">Close</p>
+                                <p className="ml-4 text-[16px]">Close</p>
                             </div>
                         </div>
                         <div className="w-[65%] flex justify-between items-center overflow-hidden">
@@ -1175,7 +1175,7 @@ const Homepage = () => {
                     <></>
                 )}
 
-                <h1 className="text-[50px] w-[72%] text-black">
+                <h1 className="text-[54px] w-[72%] text-black">
                     Serving Delicious Meals, Making Every Moment.
                 </h1>
                 <div className="relative overflow-hidden px-16 mt-12 ml-auto w-full flex items-center justify-between border-y border-black h-[70%]">
@@ -1186,7 +1186,7 @@ const Homepage = () => {
                         }}
                         className="flex items-center w-max h-full cursor-pointer active:scale-[0.98]"
                     >
-                        <div className="border mr-4 border-blue-700 p-1 w-[50px] h-[50px] flex items-center justify-center">
+                        <div className="border mr-4 border-blue-700 p-1 w-[54px] h-[54px] flex items-center justify-center">
                             <LinkSquare02Icon className="w-6 h-6 text-blue-700" />
                         </div>
                         <p className="select-none flex w-max">Junk Food</p>
@@ -1207,12 +1207,12 @@ const Homepage = () => {
                         className="flex items-center w-max h-full cursor-pointer active:scale-[0.98]"
                     >
                         <p className="select-none flex w-max">Health Food</p>
-                        <div className="border ml-4 border-blue-700 p-1 w-[50px] h-[50px] flex items-center justify-center">
+                        <div className="border ml-4 border-blue-700 p-1 w-[54px] h-[54px] flex items-center justify-center">
                             <LinkSquare02Icon className="w-6 h-6 text-blue-700" />
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex items-center justify-between mt-[40px]">
+                <div className="w-full flex items-center justify-between mt-[44px]">
                     <div className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
                         <h2 className="select-none text-[20px] mb-1">
                             The Elegance
@@ -1242,7 +1242,7 @@ const Homepage = () => {
                         </div>
                     </div>
                     <div className="relative w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
-                        <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[50px] h-[50px]">
+                        <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[54px] h-[54px]">
                             <FavouriteIcon />
                         </div>
                         <h2 className="select-none text-[20px] mb-1">
@@ -1311,8 +1311,8 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <section className="select-none relative w-screen min-h-[80vh] flex flex-col items-center justify-between overflow-hidden px-16 mt-[52px] mb-[40px]">
-                <h1 className="text-[50px] text-end mb-10 w-full text-black">
+            <section className="select-none relative w-screen min-h-[80vh] flex flex-col items-center justify-between overflow-hidden px-16 mt-[52px] mb-[44px]">
+                <h1 className="text-[54px] text-end mb-10 w-full text-black">
                     Acrylic and luxurious decorations
                 </h1>
                 <div className="w-full bg-[#FFD476] h-[480px] flex justify-center border border-black">
@@ -1325,7 +1325,7 @@ const Homepage = () => {
                         <h2 className="select-none text-[30px] relative mt-16 w-[80%]">
                             Providing Luxury Souvenirs and the Best Gifts
                         </h2>
-                        <div className="absolute top-[26%] right-16 border border-black flex items-center justify-center w-[50px] h-[50px] cursor-pointer active:scale-[0.98] rounded-full">
+                        <div className="absolute top-[26%] right-16 border border-black flex items-center justify-center w-[54px] h-[54px] cursor-pointer active:scale-[0.98] rounded-full">
                             <LinkSquare02Icon className="" />
                         </div>
                         <div className="relative bg-white h-1/2 mt-auto">
@@ -1350,7 +1350,7 @@ const Homepage = () => {
                     className="absolute w-[120px] top-0 right-[10%]"
                 />
 
-                <h1 className="text-[50px] w-[72%] text-black">
+                <h1 className="text-[54px] w-[72%] text-black">
                     Our Customers Feedback.
                 </h1>
                 <div className="w-full flex items-center">
@@ -1382,14 +1382,14 @@ const Homepage = () => {
                             </p>
                         </div>
                         <div className="relative w-full pl-10 mt-10 flex items-center justify-between">
-                            <div className="flex items-center text-[16px] w-max px-5 h-[50px] border border-black">
+                            <div className="flex items-center text-[16px] w-max px-5 h-[54px] border border-black">
                                 <p>1 of 40</p>
                             </div>
                             <div className="flex items-center w-max">
-                                <div className="w-[50px] h-[50px] border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
+                                <div className="w-[54px] h-[54px] border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
                                     <ArrowLeft01Icon />
                                 </div>
-                                <div className="w-[50px] h-[50px] ml-8 border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
+                                <div className="w-[54px] h-[54px] ml-8 border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
                                     <ArrowRight01Icon />
                                 </div>
                             </div>
@@ -1400,8 +1400,8 @@ const Homepage = () => {
 
             <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
 
-            <section className="select-none relative w-screen overflow-hidden min-h-[70vh] px-16 mt-[40px] flex flex-col z-[99]">
-                <h3 className="text-[50px]">All Your Questions Answered</h3>
+            <section className="select-none relative w-screen overflow-hidden min-h-[70vh] px-16 mt-[44px] flex flex-col z-[99]">
+                <h3 className="text-[54px]">All Your Questions Answered</h3>
                 <p className="select-none text-lg text-gray-500">
                     Frequently Asked Questions by our customers
                 </p>
@@ -1409,7 +1409,7 @@ const Homepage = () => {
                 {/* First FAQ */}
                 <div className="mt-12">
                     <div
-                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        className="text-[16px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
                         onClick={() => toggleCollapse(1)}
                     >
                         How long does the process take?
@@ -1419,7 +1419,7 @@ const Homepage = () => {
                             activeIndex === 1 ? "flex" : "hidden"
                         } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
                     >
-                        <div className="text-[14px] text-black leading-loose">
+                        <div className="text-[16px] text-black leading-loose">
                             <p>
                                 The process for wedding planning typically takes
                                 a few months, depending on the complexity of
@@ -1437,7 +1437,7 @@ const Homepage = () => {
                 {/* Second FAQ */}
                 <div>
                     <div
-                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        className="text-[16px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
                         onClick={() => toggleCollapse(2)}
                     >
                         Can the design be customized?{" "}
@@ -1447,7 +1447,7 @@ const Homepage = () => {
                             activeIndex === 2 ? "flex" : "hidden"
                         } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
                     >
-                        <div className="text-[14px] text-black leading-loose">
+                        <div className="text-[16px] text-black leading-loose">
                             <p>
                                 Yes, both our wedding organizing services and
                                 digital invitations are fully customizable. We
@@ -1464,7 +1464,7 @@ const Homepage = () => {
                 {/* Third FAQ */}
                 <div>
                     <div
-                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        className="text-[16px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
                         onClick={() => toggleCollapse(3)}
                     >
                         Can revisions be made if there are any mistakes?
@@ -1474,7 +1474,7 @@ const Homepage = () => {
                             activeIndex === 3 ? "flex" : "hidden"
                         } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
                     >
-                        <div className="text-[14px] text-black leading-loose">
+                        <div className="text-[16px] text-black leading-loose">
                             <p>
                                 Absolutely! We understand that adjustments are
                                 sometimes necessary. Whether it's a detail in
@@ -1491,7 +1491,7 @@ const Homepage = () => {
                 {/* Fourth FAQ */}
                 <div>
                     <div
-                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        className="text-[16px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
                         onClick={() => toggleCollapse(4)}
                     >
                         Is there a warranty{" "}
@@ -1501,7 +1501,7 @@ const Homepage = () => {
                             activeIndex === 4 ? "flex" : "hidden"
                         } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
                     >
-                        <div className="text-[14px] text-black leading-loose">
+                        <div className="text-[16px] text-black leading-loose">
                             <p>
                                 Yes, we offer guarantees for our services. If
                                 there are any issues with our wedding organizing
@@ -1518,7 +1518,7 @@ const Homepage = () => {
                 {/* Fifth FAQ */}
                 <div>
                     <div
-                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        className="text-[16px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
                         onClick={() => toggleCollapse(5)}
                     >
                         My wedding is still far away, can I register now?{" "}
@@ -1528,7 +1528,7 @@ const Homepage = () => {
                             activeIndex === 5 ? "block" : "hidden"
                         } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
                     >
-                        <div className="text-[14px] text-black leading-loose">
+                        <div className="text-[16px] text-black leading-loose">
                             <p>
                                 Yes, you can register for our wedding organizing
                                 services and digital invitations now. We
@@ -1541,7 +1541,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            {start ? (
+            {/* {start ? (
                 <section className="select-none select-none fixed top-0 left-0 z-[999999999] w-screen h-screen overflow-hidden bg-black bg-opacity-70 flex items-center justify-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -1551,11 +1551,11 @@ const Homepage = () => {
                     >
                         <div className="relative w-full h-[90%]">
                             <div className="h-full">
-                                <h2 className="select-none text-[40px] mb-2">
+                                <h2 className="select-none text-[44px] mb-2">
                                     Your Perfect Wedding <br /> Starts Here{" "}
                                 </h2>
                                 <SparklesIcon className="absolute top-3 right-6 w-8 h-8" />
-                                <p className="select-none text-[14px] w-[80%] leading-loose text-black">
+                                <p className="select-none text-[16px] w-[80%] leading-loose text-black">
                                     Begin Your Love Journey With Us. Every great
                                     love story deserves a beautiful beginning.
                                     Let us help you plan a wedding that’s as
@@ -1574,7 +1574,7 @@ const Homepage = () => {
                                     </li>
                                     <li className="list-disc">Catering</li>
                                 </ul>
-                                <div className="absolute h-[150px] w-1/3 right-0 bottom-5">
+                                <div className="absolute h-[154px] w-1/3 right-0 bottom-5">
                                     <ThreeDModel
                                         url={"/crown.glb"}
                                         intensity={3}
@@ -1597,7 +1597,7 @@ const Homepage = () => {
                 </section>
             ) : (
                 <></>
-            )}
+            )} */}
 
             {/* Modal */}
             {showModalBuild ? (
@@ -1609,7 +1609,7 @@ const Homepage = () => {
             {/* Back-to-top */}
             <div
                 onClick={() => scrollToTop()}
-                className="absolute w-[50px] h-[50px] active:scale-[0.97] cursor-pointer hover:brightness-[90%] bg-white border border-black flex items-center justify-center shadow-lg bottom-0 right-16 z-[9999999]"
+                className="absolute w-[54px] h-[54px] active:scale-[0.97] cursor-pointer hover:brightness-[90%] bg-white border border-black flex items-center justify-center shadow-lg bottom-0 right-16 z-[9999999]"
             >
                 <ArrowUp01Icon />
             </div>
