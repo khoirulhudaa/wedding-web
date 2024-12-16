@@ -293,7 +293,7 @@ const App = () => {
                         <p>3D</p>
                     </div>
                     <ThreeDModel
-                        url={"../public/dress3.glb"}
+                        url={"/dress3.glb"}
                         intensity={30}
                         speed={1}
                         scaleCustom={[2, 2, 2]}
@@ -395,7 +395,7 @@ const App = () => {
                         <p>3D</p>
                     </div>
                     <ThreeDModel
-                        url={"../public/camera.glb"}
+                        url={"/camera.glb"}
                         intensity={30}
                         speed={1}
                         scaleCustom={[0.58, 0.58, 0.58]}
@@ -742,7 +742,7 @@ const App = () => {
                     </div>
                     <div className="relative h-[200px] top-[30px]">
                         <ThreeDModel
-                            url={"../public/eat.glb"}
+                            url={"/eat.glb"}
                             intensity={3}
                             speed={1}
                             scaleCustom={[2.4, 2.4, 2.4]}
@@ -867,7 +867,7 @@ const App = () => {
                         </div>
                         <div className="relative bg-white h-1/2 mt-auto">
                             <ThreeDModel
-                                url={"../public/ring.glb"}
+                                url={"/ring.glb"}
                                 intensity={30}
                                 speed={1}
                                 scaleCustom={[6, 6, 6]}
@@ -1108,7 +1108,7 @@ const App = () => {
                                 </ul>
                                 <div className="absolute h-[150px] w-1/3 right-0 bottom-5">
                                     <ThreeDModel
-                                        url={"../public/crown.glb"}
+                                        url={"/crown.glb"}
                                         intensity={3}
                                         speed={1}
                                         scaleCustom={[16, 16, 16]}

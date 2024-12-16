@@ -9,7 +9,7 @@ const ModalBuild = ({ handleClose }) => {
                 <div className="w-[70vw] h-[70vh] overflow-hidden flex">
                     <div className="relative rounded-[20px] top-[-12px] bg-white items-end h-[86vh] w-[30%] shadow-md flex pt-20 justify-center">
                         <ThreeDModel
-                            url={"../public/hotel3.glb"}
+                            url={"/hotel3.glb"}
                             speed={1}
                             intensity={0.8}
                             scaleCustom={[0.045, 0.045, 0.045]}
