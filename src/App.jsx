@@ -1,39 +1,40 @@
+import { motion } from "framer-motion";
 import {
-  Agreement02Icon,
-  AiMagicIcon,
-  ArrowLeft01Icon,
-  ArrowRight01Icon,
-  Blockchain04Icon,
-  CheckmarkCircle02Icon,
-  CheckmarkSquare01Icon,
-  CommandIcon,
-  DollarSquareIcon,
-  EthereumRectangleIcon,
-  EyeIcon,
-  LinkSquare02Icon,
-  SparklesIcon,
-  FavouriteIcon,
-  Time01Icon,
+    Agreement02Icon,
+    AiMagicIcon,
+    ArrowLeft01Icon,
+    ArrowRight01Icon,
+    Blockchain04Icon,
+    CheckmarkCircle02Icon,
+    CheckmarkSquare01Icon,
+    CommandIcon,
+    DollarSquareIcon,
+    EthereumRectangleIcon,
+    EyeIcon,
+    FavouriteIcon,
+    LinkSquare02Icon,
+    SparklesIcon,
+    Time01Icon,
 } from "hugeicons-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
-  Ballroom,
-  Ballroom2,
-  Ballroom3,
-  Gal1,
-  Gal2,
-  Gradient1,
-  Gradient2,
-  Gradient4,
-  HP,
-  Lines,
-  Petik,
-  Spon1,
-  Spon2,
-  Spon3,
-  User1,
-  User2,
-  User3
+    Ballroom,
+    Ballroom2,
+    Ballroom3,
+    Gal1,
+    Gal2,
+    Gradient1,
+    Gradient2,
+    Gradient4,
+    HP,
+    Lines,
+    Petik,
+    Spon1,
+    Spon2,
+    Spon3,
+    User1,
+    User2,
+    User3,
 } from "./assets";
 import Footer from "./components/footer.jsx";
 import ModalBuild from "./components/modalBuild.jsx";
@@ -43,11 +44,12 @@ import "./index.css";
 
 const App = () => {
     const [showModalBuild, setShowModalBuild] = useState(false);
+    const [start, setStart] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
 
     const toggleCollapse = (index) => {
-      setActiveIndex(activeIndex === index ? null : index); // Toggle collapse
+        setActiveIndex(activeIndex === index ? null : index); // Toggle collapse
     };
 
     // Ref untuk mengakses elemen audio
@@ -66,8 +68,21 @@ const App = () => {
         setIsPlaying(!isPlaying);
     };
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setStart(true);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    const handleCloseStart = () => {
+        setStart(false);
+        playAUdio();
+    };
+
     return (
-        <main className="relative mt-16">
+        <main className="relative mt-16 overflow-x-hidden">
             {/* Backsound */}
             <audio
                 ref={audioRef}
@@ -117,21 +132,26 @@ const App = () => {
                         <AiMagicIcon className="ml-1" />
                     </div>
                     <h1 className="text-[2.6rem] lg:ml-0 ml-5 lg:text-[3.7rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
-                        From Planning to Celebration, <br /> We’ve Got You
-                        Covered
+                        From{" "}
+                        <span className="border-b border-b-black">
+                            Planning
+                        </span>{" "}
+                        to Celebration, <br /> We’ve Got You
+                        <span className="ml-4 border-b border-b-black">
+                            Covered
+                        </span>
                     </h1>
-                    <p className="text-slate-500 my-3 lg:ml-0 ml-5 lg:text-[16px] text-[14px] w-[90%] lg:w-[50%]">
+                    <p className="text-black my-3 lg:ml-0 ml-5 lg:text-[16px] text-[14px] w-[90%] lg:w-[50%]">
                         Bringing your special day to life with love and ease.
                         LuvlyWed, the place for elegant wedding planning and
                         unforgettable moments
                     </p>
-                    <div
-                        onClick={() => playAUdio()}
-                        className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] z-[9999] border border-black text-black lg cursor-pointer"
-                    >
-                        Start Planning Now
-                        <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
-                    </div>
+                    <a href="#start">
+                        <div className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[14px] lg:text-[15px] z-[9999] border border-black text-black lg cursor-pointer">
+                            Start Planning Now
+                            <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
+                        </div>
+                    </a>
 
                     <div className="text-[14px] mt-6 px-5 lg:px-0 w-max lg:w-max flex items-center mx-auto">
                         <div className="w-full lg:w-[30%] lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-red-500 bg-red-100">
@@ -200,8 +220,8 @@ const App = () => {
                     </div>
                 </div>
 
-                <div className="relative w-[50px] border-[1px] flex pb-2 items-end justify-center border-black bg-slate-200 h-[40px] mx-4">
-                    <div className="relative w-[6px] h-[14px] rounded-full bg-red-800"></div>
+                <div className="relative w-[50px] border-[1px] flex pb-2 items-end justify-center border-black bg-slate-100 h-[40px] mx-4">
+                    <div className="relative w-[6px] h-[14px] rounded-full bg-red-500"></div>
                 </div>
 
                 <div className="sponsor-container">
@@ -264,8 +284,11 @@ const App = () => {
             </div>
 
             {/* Dress wedding */}
-            <section className="relative flex items-center overflow-x-auto px-16 w-full border-t border-t-slate-500 h-max pb-14">
-                <div className="relative w-1/3 h-[90vh] pt-20 border-x border-x-slate-500">
+            <section
+                id="start"
+                className="relative flex px-16 w-full border-t border-t-black h-[80vh]"
+            >
+                <div className="relative w-[30%] h-[90vh] pt-20 border-x border-x-black">
                     <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
                     </div>
@@ -275,24 +298,36 @@ const App = () => {
                         speed={1}
                         scaleCustom={[2, 2, 2]}
                     />
-                    <div className="relative top-[-100px] w-screen h-[1px] bg-slate-500"></div>
+                    <div className="relative top-[-100px] w-screen h-[1px] bg-black"></div>
                 </div>
-                <div className="w-1/2 px-8 h-max">
+
+                <div className="relative w-[70%] pl-8 h-full flex flex-col justify-center">
+                    <div className="w-max flex items-center absolute bottom-[-2%] right-0">
+                        <div className="relative w-max h-max border-l border-b border-black p-3 flex items-center justify-center text-[14px] text-black">
+                            <p>100 types of dresses</p>
+                        </div>
+                        <div className="relative w-max h-max border-b border-x border-black p-3 flex items-center justify-center text-[14px] text-black">
+                            <p>100 types of traditional clothing</p>
+                        </div>
+                    </div>
+
                     <div className="w-max h-max border border-black p-3 flex items-center justify-center text-[14px] mb-3 text-black">
                         <p>Make-up Artist - Best of 2025</p>
                     </div>
                     <h2 className="font-normal text-[40px] w-full">
-                        Flawless Make-Up and Dresses for Your{" "}
-                        <span className="text-orange-500">Special Day</span>
+                        Flawless Make-Up and Dresses <br /> for Your
+                        <span className="text-orange-500 ml-2">
+                            Special Day
+                        </span>
                     </h2>
-                    <p className="text-[13px] my-6 leading-loose text-slate-500 w-[92%]">
+                    <p className="text-[13px] w-[70%] my-6 leading-loose text-black">
                         Create unforgettable memories with our exquisite
                         collection of professional make-up and stunning wedding
                         dresses, tailored to make your special day even more
                         magical
                     </p>
 
-                    <div className="absolute top-6 right-14 text-[14px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                    <div className="absolute top-6 right-0 text-[14px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
                         <p>
                             100 Outfits, Shirts, Accessories & Professional
                             Make-Up
@@ -300,29 +335,29 @@ const App = () => {
                         <SparklesIcon className="w-5 h-5 ml-3" />
                     </div>
 
-                    <div className="absolute bottom-[32%] right-14 border border-black flex items-center justify-center w-[60px] h-[60px] cursor-pointer active:scale-[0.98] rounded-full">
+                    <div className="absolute bottom-[32%] right-0 border border-black flex items-center justify-center w-[60px] h-[60px] cursor-pointer active:scale-[0.98] rounded-full">
                         <LinkSquare02Icon className="" />
                     </div>
                 </div>
             </section>
 
-            <section className="relative w-screen h-max overflow-hidden mt-[0px]">
+            <section className="relative w-screen h-max mt-[120px]">
                 <div className="w-[70%]">
                     <h2 className="text-[50px] font-normal w-[80%] ml-16">
                         The Modern Way to Share Wedding Day.
                     </h2>
                     <div className="relative top-5">
-                        <div className="w-max h-[160px] ml-16 flex my-4 border-l border-l-black">
+                        <div className="w-max h-[140px] ml-16 flex my-4 border-l border-l-black">
                             <div className="h-[200px] flex flex-col justify-between">
-                              <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
-                                  <p>Free domain</p>
-                              </div>
-                              <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
-                                  <p>Free domain</p>
-                              </div>
-                              <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
-                                  <p>Free domain</p>
-                              </div>
+                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                    <p>Free domain</p>
+                                </div>
+                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                    <p>Free domain</p>
+                                </div>
+                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] text-black">
+                                    <p>Free domain</p>
+                                </div>
                             </div>
                             <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[14px] mb-5 text-black">
                                 <p>Free domain</p>
@@ -333,7 +368,7 @@ const App = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative w-[70%] ml-auto mt-[-30px] h-[200px] px-14 pt-8 bg-[#FFD476] border border-black text-[#030605]">
+                <div className="relative w-[80%] ml-auto mt-[-30px] h-[200px] px-14 pt-8 bg-[#FFD476] border border-black text-[#030605]">
                     <div className="w-[80%]">
                         <p className="text-[14px] leading-loose w-[70%] mb-4">
                             Spread your wedding invitations quickly and
@@ -370,17 +405,18 @@ const App = () => {
                         <p>Photo & Videography</p>
                     </div>
                     <h2 className="font-normal text-[40px]">
-                        Photography Services for Your{" "}
+                        Photography Services for Your
                         <span className="text-orange-500">Event Needs</span>
                     </h2>
-                    <p className="text-[13px] my-6 leading-loose text-slate-500 w-[70%]">
+                    <p className="text-[13px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black">
                         Bringing Your Vision to Life with Exceptional
-                        Photography and Videography Services for Every Event
+                        Photography and <br /> Videography Services for Every
+                        Event
                     </p>
                 </div>
             </section>
 
-            <section className="relative w-screen h-[100vh] mt-[40px]">
+            <section className="relative w-screen h-max mt-[40px]">
                 <h2 className="text-[50px] font-normal w-[65%] ml-16">
                     Timeless in the sophistication <br /> of our equipment.
                 </h2>
@@ -442,8 +478,7 @@ const App = () => {
                 </div>
             </section>
 
-            <section className="relative w-screen px-16 h-[40vh] pt-[26px] flex items-center">
-                <div className='absolute top-0 left-16 w-[1px] h-[400px] bg-black'></div>
+            <section className="relative w-screen px-16 h-[40vh] mt-20 flex items-center">
                 <div className="relative w-[55%]">
                     <div className="relative mb-3 w-max flex items-center">
                         <div className="w-[70px] h-[70px] p-1.5 border border-black ml-4 overflow-hidden">
@@ -535,66 +570,67 @@ const App = () => {
                     </div>
                 </div>
                 <div className="flex items-center ml-auto w-max">
+                    <div className="w-[1px] h-[140px] bg-black mx-20"></div>
                     <div className="w-max h-max">
-                        <h2 className="font-bold text-[46px] mb-3">1.304</h2>
+                        <h2 className="font-bold text-[50px] mb-3">1.304</h2>
                         <p>
                             satisfied male <br /> customer
                         </p>
                     </div>
-                    <div className="w-[1px] h-[100px] bg-slate-400 mx-20"></div>
+                    <div className="w-[1px] h-[160px] bg-black mx-20"></div>
                     <div className="w-max h-max">
-                        <h2 className="font-bold text-[46px] mb-3">1.304</h2>
+                        <h2 className="font-bold text-[50px] mb-3">1.304</h2>
                         <p>
                             satisfied female <br /> customer
                         </p>
                     </div>
+                    <div className="w-[1px] h-[140px] bg-black ml-20"></div>
                 </div>
             </section>
 
             {/* <div className="mt-16 w-screen h-[1px] bg-slate-300"></div> */}
 
             <section className="relative my-[100px] px-16 overflow-hidden flex items-center justify-center h-[80vh] border-y border-y-black">
-             <div className='w-[70%] py-16 h-full'>
-              <h2 className="text-[40px]">Why are we recommended?</h2>
+                <div className="w-[70%] py-16 h-full">
+                    <h2 className="text-[40px]">Why are we recommended?</h2>
 
-              <div className="mt-10 w-full flex items-center justify-between pr-16">
-                <div className='w-[28%] h-[200px] p-4 border border-black'>
-                  <DollarSquareIcon />
-                  <p className="text-[16px] mt-2">
-                    Affordable prices
-                  </p>
-                  <div className="w-full h-[1px] bg-black my-2"></div>
-                  <p className="text-[13px] mt-10">
-                    No need for printing costs, just create once and share
-                  </p>
+                    <div className="mt-10 w-full flex items-center justify-between pr-16">
+                        <div className="w-[28%] h-[200px] p-4 border border-black">
+                            <DollarSquareIcon />
+                            <p className="text-[16px] mt-2">
+                                Affordable prices
+                            </p>
+                            <div className="w-full h-[1px] bg-black my-2"></div>
+                            <p className="text-[13px] mt-10">
+                                No need for printing costs, just create once and
+                                share
+                            </p>
+                        </div>
+                        <div className="w-[28%] h-[200px] p-4 border border-black">
+                            <Time01Icon />
+                            <p className="text-[16px] mt-2">Fast process</p>
+                            <div className="w-full h-[1px] bg-black my-2"></div>
+                            <p className="text-[13px] mt-10">
+                                Friendly service with a quick response to
+                                customer
+                            </p>
+                        </div>
+                        <div className="w-[28%] h-[200px] p-4 border border-black">
+                            <CheckmarkSquare01Icon />
+                            <p className="text-[16px] mt-2">Many templates</p>
+                            <div className="w-full h-[1px] bg-black my-2"></div>
+                            <p className="text-[13px] mt-10">
+                                We offer a variety of modern themes that are
+                                perfect
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div className='w-[28%] h-[200px] p-4 border border-black'>
-                  <Time01Icon />
-                  <p className="text-[16px] mt-2">
-                    Fast process
-                  </p>
-                  <div className="w-full h-[1px] bg-black my-2"></div>
-                  <p className="text-[13px] mt-10">
-                    Friendly service with a quick response to customer
-                  </p>
+                <div className="w-[30%] ml-auto justify-center h-full flex">
+                    <div className="w-[40%] border-l-[1px] border-y-[1px] mt-auto border-b-0 border-black h-[80%] rounded-tl-full"></div>
+                    <div className="w-[1px] h-full bg-black"></div>
+                    <div className="w-[40%] border-r-[1px] border-y-[1px] border-t-0 border-black h-[80%] rounded-br-full"></div>
                 </div>
-                <div className='w-[28%] h-[200px] p-4 border border-black'>
-                  <CheckmarkSquare01Icon />
-                  <p className="text-[16px] mt-2">
-                    Many templates
-                  </p>
-                  <div className="w-full h-[1px] bg-black my-2"></div>
-                  <p className="text-[13px] mt-10">
-                    We offer a variety of modern themes that are perfect        
-                  </p>
-                </div>
-              </div>
-             </div>
-              <div className="w-[30%] ml-auto justify-center h-full flex">
-                  <div className="w-[40%] border-l-[1px] border-y-[1px] mt-auto border-b-0 border-black h-[80%] rounded-tl-full"></div>
-                  <div className="w-[1px] h-full bg-black"></div>
-                  <div className="w-[40%] border-r-[1px] border-y-[1px] border-t-0 border-black h-[80%] rounded-br-full"></div>
-              </div>
             </section>
 
             {/* Section 2 */}
@@ -605,7 +641,7 @@ const App = () => {
                             - The Ideal Place to Celebrate - <br /> Your True{" "}
                             <span className="text-orange-500">Love</span>
                         </h2>
-                        <p className="text-[13px] text-slate-500 mx-auto my-6 leading-loose w-[70%]">
+                        <p className="text-[13px] text-black mx-auto my-6 leading-loose w-[70%]">
                             Make your dream wedding come true at our elegant
                             venue, with complete facilities.
                         </p>
@@ -616,13 +652,25 @@ const App = () => {
                     {/* Images */}
                     <div className="absolute top-6 left-6 z-[9999] h-full w-max">
                         <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
-                          <img src={Ballroom} alt="ballroom-image" className='w-full h-full object-cover' />
+                            <img
+                                src={Ballroom}
+                                alt="ballroom-image"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
-                          <img src={Ballroom2} alt="ballroom-image" className='w-full h-full object-cover' />
+                            <img
+                                src={Ballroom2}
+                                alt="ballroom-image"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[50px] h-[50px] p-1 border border-black">
-                          <img src={Ballroom3} alt="ballroom-image" className='w-full h-full object-cover' />
+                            <img
+                                src={Ballroom3}
+                                alt="ballroom-image"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
 
@@ -676,7 +724,7 @@ const App = () => {
                 </div>
             </section>
 
-            <div className="relative ml-16 w-[1px] h-[100px] bg-slate-500"></div>
+            <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
 
             {/* Section 2 */}
             <section className="relative my-10 px-16 min-h-[70vh] pb-10 overflow-hidden">
@@ -705,70 +753,102 @@ const App = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-full flex items-center justify-between mt-[40px]'>
-                  <div className='w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]'>
-                    <h2 className="text-[20px] mb-1">The Elegance</h2>
-                    <p>300 Guests</p>
-                    <div className="w-full h-[1px] bg-black my-6"></div>
+                <div className="w-full flex items-center justify-between mt-[40px]">
+                    <div className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
+                        <h2 className="text-[20px] mb-1">The Elegance</h2>
+                        <p>300 Guests</p>
+                        <div className="w-full h-[1px] bg-black my-6"></div>
 
-                    <ul className="list-style-desc">
-                      <li className='mb-4'>Simple and delicious menu options</li>
-                      <li className='mb-4'>Buffet-style menu - local dishes</li>
-                      <li className='mb-4'>Simple table decoration</li>
-                      <li className='mb-4'>Service by trained staff</li>
-                      <li className='mb-4'>Buffet-style food presentation</li>
-                      <li className='mb-4'>Standart drinks </li>
-                      <li className='mb-4'>Cold and hot beverages available</li>
-                    </ul>
-                    <div className='border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8'>
-                      <p>Detail</p>
+                        <ul className="list-style-desc">
+                            <li className="mb-4">
+                                Simple and delicious menu options
+                            </li>
+                            <li className="mb-4">
+                                Buffet-style menu - local dishes
+                            </li>
+                            <li className="mb-4">Simple table decoration</li>
+                            <li className="mb-4">Service by trained staff</li>
+                            <li className="mb-4">
+                                Buffet-style food presentation
+                            </li>
+                            <li className="mb-4">Standart drinks </li>
+                            <li className="mb-4">
+                                Cold and hot beverages available
+                            </li>
+                        </ul>
+                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8">
+                            <p>Detail</p>
+                        </div>
                     </div>
-                  </div>
-                  <div className='relative w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]'>
-                    <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[50px] h-[50px]">
-                      <FavouriteIcon />
-                    </div>
-                    <h2 className="text-[20px] mb-1">Royal Prestige</h2>
-                    <p>600 Guests</p>
-                    <div className="w-full h-[1px] bg-black my-6"></div>
+                    <div className="relative w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
+                        <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[50px] h-[50px]">
+                            <FavouriteIcon />
+                        </div>
+                        <h2 className="text-[20px] mb-1">Royal Prestige</h2>
+                        <p>600 Guests</p>
+                        <div className="w-full h-[1px] bg-black my-6"></div>
 
-                    <ul className="list-style-desc">
-                      <li className='mb-4'>Premium menu with more variety</li>
-                      <li className='mb-4'>Buffet menu and international </li>
-                      <li className='mb-4'>Elegant and beautiful table decorations</li>
-                      <li className='mb-4'>Professional and friendly staff</li>
-                      <li className='mb-4'>Buffet and à la carte food service</li>
-                      <li className='mb-4'>Specialty drinks </li>
-                      <li className='mb-4'>wardrobeFood service for VIP guests</li>
-                    </ul>
-                    <div className='border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8'>
-                      <p>Detail</p>
+                        <ul className="list-style-desc">
+                            <li className="mb-4">
+                                Premium menu with more variety
+                            </li>
+                            <li className="mb-4">
+                                Buffet menu and international{" "}
+                            </li>
+                            <li className="mb-4">
+                                Elegant and beautiful table decorations
+                            </li>
+                            <li className="mb-4">
+                                Professional and friendly staff
+                            </li>
+                            <li className="mb-4">
+                                Buffet and à la carte food service
+                            </li>
+                            <li className="mb-4">Specialty drinks </li>
+                            <li className="mb-4">
+                                wardrobeFood service for VIP guests
+                            </li>
+                        </ul>
+                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8">
+                            <p>Detail</p>
+                        </div>
                     </div>
-                  </div>
-                  <div className='w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]'>
-                    <h2 className="text-[20px] mb-1">Opulent Bliss</h2>
-                    <p>900 Guests</p>
-                    <div className="w-full h-[1px] bg-black my-6"></div>
+                    <div className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
+                        <h2 className="text-[20px] mb-1">Opulent Bliss</h2>
+                        <p>900 Guests</p>
+                        <div className="w-full h-[1px] bg-black my-6"></div>
 
-                    <ul className="list-style-desc">
-                      <li className='mb-4'>Exclusive and luxurious menu</li>
-                      <li className='mb-4'>Direct table service with personal chefs</li>
-                      <li className='mb-4'>Luxurious and detailed table decorations</li>
-                      <li className='mb-4'>Highly trained staff attending throughout</li>
-                      <li className='mb-4'>Buffet, à la carte, premium dishes</li>
-                      <li className='mb-4'>Gourmet dessert options</li>
-                      <li className='mb-4'>Special food delivery for VIP guests</li>
-                    </ul>
-                    <div className='border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8'>
-                      <p>Detail</p>
+                        <ul className="list-style-desc">
+                            <li className="mb-4">
+                                Exclusive and luxurious menu
+                            </li>
+                            <li className="mb-4">
+                                Direct table service with personal chefs
+                            </li>
+                            <li className="mb-4">
+                                Luxurious and detailed table decorations
+                            </li>
+                            <li className="mb-4">
+                                Highly trained staff attending throughout
+                            </li>
+                            <li className="mb-4">
+                                Buffet, à la carte, premium dishes
+                            </li>
+                            <li className="mb-4">Gourmet dessert options</li>
+                            <li className="mb-4">
+                                Special food delivery for VIP guests
+                            </li>
+                        </ul>
+                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8">
+                            <p>Detail</p>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </section>
 
             <section className="relative w-screen min-h-[80vh] flex flex-col items-center justify-between overflow-hidden px-16 mt-[52px] mb-[40px]">
                 <h1 className="text-[50px] text-end mb-10 w-full text-black">
-                  Acrylic and luxurious decorations
+                    Acrylic and luxurious decorations
                 </h1>
                 <div className="w-full bg-[#FFD476] h-[480px] flex justify-center border border-black">
                     <div className="w-1/2 h-full flex pl-16">
@@ -795,7 +875,7 @@ const App = () => {
                 </div>
             </section>
 
-            <section className="relative border-r border-r-slate-500 w-screen overflow-hidden px-16 mt-[100px] min-h-[70vh]">
+            <section className="relative border-r border-r-black w-screen overflow-hidden px-16 mt-[100px] min-h-[70vh]">
                 <img
                     src={Petik}
                     alt="petik"
@@ -811,134 +891,243 @@ const App = () => {
                             <img
                                 src={User2}
                                 alt="photo-picture"
-                                className="opacity-60 hover:scale-[1.4] duration-300 object-cover w-full h-full"
+                                className="hover:scale-[1.4] duration-300 object-cover w-full h-full"
                             />
                         </div>
                     </div>
                     <div className="w-[70%] h-max pt-10 overflow-hidden">
-                      <div className="w-full h-max px-16 border-y border-y-slate-500 ml-10 py-6">
-                          <div className="w-full flex items-baseline justify-between">
-                              <p className="w-max flex font-semibold text-[24px] mb-4 text-black">
-                                  Customer LuvlyWed
-                              </p>
-                              <p className="w-max fle text-[18px] text-slate-500">
-                                  Jardyn Danwart
-                              </p>
-                          </div>
-                          <p className="w-full text-[20px] text-black ml-1 mt-10">
-                              Amaizing fast and reliable customer support! The
-                              team of willing to go mile for customer service.
-                          </p>
+                        <div className="w-full h-max px-16 border-y border-y-black ml-10 py-6">
+                            <div className="w-full flex items-baseline justify-between">
+                                <p className="w-max flex font-semibold text-[24px] mb-4 text-black">
+                                    Customer LuvlyWed
+                                </p>
+                                <p className="w-max fle text-[18px] text-black">
+                                    Jardyn Danwart
+                                </p>
+                            </div>
+                            <p className="w-full text-[20px] text-black ml-1 mt-10">
+                                Amaizing fast and reliable customer support! The
+                                team of willing to go mile for customer service.
+                            </p>
                         </div>
                         <div className="relative w-full pl-10 mt-10 flex items-center justify-between">
-                          <div className="flex items-center text-[16px] w-max px-5 h-[50px] border border-black">
-                            <p>1 of 40</p>
-                          </div>
-                          <div className="flex items-center w-max">
-                            <div className="w-[50px] h-[50px] border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
-                              <ArrowLeft01Icon />
+                            <div className="flex items-center text-[16px] w-max px-5 h-[50px] border border-black">
+                                <p>1 of 40</p>
                             </div>
-                            <div className="w-[50px] h-[50px] ml-8 border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
-                              <ArrowRight01Icon />
+                            <div className="flex items-center w-max">
+                                <div className="w-[50px] h-[50px] border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
+                                    <ArrowLeft01Icon />
+                                </div>
+                                <div className="w-[50px] h-[50px] ml-8 border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
+                                    <ArrowRight01Icon />
+                                </div>
                             </div>
-                          </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div className="relative ml-16 w-[1px] h-[100px] bg-slate-500"></div>
+            <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
 
             <section className="relative w-screen overflow-hidden min-h-[70vh] px-16 mt-[40px] flex flex-col z-[99999]">
-              <h3 className="text-[50px]">All Your Questions Answered</h3>
-              <p className="text-lg text-gray-500">Pertanyaan yang paling sering ditanyakan oleh customer kami</p>
-              <br />
-              
-              {/* First FAQ */}
-              <div>
-                <div
-                  className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
-                  onClick={() => toggleCollapse(1)}
-                >
-                  Berapa lama proses pengerjaannya?
-                </div>
-                <div className={`${activeIndex === 1 ? 'flex' : 'hidden'} mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}>
-                  <div className="text-[14px] text-black leading-loose">
-                    <p>
-                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                <h3 className="text-[50px]">All Your Questions Answered</h3>
+                <p className="text-lg text-gray-500">
+                    Pertanyaan yang paling sering ditanyakan oleh customer kami
+                </p>
+                <br />
 
-              {/* Second FAQ */}
-              <div>
-                <div
-                  className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
-                  onClick={() => toggleCollapse(2)}
-                >
-                  Apakah desain bisa custom?
+                {/* First FAQ */}
+                <div>
+                    <div
+                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        onClick={() => toggleCollapse(1)}
+                    >
+                        How long does the process take?
+                    </div>
+                    <div
+                        className={`${
+                            activeIndex === 1 ? "flex" : "hidden"
+                        } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
+                    >
+                        <div className="text-[14px] text-black leading-loose">
+                            <p>
+                                The process for wedding planning typically takes
+                                a few months, depending on the complexity of
+                                your wedding. The full coordination, from
+                                planning to execution, can take 1 to 3 months.
+                                For decorations and day-of coordination, our
+                                team is available to help manage everything on
+                                your big day, ensuring a smooth and memorable
+                                event.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div className={`${activeIndex === 2 ? 'flex' : 'hidden'} mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}>
-                  <div className="text-[14px] text-black leading-loose">
-                    <p>
-                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                    </p>
-                  </div>
-                </div>
-              </div>
 
-              {/* Third FAQ */}
-              <div>
-                <div
-                  className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
-                  onClick={() => toggleCollapse(3)}
-                >
-                  Apakah bisa revisi jika ada kesalahan?
+                {/* Second FAQ */}
+                <div>
+                    <div
+                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        onClick={() => toggleCollapse(2)}
+                    >
+                        Can the design be customized?{" "}
+                    </div>
+                    <div
+                        className={`${
+                            activeIndex === 2 ? "flex" : "hidden"
+                        } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
+                    >
+                        <div className="text-[14px] text-black leading-loose">
+                            <p>
+                                Yes, both our wedding organizing services and
+                                digital invitations are fully customizable. We
+                                work with you to tailor every detail to match
+                                your vision, from the event design to the
+                                invitations. Whether you have a specific theme
+                                in mind or want something unique, we are here to
+                                bring your ideas to life.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div className={`${activeIndex === 3 ? 'flex' : 'hidden'} mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}>
-                  <div className="text-[14px] text-black leading-loose">
-                    <p>
-                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                    </p>
-                  </div>
-                </div>
-              </div>
 
-              {/* Fourth FAQ */}
-              <div>
-                <div
-                  className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
-                  onClick={() => toggleCollapse(4)}
-                >
-                  Apakah ada garansi?
+                {/* Third FAQ */}
+                <div>
+                    <div
+                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        onClick={() => toggleCollapse(3)}
+                    >
+                        Can revisions be made if there are any mistakes?
+                    </div>
+                    <div
+                        className={`${
+                            activeIndex === 3 ? "flex" : "hidden"
+                        } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
+                    >
+                        <div className="text-[14px] text-black leading-loose">
+                            <p>
+                                Absolutely! We understand that adjustments are
+                                sometimes necessary. Whether it's a detail in
+                                your wedding plans or a correction to the
+                                digital invitation, we're happy to make
+                                revisions until everything is exactly how you
+                                envision it. We ensure your satisfaction with
+                                our services.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div className={`${activeIndex === 4 ? 'flex' : 'hidden'} mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}>
-                  <div className="text-[14px] text-black leading-loose">
-                    <p>
-                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                    </p>
-                  </div>
-                </div>
-              </div>
 
-              {/* Fifth FAQ */}
-              <div>
-                <div
-                  className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
-                  onClick={() => toggleCollapse(5)}
-                >
-                  Pernikahan saya masih lama, bisa daftar sekarang?
+                {/* Fourth FAQ */}
+                <div>
+                    <div
+                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        onClick={() => toggleCollapse(4)}
+                    >
+                        Is there a warranty{" "}
+                    </div>
+                    <div
+                        className={`${
+                            activeIndex === 4 ? "flex" : "hidden"
+                        } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
+                    >
+                        <div className="text-[14px] text-black leading-loose">
+                            <p>
+                                Yes, we offer guarantees for our services. If
+                                there are any issues with our wedding organizing
+                                services or digital invitations, we will address
+                                them promptly. Our goal is to ensure your
+                                complete satisfaction with the services we
+                                provide, and we stand by the quality of our
+                                work.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div className={`${activeIndex === 5 ? 'block' : 'hidden'} mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}>
-                  <div className="text-[14px] text-black leading-loose">
-                    <p>
-                      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                    </p>
-                  </div>
+
+                {/* Fifth FAQ */}
+                <div>
+                    <div
+                        className="text-[14px] border border-black py-5 mb-4 w-full text-left px-4 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200"
+                        onClick={() => toggleCollapse(5)}
+                    >
+                        My wedding is still far away, can I register now?{" "}
+                    </div>
+                    <div
+                        className={`${
+                            activeIndex === 5 ? "block" : "hidden"
+                        } mb-4 mt-2 p-4 bg-gray-50 border border-gray-200 rounded-md`}
+                    >
+                        <div className="text-[14px] text-black leading-loose">
+                            <p>
+                                Yes, you can register for our wedding organizing
+                                services and digital invitations now. We
+                                recommend booking early to ensure availability
+                                and to give you time to plan and make
+                                adjustments.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </section>
+
+            {start ? (
+                <section className="fixed top-0 left-0 z-[999999999] w-screen h-screen overflow-hidden bg-black bg-opacity-70 flex items-center justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="w-[50vw] h-[85vh] bg-white p-6"
+                    >
+                        <div className="relative w-full h-[90%]">
+                            <div className="h-full">
+                                <h2 className="text-[40px] mb-2">
+                                    Your Perfect Wedding <br /> Starts Here{" "}
+                                </h2>
+                                <SparklesIcon className="absolute top-6 right-6 w-8 h-8" />
+                                <p className="text-[14px] w-[80%] leading-loose text-black">
+                                    Begin Your Love Journey With Us. Every great
+                                    love story deserves a beautiful beginning.
+                                    Let us help you plan a wedding that’s as
+                                    special as your relationship
+                                </p>
+                                <hr className="my-4" />
+                                <ul className="ml-5">
+                                    <li className="list-disc mb-3">
+                                        wedding organizer
+                                    </li>
+                                    <li className="list-disc mb-3">
+                                        Make-up Artist
+                                    </li>
+                                    <li className="list-disc mb-3">
+                                        Photography
+                                    </li>
+                                    <li className="list-disc">Catering</li>
+                                </ul>
+                                <div className="absolute h-[150px] border border-black w-1/3 right-0 bottom-4">
+                                    <ThreeDModel
+                                        url={"../public/crown.glb"}
+                                        intensity={3}
+                                        speed={1}
+                                        scaleCustom={[10, 10, 10]}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="w-full h-[10%]">
+                            <div
+                                onClick={() => handleCloseStart()}
+                                className="border h-full border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98]"
+                            >
+                                <p>Get Started</p>
+                            </div>
+                        </div>
+                    </motion.div>
+                </section>
+            ) : (
+                <></>
+            )}
 
             {/* Modal */}
             {showModalBuild ? (

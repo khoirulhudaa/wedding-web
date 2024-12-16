@@ -3,6 +3,7 @@ import globals from 'globals'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import reactThree from '@react-three/eslint-plugin' // Import plugin @react-three
 
 export default [
   { ignores: ['dist'] },
@@ -22,6 +23,7 @@ export default [
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      '@react-three': reactThree, // Menambahkan plugin react-three
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -33,6 +35,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      // Menambahkan beberapa aturan dari plugin react-three
+      '@react-three/no-unknown-property': 'warn', // Contoh aturan
     },
   },
 ]

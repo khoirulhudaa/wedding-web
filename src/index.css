@@ -10,6 +10,10 @@
   font-family: "Lora", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Pastikan canvas mengisi seluruh layar atau container */
 .canvas-container {
   height: 100vh; /* Mengatur tinggi Canvas penuh dengan tinggi viewport */
