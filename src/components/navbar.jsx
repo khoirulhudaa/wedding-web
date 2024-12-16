@@ -10,10 +10,26 @@ const Navbar = () => {
       {/* Right Content - (List Menu) */}
       <div className='relative min-w-[30vw]'>
         <ul className='w-full text-[14.5px] flex justify-between items-center'>
-          <li>Photography</li>
-          <li>Make-up Artist</li>
-          <li>Catering</li>
-          <li>Building</li>
+          <li>
+            <a href='#start'>
+              Make-up Artist
+            </a>
+          </li>
+          <li>
+            <a href='#photography'>
+              Photography
+            </a>
+          </li>
+          <li>
+            <a href='#building'>
+              Building
+            </a>
+          </li>
+          <li>
+            <a href='#catering'>
+              Catering
+            </a>
+          </li>
         </ul>
       </div>
 

@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import {
     Agreement02Icon,
     AiMagicIcon,
+    ArrowDown01Icon,
     ArrowLeft01Icon,
     ArrowRight01Icon,
+    ArrowUp01Icon,
     Blockchain04Icon,
     CheckmarkCircle02Icon,
     CheckmarkSquare01Icon,
@@ -80,6 +82,31 @@ const App = () => {
         setStart(false);
         playAUdio();
     };
+
+    // Memantau posisi scroll
+    const checkScrollPosition = () => {
+        if (window.scrollY > 300) {
+            // Menampilkan tombol jika scroll lebih dari 300px
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    // Fungsi untuk scroll ke atas
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Memantau perubahan posisi scroll
+    useEffect(() => {
+        window.addEventListener("scroll", checkScrollPosition);
+
+        // Membersihkan event listener saat komponen dihapus
+        return () => {
+            window.removeEventListener("scroll", checkScrollPosition);
+        };
+    }, []);
 
     return (
         <main className="relative mt-16 overflow-x-hidden">
@@ -306,7 +333,7 @@ const App = () => {
                         <div className="relative w-max h-max border-l border-b border-black p-3 flex items-center justify-center text-[14px] text-black">
                             <p>100 types of dresses</p>
                         </div>
-                        <div className="relative w-max h-max border-b border-x border-black p-3 flex items-center justify-center text-[14px] text-black">
+                        <div className="relative w-max h-max border-b border-l border-black p-3 flex items-center justify-center text-[14px] text-black">
                             <p>100 types of traditional clothing</p>
                         </div>
                     </div>
@@ -389,7 +416,7 @@ const App = () => {
             </section>
 
             {/* Section 1 */}
-            <section className="relative flex items-center overflow-x-auto px-16 w-full h-max mt-16 py-14">
+            <section id="photography" className="relative flex items-center overflow-x-auto px-16 w-full h-max mt-16 py-14">
                 <div className="relative w-1/2 h-[380px] pt-12 border border-black">
                     <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
@@ -408,7 +435,7 @@ const App = () => {
                     </div>
                     <h2 className="font-normal text-[40px]">
                         Photography Services for Your
-                        <span className="text-orange-500">Event Needs</span>
+                        <span className="text-orange-500 ml-3">Event Needs</span>
                     </h2>
                     <p className="text-[13px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black">
                         Bringing Your Vision to Life with Exceptional
@@ -636,7 +663,7 @@ const App = () => {
             </section>
 
             {/* Section 2 */}
-            <section className="relative px-16 w-screen min-h-[100vh] mt-[70px]">
+            <section id="building" className="relative px-16 w-screen min-h-[100vh] mt-[70px]">
                 <div className="relative text-center w-ful h-max">
                     <div className="w-full relative z-[99]">
                         <h2 className="font-normal text-[40px]">
@@ -729,7 +756,7 @@ const App = () => {
             <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
 
             {/* Section 2 */}
-            <section className="relative my-10 px-16 min-h-[70vh] pb-10 overflow-hidden">
+            <section id="catering" className="relative my-10 px-16 min-h-[70vh] pb-10 overflow-hidden">
                 <h1 className="text-[50px] w-[72%] text-black">
                     Serving Delicious Meals, Making Every Moment.
                 </h1>
@@ -931,7 +958,7 @@ const App = () => {
 
             <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
 
-            <section className="relative w-screen overflow-hidden min-h-[70vh] px-16 mt-[40px] flex flex-col z-[99999]">
+            <section className="relative w-screen overflow-hidden min-h-[70vh] px-16 mt-[40px] flex flex-col z-[99]">
                 <h3 className="text-[50px]">All Your Questions Answered</h3>
                 <p className="text-lg text-gray-500">
                     Pertanyaan yang paling sering ditanyakan oleh customer kami
@@ -1086,7 +1113,7 @@ const App = () => {
                                 <h2 className="text-[40px] mb-2">
                                     Your Perfect Wedding <br /> Starts Here{" "}
                                 </h2>
-                                <SparklesIcon className="absolute top-6 right-6 w-8 h-8" />
+                                <SparklesIcon className="absolute top-3 right-6 w-8 h-8" />
                                 <p className="text-[14px] w-[80%] leading-loose text-black">
                                     Begin Your Love Journey With Us. Every great
                                     love story deserves a beautiful beginning.
@@ -1137,6 +1164,14 @@ const App = () => {
             ) : (
                 <></>
             )}
+
+            {/* Back-to-top */}
+            <div
+                onClick={() => scrollToTop()}
+                className="absolute w-[50px] h-[50px] active:scale-[0.97] cursor-pointer hover:brightness-[90%] bg-white border border-black flex items-center justify-center shadow-lg bottom-0 right-16 z-[9999999]"
+            >
+                <ArrowUp01Icon />
+            </div>
 
             {/* Footer Component */}
             <Footer />
