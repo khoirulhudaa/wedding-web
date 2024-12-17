@@ -23,7 +23,7 @@ RotatingModel.propTypes = {
 
 const ThreeDModel = ({ url, scaleCustom, speed, intensity }) => {
     return (
-        <Canvas className="absolute">
+        <Canvas className="absolute z-[77]">
             <ambientLight intensity={intensity} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
 

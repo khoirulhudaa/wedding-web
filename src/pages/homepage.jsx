@@ -42,7 +42,7 @@ import {
     Spon3,
     User1,
     User2,
-    User3
+    User3,
 } from "../assets";
 import Footer from "../components/footer.jsx";
 import ModalBuild from "../components/modalBuild.jsx";
@@ -117,17 +117,7 @@ const Homepage = () => {
         };
     }, []);
 
-    const images = [
-        Gl1,
-        Gl3,
-        Gl4,
-        Gl1,
-        Gl1,
-        Gl3,
-        Gl4,
-        Gl1,
-       
-    ];
+    const images = [Gl1, Gl3, Gl4, Gl1, Gl1, Gl3, Gl4, Gl1];
 
     // define cursor coordinates
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -162,36 +152,35 @@ const Homepage = () => {
             <Navbar />
 
             {/* Hero Component */}
-            <section className="relative w-full h-full overflow-hidden flex justify-center">
+            <section className="relative w-full h-full overflow-hidden border-b border-[#cccccc] flex justify-center">
                 <div className="absolute w-full h-full overflow-hidden">
+                    <div id="asteroid1b"></div>
+                    <div id="asteroid2b"></div>
+                    <div id="asteroid3b"></div>
+                    <div id="asteroid4b"></div>
+                    <div id="asteroid5b"></div>
 
-                    <div id='asteroid1b'></div>
-                    <div id='asteroid2b'></div>
-                    <div id='asteroid3b'></div>
-                    <div id='asteroid4b'></div>
-                    <div id='asteroid5b'></div>
-                    
                     {/* Square Line's */}
-                    <div className="w-screen h-[1px] absolute left-0 top-[10%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[20%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[30%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[40%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[50%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[60%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[70%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[80%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[90%] bg-slate-100"></div>
-                    <div className="w-screen h-[1px] absolute left-0 top-[100%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[10%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[20%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[30%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[40%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[50%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[60%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[70%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[80%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[90%] bg-slate-100"></div>
-                    <div className="w-[1px] h-screen absolute top-0 left-[100%] bg-slate-100"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[10%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[20%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[30%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[40%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[50%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[60%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[70%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[80%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[90%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[100%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[10%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[20%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[30%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[40%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[50%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[60%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[70%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[80%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[90%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-screen absolute top-0 left-[100%] bg-[#cccccc]"></div>
                 </div>
 
                 {/* Gradient Effects - Background */}
@@ -227,33 +216,52 @@ const Homepage = () => {
                         Version 1.0.0 - new released
                         <AiMagicIcon className="ml-1" />
                     </div>
-                    <div className="container-mask">
+                    <div className="container-mask flex-col">
                         <motion.div
-                            className={isHovered ? 'mask' : 'mask2'}
+                            className={isHovered ? "mask" : "mask2"}
                             animate={{
-                                WebkitMaskPosition: `${mousePosition.x - size / 2}px ${
-                                    mousePosition.y - size / 30
-                                }px`,
+                                WebkitMaskPosition: `${
+                                    mousePosition.x - size / 2
+                                }px ${mousePosition.y - size / 3}px`,
                                 WebkitMaskSize: `${size}px`,
                             }}
                             transition={{ ease: "backOut", duration: 0.6 }}
                         >
-                        <h1
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
-                        className="normal text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
-                            From{" "}
-                            <span className="border-b border-b-black">
-                                Planning
-                            </span>{" "}
-                            to Celebration, <br /> We’ve Got You
-                            <span className="ml-4 border-b border-b-black">
-                                Covered
-                            </span>
-                        </h1>
+                            <h1
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                                className="select-none text-white text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center"
+                            >
+                                From{" "}
+                                <span className="border-b border-b-black">
+                                    Planning
+                                </span>{" "}
+                                to Celebration, <br /> We’ve Got You
+                                <span className="ml-4 border-b border-b-black">
+                                    Covered
+                                </span>
+                            </h1>
+                            <p
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                                className="select-none my-3 lg:ml-0 ml-5 text-white lg:text-[16px] text-[16px] w-[90%] lg:w-[50%]"
+                            >
+                                Bringing your special day to life with love and
+                                ease. LuvlyWed, the place for elegant wedding
+                                planning and unforgettable moments
+                            </p>
+                            <a href="#start">
+                                <div
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
+                                    className="relative active:scale-[0.98] bg-[transparent] opacity-0 hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] z-[99] border border-black lg cursor-pointer"
+                                >
+                                    Start Planning Now
+                                    <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
+                                </div>
+                            </a>
                         </motion.div>
-                        <h1
-                        className="normal text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
+                        <h1 className="select-none text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
                             From{" "}
                             <span className="border-b border-b-black">
                                 Planning
@@ -263,31 +271,31 @@ const Homepage = () => {
                                 Covered
                             </span>
                         </h1>
+                        <p className="select-none text-black my-3 lg:ml-0 ml-5 lg:text-[16px] text-[16px] w-[90%] lg:w-[50%]">
+                            Bringing your special day to life with love and
+                            ease. LuvlyWed, the place for elegant wedding
+                            planning and unforgettable moments
+                        </p>
+                        <a href="#start">
+                            <div className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] z-[99] border border-black text-black lg cursor-pointer">
+                                Start Planning Now
+                                <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
+                            </div>
+                        </a>
                     </div>
-                    <p className="select-none text-black my-3 lg:ml-0 ml-5 lg:text-[16px] text-[16px] w-[90%] lg:w-[50%]">
-                        Bringing your special day to life with love and ease.
-                        LuvlyWed, the place for elegant wedding planning and
-                        unforgettable moments
-                    </p>
-                    <a href="#start">
-                        <div className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] z-[99] border border-black text-black lg cursor-pointer">
-                            Start Planning Now
-                            <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
-                        </div>
-                    </a>
 
-                    <div className="text-[16px] mt-6 px-5 lg:px-0 w-max lg:w-max flex items-center mx-auto">
+                    <div className="select-none text-[16px] mt-3 px-5 lg:px-0 w-max lg:w-max flex items-center mx-auto">
                         <div className="w-full lg:w-[30%] lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-red-500 bg-red-100">
                             <EthereumRectangleIcon className="w-4 h-4 relative mr-2" />
                             Fotografi
                         </div>
-                        <div className="w-full lg:w-max lg:justify-center lg:mx-4 flex items-center px-3 py-3 lg:py-1.5 lg text-green-500 bg-green-100">
+                        <div className="select-none w-full lg:w-max lg:justify-center lg:mx-4 flex items-center px-3 py-3 lg:py-1.5 lg text-green-500 bg-green-100">
                             <CommandIcon className="w-4 h-4 relative mr-2" />
                             <p className="select-none flex w-max">
                                 Venue wedding
                             </p>
                         </div>
-                        <div className="w-full lg:w-max lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-purple-500 bg-purple-100">
+                        <div className="select-none w-full lg:w-max lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-purple-500 bg-purple-100">
                             <Blockchain04Icon className="w-4 h-4 relative mr-2" />
                             <p className="select-none flex w-max">Make-up</p>
                         </div>
@@ -295,7 +303,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <section className="select-none relative flex items-center overflow-x-hidden px-16 w-full mt-12 mb-[70px] h-max">
+            <section className="select-none relative flex items-center overflow-x-hidden px-16 w-full mt-7 mb-[70px] h-max">
                 <div className="sponsor-container">
                     <div className="sponsor-items">
                         <div className="w-[154px] h-[54px] border border-black relative mx-4">
@@ -364,7 +372,7 @@ const Homepage = () => {
                 </div>
 
                 <div className="relative w-[54px] border-[1px] flex pb-2 items-end justify-center border-black bg-slate-100 h-[44px] mx-4">
-                    <div className="relative w-[6px] h-[16px] rounded-full bg-red-500"></div>
+                    <div className="relative w-[10px] h-[14px] rounded-sm border border-black"></div>
                 </div>
 
                 <div className="sponsor-container">
@@ -450,10 +458,10 @@ const Homepage = () => {
             {/* Dress wedding */}
             <section
                 id="start"
-                className="relative flex px-16 w-full border-t border-t-black h-[80vh]"
+                className="select-none relative flex px-16 w-full border-t border-t-black h-[80vh]"
             >
                 <div className="relative w-[30%] h-[90vh] pt-20 border-x border-x-black">
-                    <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
+                    <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
                     </div>
                     <ThreeDModel
@@ -465,7 +473,7 @@ const Homepage = () => {
                     <div className="relative top-[-100px] w-screen h-[1px] bg-black"></div>
                 </div>
 
-                <div className="relative w-[70%] pl-8 h-full flex flex-col justify-center">
+                <div className="select-none relative w-[70%] pl-8 h-full flex flex-col justify-center">
                     <div className="w-max flex items-center absolute bottom-[-2%] right-0">
                         <div className="relative w-max h-max border-l border-b border-black p-3 flex items-center justify-center text-[16px] text-black">
                             <p>100 types of dresses</p>
@@ -558,10 +566,10 @@ const Homepage = () => {
             {/* Section 1 */}
             <section
                 id="photography"
-                className="relative flex items-center overflow-x-auto px-16 w-full h-max mt-16 py-14"
+                className="select-none relative flex items-center overflow-x-auto px-16 w-full h-max mt-16 py-14"
             >
                 <div className="relative w-1/2 h-[380px] pt-12 border border-black">
-                    <div className="absolute top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
+                    <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
                     </div>
                     <ThreeDModel
@@ -570,6 +578,18 @@ const Homepage = () => {
                         speed={1}
                         scaleCustom={[0.58, 0.58, 0.58]}
                     />
+
+                    <div className="w-full h-[1px] absolute left-0 top-[10%] bg-[#cccccc]"></div>
+                    <div className="w-full h-[1px] absolute left-0 top-[30%] bg-[#cccccc]"></div>
+                    <div className="w-full h-[1px] absolute left-0 top-[50%] bg-[#cccccc]"></div>
+                    <div className="w-full h-[1px] absolute left-0 top-[70%] bg-[#cccccc]"></div>
+                    <div className="w-full h-[1px] absolute left-0 top-[90%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-full absolute top-0 left-[15%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-full absolute top-0 left-[30%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-full absolute top-0 left-[50%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-full absolute top-0 left-[70%] bg-[#cccccc]"></div>
+                    <div className="w-[1px] h-full absolute top-0 left-[85%] bg-[#cccccc]"></div>
+
                 </div>
                 <div className="w-1/2 px-8 h-max">
                     <div className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black">
@@ -667,41 +687,39 @@ const Homepage = () => {
                 </div>
             </section>
 
-            {
-                showGallery ? (
-                    <div className="fixed top-0 left-0 z-[999999] w-screen h-screen bg-black bg-opacity-70 flex items-center justify-center">
-                        <div className="bg-white w-[70vw] h-[85vh] overflow-hidden p-6">
-                        <div className='w-full flex items-baseline pr-1 justify-between'>
+            {showGallery ? (
+                <div className="fixed top-0 left-0 z-[999999] w-screen h-screen bg-black bg-opacity-70 flex items-center justify-center">
+                    <div className="bg-white w-[70vw] h-[85vh] overflow-hidden p-6">
+                        <div className="w-full flex items-baseline pr-1 justify-between">
                             <h2 className="border-b border-black pb-3 text-[32px] mb-6 ml-3">
                                 Gallery LuvlyWed
                             </h2>
                             <div
-                                    onClick={() => setShowGallery(false)}
-                                    className="cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 text-black border border-black w-[44px] h-[44px] flex items-center justify-center"
-                                >
-                                    <Cancel01Icon className="w-6 h-6" />
-                                </div>
-                        </div>
-
-                            <div className="w-full h-[80%] flex flex-wrap justify-between overflow-auto">
-
-                                {images.map((src, index) => (
-                                    <div className='w-1/2 border border-white h-1/2 overflow-hidden'>
-                                        <img
-                                            loading="lazy"
-                                            key={index}
-                                            src={src}
-                                            alt={`Image ${index}`}
-                                            className="w-full h-full hover:scale-[1.1] duration-300 hover:grayscale-[60%] object-cover"
-                                        />
-                                    </div>
-                                ))}
+                                onClick={() => setShowGallery(false)}
+                                className="cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 text-black border border-black w-[44px] h-[44px] flex items-center justify-center"
+                            >
+                                <Cancel01Icon className="w-6 h-6" />
                             </div>
                         </div>
+
+                        <div className="w-full h-[80%] flex flex-wrap justify-between overflow-auto">
+                            {images.map((src, index) => (
+                                <div className="w-1/2 border border-white h-1/2 overflow-hidden">
+                                    <img
+                                        loading="lazy"
+                                        key={index}
+                                        src={src}
+                                        alt={`Image ${index}`}
+                                        className="w-full h-full hover:scale-[1.1] duration-300 hover:grayscale-[60%] object-cover"
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                ):
-                    <></>
-            }
+                </div>
+            ) : (
+                <></>
+            )}
 
             <section className="select-none relative w-screen px-16 h-[40vh] mt-20 flex items-center">
                 <div className="relative w-[55%]">
@@ -1015,7 +1033,7 @@ const Homepage = () => {
             {/* Section 2 */}
             <section
                 id="catering"
-                className="relative my-10 px-16 min-h-[70vh] pb-10 overflow-hidden"
+                className="select-none relative my-10 px-16 min-h-[70vh] pb-10 overflow-hidden"
             >
                 {/* Junk Food */}
                 {showJunkFood ? (
@@ -1039,7 +1057,7 @@ const Homepage = () => {
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
                                 </div>
-                                <div className="relative w-1/3 skew-x-6 h-full mb-4 overflow-hidden">
+                                <div className="relative w-1/3 skew-x-6 border-x border-black h-full mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 right-6 text-white">
                                         <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
@@ -1052,7 +1070,7 @@ const Homepage = () => {
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
                                 </div>
-                                <div className="relative w-1/3 skew-x-6 h-full mb-4 overflow-hidden">
+                                <div className="relative w-1/3 skew-x-6 border-r border-black h-full mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 right-6 text-white">
                                         <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
@@ -1136,7 +1154,7 @@ const Homepage = () => {
                         </div>
                         <div className="w-[65%] flex justify-between items-center overflow-hidden">
                             <div className="flex w-full h-full relative left-10">
-                                <div className="relative w-1/3 -skew-x-6 h-full border-r border-white mb-4 overflow-hidden">
+                                <div className="relative w-1/3 -skew-x-6 h-full border-l border-black mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 left-6 text-white">
                                         <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
@@ -1149,7 +1167,7 @@ const Homepage = () => {
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
                                 </div>
-                                <div className="relative w-1/3 -skew-x-6 h-full mb-4 overflow-hidden">
+                                <div className="relative w-1/3 -skew-x-6 h-full border-x border-black mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 left-6 text-white">
                                         <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
@@ -1342,6 +1360,17 @@ const Homepage = () => {
                                 speed={1}
                                 scaleCustom={[6, 6, 6]}
                             />
+
+                            <div className="w-full h-[1px] absolute left-0 top-[20%] bg-[#cccccc]"></div>
+                            <div className="w-full h-[1px] absolute left-0 top-[40%] bg-[#cccccc]"></div>
+                            <div className="w-full h-[1px] absolute left-0 top-[60%] bg-[#cccccc]"></div>
+                            <div className="w-full h-[1px] absolute left-0 top-[80%] bg-[#cccccc]"></div>
+                            <div className="w-[1px] h-full absolute top-0 left-[15%] bg-[#cccccc]"></div>
+                            <div className="w-[1px] h-full absolute top-0 left-[30%] bg-[#cccccc]"></div>
+                            <div className="w-[1px] h-full absolute top-0 left-[50%] bg-[#cccccc]"></div>
+                            <div className="w-[1px] h-full absolute top-0 left-[70%] bg-[#cccccc]"></div>
+                            <div className="w-[1px] h-full absolute top-0 left-[85%] bg-[#cccccc]"></div>
+
                         </div>
                     </div>
                 </div>
