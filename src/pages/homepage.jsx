@@ -150,35 +150,35 @@ const Homepage = () => {
     const size = isHovered ? "180" : "30";
 
     useEffect(() => {
-        const startTime = performance.now();
-        const totalDuration = 2000;
+        const monitorResources = () => {
+            const resources = performance.getEntriesByType("resource");
+            const loadedResources = resources.filter(
+                (res) => res.responseEnd > 0
+            );
 
-        const interval = setInterval(() => {
-            const now = performance.now();
-            const elapsedTime = now - startTime;
-            const newProgress = Math.min(
-                (elapsedTime / totalDuration) * 100,
+            const totalResources = resources.length || 1; // Agar tidak dibagi dengan 0
+            const currentProgress = Math.min(
+                (loadedResources.length / totalResources) * 100,
                 100
             );
 
-            setProgress(Math.round(newProgress));
+            setProgress(Math.round(currentProgress));
 
-            if (newProgress >= 100) {
-                clearInterval(interval);
-
-                // Tunggu 1 detik sebelum menampilkan main
+            if (currentProgress === 100) {
                 setTimeout(() => {
                     setShowMain(true);
-                }, 1000);
+                }, 1000); // Tunggu 1 detik sebelum menampilkan `main`
             }
-        }, 16);
+        };
 
-        return () => clearInterval(interval);
+        const interval = setInterval(monitorResources, 100);
+
+        return () => clearInterval(interval); // Bersihkan interval saat komponen dihapus
     }, []);
 
     return (
         <>
-            {(progress === 100 && showMain) ? (
+            {progress === 100 && showMain ? (
                 <main className="relative mt-16 overflow-x-hidden">
                     {/* Backsound */}
 
