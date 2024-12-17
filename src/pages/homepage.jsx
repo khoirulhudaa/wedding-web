@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 import {
     Agreement02Icon,
     AiMagicIcon,
@@ -10,6 +12,7 @@ import {
     CheckmarkCircle02Icon,
     CheckmarkSquare01Icon,
     CommandIcon,
+    CrownIcon,
     DollarSquareIcon,
     EthereumRectangleIcon,
     EyeIcon,
@@ -58,6 +61,10 @@ const Homepage = () => {
     const [showHealthFood, setShowHealthFood] = useState(false);
     const [showGallery, setShowGallery] = useState(false);
     const [activeIndex, setActiveIndex] = useState(2);
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     const toggleCollapse = (index) => {
         setActiveIndex(activeIndex === index ? null : index); // Toggle collapse
@@ -154,14 +161,8 @@ const Homepage = () => {
             {/* Hero Component */}
             <section className="relative w-full h-full overflow-hidden border-b border-[#cccccc] flex justify-center">
                 <div className="absolute w-full h-full overflow-hidden">
-                    <div id="asteroid1b"></div>
-                    <div id="asteroid2b"></div>
-                    <div id="asteroid3b"></div>
-                    <div id="asteroid4b"></div>
-                    <div id="asteroid5b"></div>
-
                     {/* Square Line's */}
-                    <div className="w-screen h-[1px] absolute left-0 top-[10%] bg-[#cccccc]"></div>
+                    <div className="w-screen h-[1px] absolute left-0 top-[8%] bg-[#cccccc]"></div>
                     <div className="w-screen h-[1px] absolute left-0 top-[20%] bg-[#cccccc]"></div>
                     <div className="w-screen h-[1px] absolute left-0 top-[30%] bg-[#cccccc]"></div>
                     <div className="w-screen h-[1px] absolute left-0 top-[40%] bg-[#cccccc]"></div>
@@ -216,7 +217,7 @@ const Homepage = () => {
                         Version 1.0.0 - new released
                         <AiMagicIcon className="ml-1" />
                     </div>
-                    <div className="container-mask flex-col">
+                    <div className="container-mask">
                         <motion.div
                             className={isHovered ? "mask" : "mask2"}
                             animate={{
@@ -241,27 +242,10 @@ const Homepage = () => {
                                     Covered
                                 </span>
                             </h1>
-                            <p
-                                onMouseEnter={() => setIsHovered(true)}
-                                onMouseLeave={() => setIsHovered(false)}
-                                className="select-none my-3 lg:ml-0 ml-5 text-white lg:text-[16px] text-[16px] w-[90%] lg:w-[50%]"
-                            >
-                                Bringing your special day to life with love and
-                                ease. LuvlyWed, the place for elegant wedding
-                                planning and unforgettable moments
-                            </p>
-                            <a href="#start">
-                                <div
-                                    onMouseEnter={() => setIsHovered(true)}
-                                    onMouseLeave={() => setIsHovered(false)}
-                                    className="relative active:scale-[0.98] bg-[transparent] opacity-0 hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] z-[99] border border-black lg cursor-pointer"
-                                >
-                                    Start Planning Now
-                                    <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
-                                </div>
-                            </a>
                         </motion.div>
-                        <h1 className="select-none text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center">
+                        <h1 
+                            data-aos="fade-zoom-in"
+                            className="select-none text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-14 lg:w-[80vw] lg:text-center">
                             From{" "}
                             <span className="border-b border-b-black">
                                 Planning
@@ -271,19 +255,18 @@ const Homepage = () => {
                                 Covered
                             </span>
                         </h1>
-                        <p className="select-none text-black my-3 lg:ml-0 ml-5 lg:text-[16px] text-[16px] w-[90%] lg:w-[50%]">
-                            Bringing your special day to life with love and
-                            ease. LuvlyWed, the place for elegant wedding
-                            planning and unforgettable moments
-                        </p>
-                        <a href="#start">
-                            <div className="relative active:scale-[0.98] hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 px-4 lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] z-[99] border border-black text-black lg cursor-pointer">
-                                Start Planning Now
-                                <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
-                            </div>
-                        </a>
                     </div>
-
+                    <p className="select-none text-black mb-3 relative top-[-18px] lg:ml-0 ml-5 lg:text-[16px] text-[16px] w-[90%] lg:w-[50%]">
+                        Bringing your special day to life with love and ease.
+                        LuvlyWed, the place for elegant wedding planning and
+                        unforgettable moments
+                    </p>
+                    <a href="#start">
+                        <div className="relative active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[94%] text-center lg:w-max w-max flex no-underline lg:ml-0 ml-5 mb-[45px] px-4 lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] z-[99] border border-black text-black lg cursor-pointer">
+                            Start Planning Now
+                            <Agreement02Icon className="ml-2 w-4 h-4 relative top-[4px]" />
+                        </div>
+                    </a>
                     <div className="select-none text-[16px] mt-3 px-5 lg:px-0 w-max lg:w-max flex items-center mx-auto">
                         <div className="w-full lg:w-[30%] lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-red-500 bg-red-100">
                             <EthereumRectangleIcon className="w-4 h-4 relative mr-2" />
@@ -458,9 +441,12 @@ const Homepage = () => {
             {/* Dress wedding */}
             <section
                 id="start"
-                className="select-none relative flex px-16 w-full border-t border-t-black h-[80vh]"
+                className="select-none relative flex px-16 w-full border-t border-t-black h-[84vh]"
             >
-                <div className="relative w-[30%] h-[90vh] pt-20 border-x border-x-black">
+                <div 
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    className="relative w-[30%] h-full pt-32 border-x border-x-black">
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
                     </div>
@@ -468,39 +454,42 @@ const Homepage = () => {
                         url={"/dress3.glb"}
                         intensity={30}
                         speed={1}
-                        scaleCustom={[2, 2, 2]}
+                        scaleCustom={[2.1, 2.1, 2.1]}
                     />
-                    <div className="relative top-[-100px] w-screen h-[1px] bg-black"></div>
                 </div>
 
                 <div className="select-none relative w-[70%] pl-8 h-full flex flex-col justify-center">
-                    <div className="w-max flex items-center absolute bottom-[-2%] right-0">
-                        <div className="relative w-max h-max border-l border-b border-black p-3 flex items-center justify-center text-[16px] text-black">
-                            <p>100 types of dresses</p>
-                        </div>
-                        <div className="relative w-max h-max border-b border-l border-black p-3 flex items-center justify-center text-[16px] text-black">
-                            <p>100 types of traditional clothing</p>
-                        </div>
-                    </div>
-
-                    <div className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black">
+                    <div
+                        data-aos="fade-zoom-in"
+                        data-aos-easing="ease-in-back"
+                        className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black"
+                    >
                         <SparklesIcon className="w-5 h-5 mr-2" />
                         <p>Make-up Artist - Best of 2025</p>
                     </div>
-                    <h2 className="select-none font-normal text-[44px] w-full">
+                    <h2
+                        data-aos="fade-up"
+                        className="select-none font-normal text-[44px] w-full"
+                    >
                         Flawless Make-Up and Dresses <br /> for Your
                         <span className="text-orange-500 ml-2">
                             Special Day
                         </span>
                     </h2>
-                    <p className="select-none text-[15px] w-[70%] my-6 leading-loose text-black">
+                    <p
+                        data-aos="fade-zoom-in"
+                        dat-aos-delay="300"
+                        className="select-none text-[15px] w-[70%] my-6 leading-loose text-black"
+                    >
                         Create unforgettable memories with our exquisite
                         collection of professional make-up and stunning wedding
                         dresses, tailored to make your special day even more
                         magical
                     </p>
 
-                    <div className="absolute top-6 right-0 text-[16px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                    <div 
+                        data-aos="fade-zoom-in"
+                        className="absolute top-6 right-0 text-[16px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
                         <p>
                             100 Outfits, Shirts, Accessories & Professional
                             Make-Up
@@ -508,15 +497,89 @@ const Homepage = () => {
                         <SparklesIcon className="w-5 h-5 ml-3" />
                     </div>
 
-                    <div className="absolute bottom-[32%] right-0 border border-black flex items-center justify-center w-[60px] h-[60px] cursor-pointer active:scale-[0.98] rounded-full">
+                    <div className="absolute bottom-[32%] right-0 border border-black flex items-center justify-center w-[60px] h-[60px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow rounded-full">
                         <LinkSquare02Icon className="" />
                     </div>
                 </div>
             </section>
 
+            <section className="select-none relative mb-[100px] px-16 overflow-hidden flex items-center justify-center h-[84vh] border-y border-y-black">
+                <div className="w-[70%] py-16 h-full">
+                    <h2 
+                        data-aos="fade-left"
+                        className="select-none mt-10 text-[44px]">
+                        Wedding Organizer Packages
+                    </h2>
+
+                    <div className="mt-10 w-full flex items-center justify-between pr-16">
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                            className="w-[28%] h-[260px] p-4 border border-black">
+                            <CrownIcon />
+                            <p className="select-none text-[16px] mt-2">
+                                Classical
+                            </p>
+                            <div className="w-full h-[1px] bg-black my-2"></div>
+                            <p className="select-none text-[15px] mt-10">
+                                No need for printing costs, just create once and
+                                share
+                            </p>
+                            <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                <p>Check</p>
+                                <ArrowRight01Icon className="w-5 h-5 ml-3" />
+                            </div>
+                        </div>
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                            className="w-[28%] h-[260px] p-4 border border-black">
+                            <CrownIcon />
+                            <p className="select-none text-[16px] mt-2">
+                                Exquisite
+                            </p>
+                            <div className="w-full h-[1px] bg-black my-2"></div>
+                            <p className="select-none text-[15px] mt-10">
+                                Friendly service with a quick response to
+                                customer
+                            </p>
+                            <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                <p>Check</p>
+                                <ArrowRight01Icon className="w-5 h-5 ml-3" />
+                            </div>
+                        </div>
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            className="w-[28%] h-[260px] p-4 border border-black">
+                            <CrownIcon />
+                            <p className="select-none text-[16px] mt-2">
+                                Opulence
+                            </p>
+                            <div className="w-full h-[1px] bg-black my-2"></div>
+                            <p className="select-none text-[15px] mt-10">
+                                We offer a variety of modern themes that are
+                                perfect
+                            </p>
+                            <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                <p>Check</p>
+                                <ArrowRight01Icon className="w-5 h-5 ml-3" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-[30%] ml-auto justify-center h-full flex">
+                    <div className="w-[40%] border-l-[1px] border-y-[1px] mt-auto border-b-0 border-black h-[80%] rounded-tl-full"></div>
+                    <div className="w-[1px] h-full bg-black"></div>
+                    <div className="w-[40%] border-r-[1px] border-y-[1px] border-t-0 border-black h-[80%] rounded-br-full"></div>
+                </div>
+            </section>
+
             <section className="select-none relative w-screen h-max mt-[120px]">
                 <div className="w-[70%]">
-                    <h2 className="select-none text-[54px] font-normal w-[80%] ml-16">
+                    <h2 
+                        data-aos="fade-left"
+                        className="select-none text-[54px] font-normal w-[80%] ml-16">
                         The Modern Way to Share Wedding Day.
                     </h2>
                     <div className="relative top-5">
@@ -554,6 +617,8 @@ const Homepage = () => {
                     </div>
                     <img
                         loading="lazy"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
                         draggable="false" // Mencegah gambar agar tidak bisa di-drag
                         onContextMenu={(e) => e.preventDefault()} // Mencegah klik kanan
                         src={HP}
@@ -568,7 +633,10 @@ const Homepage = () => {
                 id="photography"
                 className="select-none relative flex items-center overflow-x-auto px-16 w-full h-max mt-16 py-14"
             >
-                <div className="relative w-1/2 h-[380px] pt-12 border border-black">
+                <div
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    className="relative w-1/2 h-[380px] pt-12 border border-black">
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
                     </div>
@@ -589,20 +657,26 @@ const Homepage = () => {
                     <div className="w-[1px] h-full absolute top-0 left-[50%] bg-[#cccccc]"></div>
                     <div className="w-[1px] h-full absolute top-0 left-[70%] bg-[#cccccc]"></div>
                     <div className="w-[1px] h-full absolute top-0 left-[85%] bg-[#cccccc]"></div>
-
                 </div>
                 <div className="w-1/2 px-8 h-max">
-                    <div className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black">
+                    <div
+                        data-aos="fade-down"
+                        className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black">
                         <SparklesIcon className="w-5 h-5 mr-2" />
                         <p>Photo & Videography</p>
                     </div>
-                    <h2 className="select-none font-normal text-[44px]">
+                    <h2
+                        data-aos="fade-left"
+                        className="select-none font-normal text-[44px]">
                         Photography Services for Your
                         <span className="text-orange-500 ml-3">
                             Event Needs
                         </span>
                     </h2>
-                    <p className="select-none text-[15px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black">
+                    <p 
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                        className="select-none text-[15px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black">
                         Bringing Your Vision to Life with Exceptional
                         Photography and <br /> Videography Services for Every
                         Event
@@ -611,8 +685,10 @@ const Homepage = () => {
             </section>
 
             <section className="select-none relative w-screen h-max mt-[44px]">
-                <h2 className="select-none text-[54px] font-normal w-[65%] ml-16">
-                    Timeless in the sophistication <br /> of our equipment.
+                <h2 
+                    data-aos="fade-left"
+                    className="select-none text-[54px] font-normal w-[65%] ml-16">
+                        Timeless in the sophistication <br /> of our equipment.
                 </h2>
                 <div>
                     <div className="w-[1px] h-[120px] ml-20 my-4 bg-black"></div>
@@ -667,18 +743,23 @@ const Homepage = () => {
                     </div>
                     <div className="w-[80%] pr-2 ml-auto flex items-center">
                         <div className="w-[75%]">
-                            <h2 className="select-none text-[44px] w-max mb-4">
+                            <h2 
+                                data-aos="fade-left"
+                                className="select-none text-[44px] w-max mb-4">
                                 Servive Quality
                             </h2>
-                            <p className="select-none text-[13.2px] leading-loose w-[80%]">
+                            <p 
+                                data-aos="fade-up"
+                                className="select-none text-[13.2px] leading-loose w-[80%]">
                                 We take pride in offering exceptional service
                                 for every couple, capturing every special moment
                                 of your wedding day with care and high quality
                             </p>
                         </div>
                         <div
+                            data-aos="fade-dowm"
                             onClick={() => setShowGallery(true)}
-                            className="relative text-center active:scale-[0.98] hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer"
+                            className="relative text-center active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer"
                         >
                             Explore images
                             <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
@@ -850,7 +931,9 @@ const Homepage = () => {
                 </div>
                 <div className="flex items-center ml-auto w-max">
                     <div className="w-[1px] h-[140px] bg-black mx-20"></div>
-                    <div className="w-max h-max">
+                    <div 
+                        data-aos="fade-up"
+                        className="w-max h-max">
                         <h2 className="select-none font-bold text-[54px] mb-3">
                             1.304
                         </h2>
@@ -859,7 +942,10 @@ const Homepage = () => {
                         </p>
                     </div>
                     <div className="w-[1px] h-[160px] bg-black mx-20"></div>
-                    <div className="w-max h-max">
+                    <div 
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        className="w-max h-max">
                         <h2 className="select-none font-bold text-[54px] mb-3">
                             1.304
                         </h2>
@@ -875,12 +961,17 @@ const Homepage = () => {
 
             <section className="select-none relative my-[100px] px-16 overflow-hidden flex items-center justify-center h-[80vh] border-y border-y-black">
                 <div className="w-[70%] py-16 h-full">
-                    <h2 className="select-none text-[44px]">
+                    <h2 
+                        data-aos="fade-left"
+                        className="select-none text-[44px]">
                         Why are we recommended?
                     </h2>
 
                     <div className="mt-10 w-full flex items-center justify-between pr-16">
-                        <div className="w-[28%] h-[200px] p-4 border border-black">
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                            className="w-[28%] h-[200px] p-4 border border-black">
                             <DollarSquareIcon />
                             <p className="select-none text-[16px] mt-2">
                                 Affordable prices
@@ -891,7 +982,10 @@ const Homepage = () => {
                                 share
                             </p>
                         </div>
-                        <div className="w-[28%] h-[200px] p-4 border border-black">
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                            className="w-[28%] h-[200px] p-4 border border-black">
                             <Time01Icon />
                             <p className="select-none text-[16px] mt-2">
                                 Fast process
@@ -902,7 +996,10 @@ const Homepage = () => {
                                 customer
                             </p>
                         </div>
-                        <div className="w-[28%] h-[200px] p-4 border border-black">
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            className="w-[28%] h-[200px] p-4 border border-black">
                             <CheckmarkSquare01Icon />
                             <p className="select-none text-[16px] mt-2">
                                 Many templates
@@ -929,21 +1026,28 @@ const Homepage = () => {
             >
                 <div className="relative text-center w-ful h-max">
                     <div className="w-full relative z-[99]">
-                        <h2 className="select-none font-normal text-[44px]">
+                        <h2 
+                            data-aos="fade-left"
+                            className="select-none font-normal text-[44px]">
                             - The Ideal Place to Celebrate - <br /> Your True{" "}
                             <span className="text-orange-500">Love</span>
                         </h2>
-                        <p className="select-none text-[15px] text-black mx-auto my-6 leading-loose w-[70%]">
+                        <p 
+                            data-aos="fade-right"
+                            className="select-none text-[15px] text-black mx-auto my-6 leading-loose w-[70%]">
                             Make your dream wedding come true at our elegant
                             venue, with complete facilities.
                         </p>
                     </div>
                 </div>
 
-                <div className="relative w-full h-[500px] border border-black overflow-hidden">
+                <div 
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    className="relative w-full h-[500px] border border-black overflow-hidden">
                     {/* Images */}
                     <div className="absolute top-6 left-6 z-[99] h-full w-max">
-                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
+                        <div className="bg-white cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -953,7 +1057,7 @@ const Homepage = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
+                        <div className="bg-white cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -963,7 +1067,7 @@ const Homepage = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="bg-white cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
+                        <div className="bg-white cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[90%] mb-6 w-[54px] h-[54px] p-1 border border-black">
                             <img
                                 loading="lazy"
                                 draggable="false" // Mencegah gambar agar tidak bisa di-drag
@@ -978,13 +1082,13 @@ const Homepage = () => {
                     <div className="w-max flex items-center absolute right-6 top-3">
                         <div
                             onClick={() => setShowModalBuild(true)}
-                            className="mr-5 z-[99] text-center active:scale-[0.98] hover:brightness-90 lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 p-4 font-medium text-[16px] lg:text-[15px] bg-white text-black lg cursor-pointer"
+                            className="mr-5 z-[99] text-center active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-90 lg:w-max w-max flex no-underline lg:ml-0 ml-5 mt-4 p-4 font-medium text-[16px] lg:text-[15px] bg-white text-black lg cursor-pointer"
                         >
                             <EyeIcon className="w-4 h-4 relative" />
                         </div>
 
                         <a
-                            className="z-[99] text-center lg:w-max w-max flex active:scale-[0.98] hover:brightness-90 no-underline lg:ml-0 ml-5 mt-4 px-6 py-3 font-medium text-[16px] lg:text-[15px] bg-white text-black lg cursor-pointer"
+                            className="z-[99] text-center lg:w-max w-max flex active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-90 no-underline lg:ml-0 ml-5 mt-4 px-6 py-3 font-medium text-[16px] lg:text-[15px] bg-white text-black lg cursor-pointer"
                             href="https://wa.me/6289513093406"
                             target="__blank"
                         >
@@ -1033,8 +1137,10 @@ const Homepage = () => {
             {/* Section 2 */}
             <section
                 id="catering"
-                className="select-none relative my-10 px-16 min-h-[70vh] pb-10 overflow-hidden"
+                className="select-none relative mb-10 mt-6 px-16 min-h-[70vh] py-2 pb-10 overflow-hidden"
             >
+                <div className="absolute right-16 top-[-100px] w-[1px] h-[200px] bg-black"></div>
+
                 {/* Junk Food */}
                 {showJunkFood ? (
                     <div
@@ -1200,16 +1306,19 @@ const Homepage = () => {
                     <></>
                 )}
 
-                <h1 className="text-[54px] w-[72%] text-black">
+                <h1 
+                    data-aos="fade-left"
+                    className="text-[54px] w-[72%] text-black">
                     Serving Delicious Meals, Making Every Moment.
                 </h1>
                 <div className="relative overflow-hidden px-16 mt-12 ml-auto w-full flex items-center justify-between border-y border-black h-[70%]">
                     <div
+                        data-aos="fade-up"
                         onClick={() => {
                             setShowJunkFood(true);
                             setShowHealthFood(false);
                         }}
-                        className="flex items-center w-max h-full cursor-pointer active:scale-[0.98]"
+                        className="flex items-center w-max h-full cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow"
                     >
                         <div className="border mr-4 border-blue-700 p-1 w-[54px] h-[54px] flex items-center justify-center">
                             <LinkSquare02Icon className="w-6 h-6 text-blue-700" />
@@ -1225,11 +1334,13 @@ const Homepage = () => {
                         />
                     </div>
                     <div
+                        data-aos="fade-up"
+                        data-aos-delay="200"
                         onClick={() => {
                             setShowJunkFood(false);
                             setShowHealthFood(true);
                         }}
-                        className="flex items-center w-max h-full cursor-pointer active:scale-[0.98]"
+                        className="flex items-center w-max h-full cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow"
                     >
                         <p className="select-none flex w-max">Health Food</p>
                         <div className="border ml-4 border-blue-700 p-1 w-[54px] h-[54px] flex items-center justify-center">
@@ -1238,7 +1349,10 @@ const Homepage = () => {
                     </div>
                 </div>
                 <div className="w-full flex items-center justify-between mt-[44px]">
-                    <div className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
+                    <div 
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                        className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
                         <h2 className="select-none text-[20px] mb-1">
                             The Elegance
                         </h2>
@@ -1262,11 +1376,14 @@ const Homepage = () => {
                                 Cold and hot beverages available
                             </li>
                         </ul>
-                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8">
+                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow mt-8">
                             <p>Detail</p>
                         </div>
                     </div>
-                    <div className="relative w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
+                    <div 
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        className="relative w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
                         <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[54px] h-[54px]">
                             <FavouriteIcon />
                         </div>
@@ -1297,11 +1414,14 @@ const Homepage = () => {
                                 wardrobeFood service for VIP guests
                             </li>
                         </ul>
-                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8">
+                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow mt-8">
                             <p>Detail</p>
                         </div>
                     </div>
-                    <div className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
+                    <div 
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]">
                         <h2 className="select-none text-[20px] mb-1">
                             Opulent Bliss
                         </h2>
@@ -1329,7 +1449,7 @@ const Homepage = () => {
                                 Special food delivery for VIP guests
                             </li>
                         </ul>
-                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98] mt-8">
+                        <div className="border border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow mt-8">
                             <p>Detail</p>
                         </div>
                     </div>
@@ -1337,7 +1457,9 @@ const Homepage = () => {
             </section>
 
             <section className="select-none relative w-screen min-h-[80vh] flex flex-col items-center justify-between overflow-hidden px-16 mt-[52px] mb-[44px]">
-                <h1 className="text-[54px] text-end mb-10 w-full text-black">
+                <h1 
+                    data-aos="fade-right"
+                    className="text-[54px] text-end mb-10 w-full text-black">
                     Acrylic and luxurious decorations
                 </h1>
                 <div className="w-full bg-[#FFD476] h-[480px] flex justify-center border border-black">
@@ -1347,13 +1469,16 @@ const Homepage = () => {
                         <div className="w-[30%] border-r-[2px] border-y-[2px] border-t-0 border-white bg-[#FFD476] h-[80%] rounded-br-full"></div>
                     </div>
                     <div className="relative w-1/2 flex flex-col justify-between">
-                        <h2 className="select-none text-[30px] relative mt-16 w-[80%]">
+                        <h2 
+                            data-aos="fade-up"
+                            className="select-none text-[30px] relative mt-16 w-[80%]">
                             Providing Luxury Souvenirs and the Best Gifts
                         </h2>
-                        <div className="absolute top-[26%] right-16 border border-black flex items-center justify-center w-[54px] h-[54px] cursor-pointer active:scale-[0.98] rounded-full">
+                        <div className="absolute top-[26%] right-16 border border-black flex items-center justify-center w-[54px] h-[54px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow rounded-full">
                             <LinkSquare02Icon className="" />
                         </div>
-                        <div className="relative bg-white h-1/2 mt-auto">
+                        <div 
+                            className="relative bg-white h-1/2 mt-auto">
                             <ThreeDModel
                                 url={"/ring.glb"}
                                 intensity={30}
@@ -1370,7 +1495,6 @@ const Homepage = () => {
                             <div className="w-[1px] h-full absolute top-0 left-[50%] bg-[#cccccc]"></div>
                             <div className="w-[1px] h-full absolute top-0 left-[70%] bg-[#cccccc]"></div>
                             <div className="w-[1px] h-full absolute top-0 left-[85%] bg-[#cccccc]"></div>
-
                         </div>
                     </div>
                 </div>
@@ -1386,7 +1510,9 @@ const Homepage = () => {
                     className="absolute w-[120px] top-0 right-[10%]"
                 />
 
-                <h1 className="text-[54px] w-[72%] text-black">
+                <h1 
+                    data-aos="fade-left"
+                    className="text-[54px] w-[72%] text-black">
                     Our Customers Feedback.
                 </h1>
                 <div className="w-full flex items-center">
@@ -1405,14 +1531,20 @@ const Homepage = () => {
                     <div className="w-[70%] h-max pt-10 overflow-hidden">
                         <div className="w-full h-max px-16 border-y border-y-black ml-10 py-6">
                             <div className="w-full flex items-baseline justify-between">
-                                <p className="select-none w-max flex font-semibold text-[24px] mb-4 text-black">
+                                <p 
+                                    data-aos="fade-left"
+                                    className="select-none w-max flex font-semibold text-[24px] mb-4 text-black">
                                     Customer LuvlyWed
                                 </p>
-                                <p className="select-none w-max fle text-[18px] text-black">
+                                <p 
+                                    data-aos="fade-up"
+                                    className="select-none w-max fle text-[18px] text-black">
                                     Jardyn Danwart
                                 </p>
                             </div>
-                            <p className="select-none w-full text-[20px] text-black ml-1 mt-10">
+                            <p 
+                                data-aos="fade-dowm"
+                                className="select-none w-full text-[20px] text-black ml-1 mt-10">
                                 Amaizing fast and reliable customer support! The
                                 team of willing to go mile for customer service.
                             </p>
@@ -1422,10 +1554,10 @@ const Homepage = () => {
                                 <p>1 of 40</p>
                             </div>
                             <div className="flex items-center w-max">
-                                <div className="w-[54px] h-[54px] border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
+                                <div className="w-[54px] h-[54px] border border-black cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow flex items-center justify-center">
                                     <ArrowLeft01Icon />
                                 </div>
-                                <div className="w-[54px] h-[54px] ml-8 border border-black cursor-pointer active:scale-[0.98] flex items-center justify-center">
+                                <div className="w-[54px] h-[54px] ml-8 border border-black cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow flex items-center justify-center">
                                     <ArrowRight01Icon />
                                 </div>
                             </div>
@@ -1437,7 +1569,9 @@ const Homepage = () => {
             <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
 
             <section className="select-none relative w-screen overflow-hidden min-h-[70vh] px-16 mt-[44px] flex flex-col z-[99]">
-                <h3 className="text-[54px]">All Your Questions Answered</h3>
+                <h3 
+                    data-aos="fade-left"
+                    className="text-[54px]">All Your Questions Answered</h3>
                 <p className="select-none text-lg text-gray-500">
                     Frequently Asked Questions by our customers
                 </p>
@@ -1577,7 +1711,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            {start ? (
+            {/* {start ? (
                 <section className="select-none select-none fixed top-0 left-0 z-[999999999] w-screen h-screen overflow-hidden bg-black bg-opacity-70 flex items-center justify-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -1624,7 +1758,7 @@ const Homepage = () => {
                         <div className="w-full h-[10%]">
                             <div
                                 onClick={() => handleCloseStart()}
-                                className="border h-full border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.98]"
+                                className="border h-full border-black w-full py-3 flex items-center justify-center cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow"
                             >
                                 <p>Get Started</p>
                             </div>
@@ -1633,7 +1767,7 @@ const Homepage = () => {
                 </section>
             ) : (
                 <></>
-            )}
+            )} */}
 
             {/* Modal */}
             {showModalBuild ? (
