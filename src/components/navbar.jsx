@@ -2,7 +2,7 @@ import { Logo } from '../assets'
 
 const Navbar = () => {
   return (
-    <nav className='w-screen z-[99999] border-y border-y-black fixed left-0 h-max top-0 flex items-center justify-between py-4 px-6 bg-white'>
+    <nav className='w-screen z-[99999] border-y border-y-black fixed left-0 h-max top-0 flex items-center justify-between py-4 px-16 bg-white'>
       
       {/* Left Content - (Logo) */}
       <img src={Logo} alt='Logo Luvlywed' className='w-[7rem]' />
