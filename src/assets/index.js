@@ -27,6 +27,9 @@ import Jk3 from './jk3.webp'
 import Ht1 from './ht1.webp'
 import Ht2 from './ht2.webp'
 import Ht3 from './ht3.webp'
+import Dress1 from './dress1.jpeg'
+import Dress2 from './dress2.jpeg'
+import Dress3 from './dress3.jpeg'
 import Prod from './prod1.png'
 
 import Logo from './Icons/logo.svg'
@@ -47,6 +50,9 @@ export {
     HP, 
     Lines,
     Logo, 
+    Dress1,
+    Dress2,
+    Dress3,
     People, 
     Petik,
     Spon1,

@@ -228,7 +228,7 @@ const Section11 = () => {
                     <div
                         data-aos="fade-up"
                         data-aos-delay="100"
-                        className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
+                        className="bg-whit w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <h2 className="select-none text-[20px] mb-1">
                             The Elegance
@@ -260,7 +260,7 @@ const Section11 = () => {
                     <div
                         data-aos="fade-up"
                         data-aos-delay="200"
-                        className="relative w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
+                        className="relative bg-white w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[54px] h-[54px]">
                             <FavouriteIcon />
@@ -299,7 +299,7 @@ const Section11 = () => {
                     <div
                         data-aos="fade-up"
                         data-aos-delay="300"
-                        className="w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
+                        className="bg-white w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <h2 className="select-none text-[20px] mb-1">
                             Opulent Bliss

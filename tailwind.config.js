@@ -3,6 +3,7 @@ export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
+      
       animation: {
         glow: 'glow 2s infinite', // Animasi untuk glow yang bergerak
       },

@@ -1,6 +1,7 @@
 import React from "react";
 import ThreeDModel from "../../components/model";
 import { LinkSquare02Icon, SparklesIcon } from "hugeicons-react";
+import { Link } from "react-router-dom";
 
 const Section3 = () => {
     return (
@@ -8,7 +9,7 @@ const Section3 = () => {
             {/* Dress wedding */}
             <section
                 id="start"
-                className="select-none relative flex px-16 w-full border-t border-t-black h-[84vh]"
+                className="select-none relative flex px-16 w-full border-t border-black h-[84vh]"
             >
                 <div
                     data-aos="fade-zoom-in"
@@ -66,9 +67,11 @@ const Section3 = () => {
                         <SparklesIcon className="w-5 h-5 ml-3" />
                     </div>
 
-                    <div className="absolute bottom-[32%] right-0 border border-black flex items-center justify-center w-[60px] h-[60px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow rounded-full">
-                        <LinkSquare02Icon className="" />
-                    </div>
+                    <Link to={"/dress"}>
+                        <div className="absolute bottom-[32%] right-0 border border-black flex items-center justify-center w-[60px] h-[60px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow">
+                            <LinkSquare02Icon className="" />
+                        </div>
+                    </Link>
                 </div>
             </section>
         </React.Fragment>

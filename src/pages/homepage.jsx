@@ -31,11 +31,23 @@ const Homepage = () => {
 
     const audioRef = useRef(null);
 
+    useEffect(() => {
+        // Mengatur volume ke 75% saat pertama kali render atau setelah audioRef berubah
+        if (audioRef.current) {
+            audioRef.current.volume = 0.75; // Set volume ke 75%
+            if (audioRef.current.muted) {
+                audioRef.current.muted = false; // Nonaktifkan mute jika diaktifkan
+            }
+        }
+    }, []); // Empty dependency array berarti ini hanya dipanggil sekali saat pertama kali render
+
     const playAUdio = () => {
+        const audio = audioRef.current;
+
         if (isPlaying) {
-            audioRef.current.pause();
+            audio.pause(); // Pause audio jika sudah diputar
         } else {
-            audioRef.current.play();
+            audio.play(); // Play audio jika belum diputar
         }
 
         setIsPlaying(!isPlaying);

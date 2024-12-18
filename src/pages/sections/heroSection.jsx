@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
-import {
-    Agreement02Icon,
-    AiMagicIcon,
-    Blockchain04Icon,
-    CommandIcon,
-    EthereumRectangleIcon,
-} from "hugeicons-react";
+import { Agreement02Icon, AiMagicIcon, CommandIcon } from "hugeicons-react";
 import React, { useEffect, useState } from "react";
 import { Gradient1, Gradient2, Gradient4 } from "../../assets";
 
@@ -105,29 +99,29 @@ const HeroSection = () => {
                             <h1
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
-                                className="select-none text-white text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center"
+                                className="select-none text-transparent hidden text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.38rem] font-bold w-[90vw] mt-10 lg:w-[80vw] lg:text-center"
                             >
-                                From{" "}
+                                From Planning We Deliver Luxury{" "}
                                 <span className="border-b border-b-black">
                                     Planning
                                 </span>{" "}
-                                to Celebration, <br /> We’ve Got You
+                                to Celebration, <br /> We’ve Crafted
                                 <span className="ml-4 border-b border-b-black">
-                                    Covered
+                                    Luxury
                                 </span>
                             </h1>
                         </motion.div>
                         <h1
                             data-aos="fade-zoom-in"
-                            className="select-none text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.3rem] font-bold w-[90vw] mt-14 lg:w-[80vw] lg:text-center"
+                            className=" text-[2.8rem] lg:ml-0 ml-5 lg:text-[4.38rem] font-bold w-[90vw] mt-14 lg:w-[80vw] lg:text-center"
                         >
                             From{" "}
                             <span className="border-b border-b-black">
                                 Planning
                             </span>{" "}
-                            to Celebration, <br /> We’ve Got You
+                            to Celebration, <br /> We've Crafted
                             <span className="ml-4 border-b border-b-black">
-                                Covered
+                                Luxury
                             </span>
                         </h1>
                     </div>
@@ -144,7 +138,7 @@ const HeroSection = () => {
                     </a>
                     <div className="select-none text-[16px] mt-3 px-5 lg:px-0 w-max lg:w-max flex items-center mx-auto">
                         <div className="w-full lg:w-[30%] lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-red-500 bg-red-100">
-                            <EthereumRectangleIcon className="w-4 h-4 relative mr-2" />
+                            <CommandIcon className="w-4 h-4 relative mr-2" />
                             Fotografi
                         </div>
                         <div className="select-none w-full lg:w-max lg:justify-center lg:mx-4 flex items-center px-3 py-3 lg:py-1.5 lg text-green-500 bg-green-100">
@@ -154,7 +148,7 @@ const HeroSection = () => {
                             </p>
                         </div>
                         <div className="select-none w-full lg:w-max lg:justify-center flex items-center px-3 py-3 lg:py-1.5 lg text-purple-500 bg-purple-100">
-                            <Blockchain04Icon className="w-4 h-4 relative mr-2" />
+                            <CommandIcon className="w-4 h-4 relative mr-2" />
                             <p className="select-none flex w-max">Make-up</p>
                         </div>
                     </div>

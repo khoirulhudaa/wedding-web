@@ -8,8 +8,6 @@ import React from "react";
 const Section9 = () => {
     return (
         <React.Fragment>
-            <div className="mt-16 w-screen h-[1px] bg-slate-300"></div>
-
             <section className="select-none relative my-[100px] px-16 overflow-hidden flex items-center justify-center h-[80vh] border-y border-y-black">
                 <div className="w-[70%] py-16 h-full">
                     <h2
@@ -23,7 +21,7 @@ const Section9 = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="w-[28%] h-[200px] p-4 border border-black"
+                            className="bg-white w-[28%] h-[200px] p-4 border border-black"
                         >
                             <DollarSquareIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -38,7 +36,7 @@ const Section9 = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-delay="200"
-                            className="w-[28%] h-[200px] p-4 border border-black"
+                            className="bg-white w-[28%] h-[200px] p-4 border border-black"
                         >
                             <Time01Icon />
                             <p className="select-none text-[16px] mt-2">
@@ -53,7 +51,7 @@ const Section9 = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-delay="300"
-                            className="w-[28%] h-[200px] p-4 border border-black"
+                            className="bg-white w-[28%] h-[200px] p-4 border border-black"
                         >
                             <CheckmarkSquare01Icon />
                             <p className="select-none text-[16px] mt-2">

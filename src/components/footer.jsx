@@ -5,20 +5,12 @@ import { ArrowUp01Icon } from "hugeicons-react";
 const Footer = ({ scrollToTop }) => {
     return (
         <React.Fragment>
-            <footer className="w-full h-[320px] border-t border-t-black bg-white mt-28 flex items-center">
-                {/* Back-to-top */}
-                <div
-                    onClick={() => scrollToTop()}
-                    className="absolute w-[54px] h-[54px] active:scale-[0.97] cursor-pointer hover:brightness-[90%] bg-white border border-black flex items-center justify-center shadow-lg bottom-0 right-16 z-[9999999]"
-                >
-                    <ArrowUp01Icon />
-                </div>
-
+            <footer className="relative w-full h-[320px] border-t border-t-black bg-white mt-28 flex items-center">
                 {/* Content Footer */}
-                <div className="w-[30%] h-full flex border-r border-r-black items-center justify-center">
+                <div className="relative w-[30%] h-full flex border-r border-r-black items-center justify-center">
                     <img src={Logo} alt="logo-luvlywed" />
                 </div>
-                <div className="w-[70%] h-full flex items-center justify-end pr-16">
+                <div className="relative w-[70%] h-full flex items-center justify-end pr-16">
                     <div className="w-1/3 h-full flex flex-col justify-center items-end text-left">
                         <p className="font-semibold border-b border-b-black pb-2 mb-4">
                             Wedding Organizer
@@ -51,8 +43,16 @@ const Footer = ({ scrollToTop }) => {
                     </div>
                 </div>
             </footer>
-            <div className="w-full overflow-x-hidden h-max py-8 border-t border-t-black text-black lg:text-[15px] text-[16px] flex items-center px-5 lg:justify-center">
+            <div className="relative w-full overflow-x-hidden h-max py-8 border-t border-t-black text-black lg:text-[15px] text-[16px] flex items-center px-5 lg:justify-center">
                 <small>#LuvlyWed - Olimpik - Muhammad Khoirulhuda</small>
+
+                {/* Back-to-top */}
+                <div
+                    onClick={() => scrollToTop()}
+                    className="absolute w-[54px] h-[54px] active:scale-[0.97] cursor-pointer hover:brightness-[90%] bg-white border border-black flex items-center justify-center shadow-lg bottom-0 right-16 z-[9999999]"
+                >
+                    <ArrowUp01Icon />
+                </div>
             </div>
         </React.Fragment>
     );

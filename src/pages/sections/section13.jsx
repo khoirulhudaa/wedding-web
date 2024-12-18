@@ -23,7 +23,7 @@ const Section13 = () => {
                 </h1>
                 <div className="w-full flex items-center">
                     <div className="w-[30%]">
-                        <div className="relative w-full mt-8 p-10 h-[400px] border border-black overflow-hidden">
+                        <div className="relative w-full bg-white mt-8 p-10 h-[400px] border border-black overflow-hidden">
                             <img
                                 loading="lazy"
                                 draggable="false"
@@ -59,14 +59,14 @@ const Section13 = () => {
                             </p>
                         </div>
                         <div className="relative w-full pl-10 mt-10 flex items-center justify-between">
-                            <div className="flex items-center text-[16px] w-max px-5 h-[54px] border border-black">
+                            <div className="bg-white flex items-center text-[16px] w-max px-5 h-[54px] border border-black">
                                 <p>1 of 40</p>
                             </div>
                             <div className="flex items-center w-max">
-                                <div className="w-[54px] h-[54px] border border-black cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow flex items-center justify-center">
+                                <div className="bg-white w-[54px] h-[54px] border border-black cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow flex items-center justify-center">
                                     <ArrowLeft01Icon />
                                 </div>
-                                <div className="w-[54px] h-[54px] ml-8 border border-black cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow flex items-center justify-center">
+                                <div className="bg-white w-[54px] h-[54px] ml-8 border border-black cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow flex items-center justify-center">
                                     <ArrowRight01Icon />
                                 </div>
                             </div>

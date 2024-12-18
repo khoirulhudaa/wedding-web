@@ -1,5 +1,6 @@
 import { ArrowRight01Icon, CrownIcon } from "hugeicons-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Section4 = () => {
     return (
@@ -17,7 +18,7 @@ const Section4 = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="w-[28%] h-[260px] p-4 border border-black"
+                            className="bg-white w-[29%] h-[260px] p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -28,15 +29,17 @@ const Section4 = () => {
                                 No need for printing costs, just create once and
                                 share
                             </p>
-                            <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
-                                <p>Check</p>
-                                <ArrowRight01Icon className="w-5 h-5 ml-3" />
-                            </div>
+                            <Link to={"/packet-classical"}>
+                                <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                    <p>Check</p>
+                                    <ArrowRight01Icon className="w-5 h-5 ml-3" />
+                                </div>
+                            </Link>
                         </div>
                         <div
                             data-aos="fade-up"
                             data-aos-delay="200"
-                            className="w-[28%] h-[260px] p-4 border border-black"
+                            className="bg-white w-[29%] h-[260px] p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -44,18 +47,19 @@ const Section4 = () => {
                             </p>
                             <div className="w-full h-[1px] bg-black my-2"></div>
                             <p className="select-none text-[15px] mt-10">
-                                Friendly service with a quick response to
-                                customer
+                                Friendly service with a quick response to cust
                             </p>
-                            <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
-                                <p>Check</p>
-                                <ArrowRight01Icon className="w-5 h-5 ml-3" />
-                            </div>
+                            <Link to={"/packet-exquisite"}>
+                                <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                    <p>Check</p>
+                                    <ArrowRight01Icon className="w-5 h-5 ml-3" />
+                                </div>
+                            </Link>
                         </div>
                         <div
                             data-aos="fade-up"
                             data-aos-delay="300"
-                            className="w-[28%] h-[260px] p-4 border border-black"
+                            className="bg-white w-[29%] h-[260px] p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -63,13 +67,14 @@ const Section4 = () => {
                             </p>
                             <div className="w-full h-[1px] bg-black my-2"></div>
                             <p className="select-none text-[15px] mt-10">
-                                We offer a variety of modern themes that are
-                                perfect
+                                We offer a variety of modern theme templates.
                             </p>
-                            <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
-                                <p>Check</p>
-                                <ArrowRight01Icon className="w-5 h-5 ml-3" />
-                            </div>
+                            <Link to={"/packet-opulence"}>
+                                <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                    <p>Check</p>
+                                    <ArrowRight01Icon className="w-5 h-5 ml-3" />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
