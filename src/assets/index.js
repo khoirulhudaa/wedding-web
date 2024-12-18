@@ -1,4 +1,3 @@
-// Standart images
 import Ballroom from './ballroom.webp'
 import Ballroom2 from './ballroom2.webp'
 import Ballroom3 from './ballroom3.webp'
@@ -15,7 +14,6 @@ import HP from './hp.png'
 import Lines from './lines.svg'
 import People from './people.png'
 import Petik from './petik.svg'
-import Prod from './prod1.png'
 import Spon1 from './sp1.png'
 import Spon2 from './sp2.png'
 import Spon3 from './sp3.png'
@@ -29,8 +27,8 @@ import Jk3 from './jk3.webp'
 import Ht1 from './ht1.webp'
 import Ht2 from './ht2.webp'
 import Ht3 from './ht3.webp'
+import Prod from './prod1.png'
 
-// Icons
 import Logo from './Icons/logo.svg'
 
 export {
@@ -42,14 +40,16 @@ export {
     Gl1,
     Gl3,
     Gl4,
-    // Standart images
     Gradient1,
     Gradient2,
     Gradient3,
-    Gradient4, HP, Lines,
-    // Icons
-    Logo, People, Petik,
-    Prod, Spon1,
+    Gradient4, 
+    HP, 
+    Lines,
+    Logo, 
+    People, 
+    Petik,
+    Spon1,
     Spon2,
     Spon3,
     Spon4,
@@ -61,5 +61,6 @@ export {
     Jk3,
     Ht1,
     Ht2,
-    Ht3
+    Ht3,
+    Prod
 }
