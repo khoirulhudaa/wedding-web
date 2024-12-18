@@ -25,6 +25,11 @@ h1, h2, h3, p, span, small {
   cursor: default;
 }
 
+.textStroke {
+  -webkit-text-stroke: 0.04em black;
+  paint-order: stroke fill;
+}
+
 .container-mask {
   display: flex;
   align-items: center;

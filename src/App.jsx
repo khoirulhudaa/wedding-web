@@ -1,13 +1,19 @@
 import { RouterProvider } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 import Routes from "./routes";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-function App() {
+const App = () => {
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     return (
         <React.Fragment>
             <RouterProvider router={Routes} />
         </React.Fragment>
     );
-}
+};
 
 export default App;
