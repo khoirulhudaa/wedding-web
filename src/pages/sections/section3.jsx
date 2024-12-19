@@ -1,7 +1,7 @@
+import { ArrowRight01Icon, SparklesIcon } from "hugeicons-react";
 import React from "react";
-import ThreeDModel from "../../components/model";
-import { ArrowRight01Icon, LinkSquare02Icon, SparklesIcon } from "hugeicons-react";
 import { Link } from "react-router-dom";
+import ThreeDModel from "../../components/model";
 
 const Section3 = () => {
     return (
