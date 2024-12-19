@@ -18,7 +18,7 @@ const Section4 = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="bg-white w-[29%] h-[260px] p-4 border border-black"
+                            className="w-[29%] h-[260px] p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -39,7 +39,7 @@ const Section4 = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-delay="200"
-                            className="bg-white w-[29%] h-[260px] p-4 border border-black"
+                            className="w-[29%] h-[260px] p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -59,7 +59,7 @@ const Section4 = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-delay="300"
-                            className="bg-white w-[29%] h-[260px] p-4 border border-black"
+                            className="w-[29%] h-[260px] p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -78,7 +78,7 @@ const Section4 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[30%] ml-auto justify-center h-full flex">
+                <div className="w-[30%] ml-auto justify-end h-full flex">
                     <div className="w-[40%] border-l-[1px] border-y-[1px] mt-auto border-b-0 border-black h-[80%] rounded-tl-full"></div>
                     <div className="w-[1px] h-full bg-black"></div>
                     <div className="w-[40%] border-r-[1px] border-y-[1px] border-t-0 border-black h-[80%] rounded-br-full"></div>

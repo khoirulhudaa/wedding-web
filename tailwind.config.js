@@ -3,7 +3,9 @@ export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
-      
+      boxShadow: {
+        'thick': '0 4px 12px rgba(0, 0, 0, 0.5)', // Custom thick shadow
+      },
       animation: {
         glow: 'glow 2s infinite', // Animasi untuk glow yang bergerak
       },

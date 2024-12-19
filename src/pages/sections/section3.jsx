@@ -1,6 +1,6 @@
 import React from "react";
 import ThreeDModel from "../../components/model";
-import { LinkSquare02Icon, SparklesIcon } from "hugeicons-react";
+import { ArrowRight01Icon, LinkSquare02Icon, SparklesIcon } from "hugeicons-react";
 import { Link } from "react-router-dom";
 
 const Section3 = () => {
@@ -14,7 +14,7 @@ const Section3 = () => {
                 <div
                     data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    className="relative w-[30%] h-full pt-32 border-x border-x-black"
+                    className="relative w-[40%] h-full pt-32 border-x border-x-black"
                 >
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
@@ -27,7 +27,7 @@ const Section3 = () => {
                     />
                 </div>
 
-                <div className="select-none relative w-[70%] pl-8 h-full flex flex-col justify-center">
+                <div className="select-none relative w-[60%] border-r border-black pl-8 h-full flex flex-col justify-center">
                     <div
                         data-aos="fade-zoom-in"
                         data-aos-easing="ease-in-back"
@@ -56,20 +56,20 @@ const Section3 = () => {
                         magical
                     </p>
 
-                    <div
+                    {/* <div
                         data-aos="fade-zoom-in"
-                        className="absolute top-6 right-0 text-[16px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow"
+                        className="absolute top-6 right-6 text-[16px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow"
                     >
                         <p>
-                            100 Outfits, Shirts, Accessories & Professional
-                            Make-Up
+                            100 Outfits, Shirts, Accessories
                         </p>
                         <SparklesIcon className="w-5 h-5 ml-3" />
-                    </div>
+                    </div> */}
 
                     <Link to={"/dress"}>
-                        <div className="absolute bottom-[32%] right-0 border border-black flex items-center justify-center w-[60px] h-[60px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow">
-                            <LinkSquare02Icon className="" />
+                        <div className="relative border border-black hover:bg-glow hover:text-black hover:animate-glow active:scale-[0.97] hover:brightness-[90%] text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] text-black cursor-pointer">
+                            Order now{" "}
+                            <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                         </div>
                     </Link>
                 </div>

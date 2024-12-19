@@ -24,34 +24,56 @@ import Section11 from "./sections/section11.jsx";
 
 const Homepage = () => {
     const [showModalBuild, setShowModalBuild] = useState(false);
-    const [start, setStart] = useState(false);
+    const [start, setStart] = useState(null);
     const [progress, setProgress] = useState(0);
     const [showMain, setShowMain] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(false);
 
     const audioRef = useRef(null);
 
     useEffect(() => {
-        // Mengatur volume ke 75% saat pertama kali render atau setelah audioRef berubah
-        if (audioRef.current) {
-            audioRef.current.volume = 0.75; // Set volume ke 75%
-            if (audioRef.current.muted) {
-                audioRef.current.muted = false; // Nonaktifkan mute jika diaktifkan
-            }
+        const sessionOpen = localStorage.getItem("sessionOpen");
+        if (!sessionOpen) {
+            setStart(true);
         }
-    }, []); // Empty dependency array berarti ini hanya dipanggil sekali saat pertama kali render
 
-    const playAUdio = () => {
+        const handleUnload = () => {
+            localStorage.removeItem("sessionOpen");
+        };
+
+        window.addEventListener("unload", handleUnload);
+
+        return () => {
+            window.removeEventListener("unload", handleUnload);
+        };
+    }, []);
+
+    const handleCloseModal = () => {
+        localStorage.setItem("sessionOpen", "true");
+        setStart(false);
+        audioRef?.current?.play().catch((error) => {
+            console.error("Error playing audio:", error);
+        });
+
+        audio.volume = 0.75;
+        if (audio.muted) {
+            audio.muted = false;
+        }
+    };
+
+    useEffect(() => {
         const audio = audioRef.current;
 
-        if (isPlaying) {
-            audio.pause(); // Pause audio jika sudah diputar
-        } else {
-            audio.play(); // Play audio jika belum diputar
-        }
+        if (audio) {
+            audio.play().catch((error) => {
+                console.error("Error playing audio:", error);
+            });
 
-        setIsPlaying(!isPlaying);
-    };
+            audio.volume = 0.75;
+            if (audio.muted) {
+                audio.muted = false;
+            }
+        }
+    }, [audioRef?.current]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -100,7 +122,9 @@ const Homepage = () => {
                     <audio
                         ref={audioRef}
                         className="absolute z-[-2] opacity-0"
-                        src="../audio/audio.mp3"
+                        src="/audio/audio.mp3"
+                        autoPlay
+                        loop
                     />
 
                     {/* Navbar Component */}
@@ -137,12 +161,8 @@ const Homepage = () => {
                     <Section14 />
 
                     {/* Modal - Opening */}
-                    {start ? (
-                        <OpeningModal
-                            handleClose={() => {
-                                setStart(false), playAUdio();
-                            }}
-                        />
+                    {!localStorage.getItem("sessionOpen") && start ? (
+                        <OpeningModal handleClose={() => handleCloseModal()} />
                     ) : (
                         <></>
                     )}

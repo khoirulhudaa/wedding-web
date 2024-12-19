@@ -1,17 +1,35 @@
 import { ArrowRight01Icon } from "hugeicons-react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Dress1, Gradient1, Gradient2, Gradient4 } from "../assets";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { Link } from "react-router-dom";
 
 const Dress = () => {
+    const audioRef = useRef(null);
+
     useEffect(() => {
+        if (audioRef.current) {
+            audioRef.current.volume = 0.75; // Set volume ke 75%
+            if (audioRef.current.muted) {
+                audioRef.current.muted = false; // Nonaktifkan mute jika diaktifkan
+            }
+        }
+        const audio = audioRef.current;
+        audio.play(); // Play audio jika belum diputar
+
         window.scrollTo(0, 0);
     }, []);
 
     return (
         <React.Fragment>
+            {/* BackSound */}
+            <audio
+                ref={audioRef}
+                className="absolute z-[-2] opacity-0"
+                src="/audio/packet.mp3"
+            />
+
             <Navbar />
 
             <img

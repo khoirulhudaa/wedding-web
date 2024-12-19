@@ -1,5 +1,6 @@
 import { FavouriteIcon, LinkSquare02Icon } from "hugeicons-react";
 import React, { useState } from "react";
+import { Jk1, Jk2, Jk3 } from "../../assets";
 import ThreeDModel from "../../components/model";
 
 const Section11 = () => {
@@ -187,17 +188,17 @@ const Section11 = () => {
                 >
                     Serving Delicious Meals, Making Every Moment.
                 </h1>
-                <div className="relative overflow-hidden px-16 mt-12 ml-auto w-full flex items-center justify-between border-y border-black h-[70%]">
+                <div className="relative overflow-hidden  px-16 mt-12 ml-auto w-full flex items-center justify-between border-y border-black h-[70%]">
                     <div
                         data-aos="fade-up"
                         onClick={() => {
                             setShowJunkFood(true);
                             setShowHealthFood(false);
                         }}
-                        className="flex items-center w-max h-full cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow"
+                        className="flex items-center border pr-3 border-black w-max h-full cursor-pointer active:scale-[0.97]"
                     >
-                        <div className="border mr-4 border-blue-700 p-1 w-[54px] h-[54px] flex items-center justify-center">
-                            <LinkSquare02Icon className="w-6 h-6 text-blue-700" />
+                        <div className="border mr-4 border-r border-r-black hover:bg-glow hover:animate-glow bg-[#FFD476] p-1 w-[54px] h-[54px] flex items-center justify-center">
+                            <LinkSquare02Icon className="w-6 h-6 text-orange-700" />
                         </div>
                         <p className="select-none flex w-max">Junk Food</p>
                     </div>
@@ -216,12 +217,12 @@ const Section11 = () => {
                             setShowJunkFood(false);
                             setShowHealthFood(true);
                         }}
-                        className="flex items-center w-max h-full cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow"
+                        className="flex items-center border pr-3 border-black w-max h-full cursor-pointer active:scale-[0.97]"
                     >
-                        <p className="select-none flex w-max">Health Food</p>
-                        <div className="border ml-4 border-blue-700 p-1 w-[54px] h-[54px] flex items-center justify-center">
-                            <LinkSquare02Icon className="w-6 h-6 text-blue-700" />
+                        <div className="border mr-4 border-r border-r-black hover:bg-glow hover:animate-glow bg-[#FFD476] p-1 w-[54px] h-[54px] flex items-center justify-center">
+                            <LinkSquare02Icon className="w-6 h-6 text-orange-700" />
                         </div>
+                        <p className="select-none flex w-max">Health Food</p>
                     </div>
                 </div>
                 <div className="w-full flex items-center justify-between mt-[44px]">

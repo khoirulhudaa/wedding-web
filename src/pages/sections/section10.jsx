@@ -36,8 +36,6 @@ const Section10 = () => {
                 </div>
 
                 <div
-                    data-aos="fade-up"
-                    data-aos-delay="200"
                     className="relative w-full h-[500px] border border-black overflow-hidden"
                 >
                     <div className="w-max z-[4] h-max absolute left-8 top-8">
@@ -104,7 +102,8 @@ const Section10 = () => {
                         </div>
                     </div>
                     <img
-                        src={Ballroom2}
+                        src={Ballroom3}
+                        loading="lazy"
                         alt="ballroom background"
                         className="absolute top-0 left-0 brightness-[40%] duration-300 object-cover w-full h-full"
                     />

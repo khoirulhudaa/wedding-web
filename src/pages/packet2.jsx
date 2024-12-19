@@ -3,19 +3,44 @@ import {
     CheckmarkSquare02Icon,
     GridIcon,
 } from "hugeicons-react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { Gradient1, Gradient2, Gradient4 } from "../assets";
 import { Link } from "react-router-dom";
 
 const Packet2 = () => {
+    const audioRef = useRef(null);
+
     useEffect(() => {
+        const audio = audioRef.current;
+
+        if (audio) {
+            audio.play().catch((error) => {
+                console.error("Error playing audio:", error);
+            });
+
+            // Mengatur volume dan nonaktifkan mute
+            audio.volume = 0.75;
+            if (audio.muted) {
+                audio.muted = false;
+            }
+        }
+
         window.scrollTo(0, 0);
-    }, []);
+    }, [audioRef?.current]);
 
     return (
         <React.Fragment>
+            {/* BackSound */}
+            <audio
+                ref={audioRef}
+                className="absolute z-[-2] opacity-0"
+                src="/audio/packet.mp3"
+                autoPlay
+                loop
+            />
+
             <Navbar />
 
             <img
@@ -63,7 +88,7 @@ const Packet2 = () => {
                         <p>Packet-Exquisite</p>
                     </div>
                     <div className="flex items-center">
-                        <div className="active:scale-[0.97] cursor-pointer relative z-[3] text-[16px] py-1 w-max ml-auto px-3 bg-[#FFD476] text-black flex items-center border border-black justify-center">
+                        <div className="active:scale-[0.97] cursor-pointer relative z-[3] text-[16px] py-1 w-max ml-auto px-3 bg-[#FFD476] border-r-0 text-black flex items-center border border-black justify-center">
                             <Chatting01Icon className="w-4 h-4" />
                             <p className="ml-3">Booking Now</p>
                         </div>

@@ -16,16 +16,16 @@ const Navbar = () => {
             {/* Right Content - (List Menu) */}
             <div className="relative min-w-[30vw]">
                 <ul className="w-full text-[15px] flex justify-between items-center">
-                    <li>
+                    <li className="active:scale-[0.97] hover:text-slate-500">
                         <a href="#start">Make-up Artist</a>
                     </li>
-                    <li>
+                    <li className="active:scale-[0.97] hover:text-slate-500">
                         <a href="#photography">Photography</a>
                     </li>
-                    <li>
+                    <li className="active:scale-[0.97] hover:text-slate-500">
                         <a href="#building">Building</a>
                     </li>
-                    <li>
+                    <li className="active:scale-[0.97] hover:text-slate-500">
                         <a href="#catering">Catering</a>
                     </li>
                 </ul>

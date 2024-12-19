@@ -44,7 +44,7 @@ const Section5 = () => {
                         </p>
                     </div>
                     <Link to={"/invitation"}>
-                        <div className="relative text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
+                        <div className="relative hover:bg-glow hover:text-black hover:animate-glow active:scale-[0.97] hover:brightness-[90%] text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer">
                             Order now{" "}
                             <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                         </div>
