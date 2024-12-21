@@ -4,7 +4,7 @@ import { Spon1, Spon2, Spon3 } from "../../assets";
 const Section2 = () => {
     return (
         <React.Fragment>
-            <section className="select-none relative flex items-center overflow-x-hidden px-16 w-full mt-7 mb-[70px] h-max">
+            <section className="select-none relative hidden lg:flex items-center overflow-x-hidden lg:px-16 w-full lg:mt-7 mb-[70px] h-[50px] lg:h-max">
                 <div className="sponsor-container">
                     <div className="sponsor-items">
                         <div className="w-[154px] h-[54px] border border-black relative mx-4">

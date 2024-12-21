@@ -94,7 +94,7 @@ const Packet3 = () => {
                         </div>
                         <div className="relative z-[3] text-[16px] py-1 w-max ml-auto px-3 bg-transparent text-black flex items-center border border-black justify-center">
                             <GridIcon className="w-4 h-4" />
-                            <p className="ml-3">Classical</p>
+                            <p className="ml-3">Opulence</p>
                         </div>
                     </div>
                 </div>

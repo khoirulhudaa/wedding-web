@@ -7,12 +7,11 @@ const Section6 = () => {
         <React.Fragment>
             <section
                 id="photography"
-                className="select-none relative border-y border-black mt-[140px] mb-20 flex items-center overflow-x-auto px-16 w-full h-max py-20"
+                className="select-none relative border-y border-black lg:mt-[140px] mb-8 lg:mb-20 lg:flex items-center overflow-x-auto px-4 lg:px-16 w-full h-max py-12 lg:py-20"
             >
                 <div
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    className="relative bg-white w-1/2 h-[380px] pt-12 border border-black"
+                    // data-aos-easing="ease-in-back"
+                    className="relative bg-white w-full lg:w-1/2 h-[380px] lg:pt-12 border border-black"
                 >
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
@@ -35,17 +34,15 @@ const Section6 = () => {
                     <div className="w-[1px] h-full absolute top-0 left-[70%] bg-[#cccccc]"></div>
                     <div className="w-[1px] h-full absolute top-0 left-[85%] bg-[#cccccc]"></div>
                 </div>
-                <div className="w-1/2 px-8 h-max">
+                <div className="w-[94%] lg:w-1/2 lg:px-8 h-max">
                     <div
-                        data-aos="fade-down"
-                        className="w-max h-max border bg-white border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black"
+                        className="w-max h-max border bg-white border-black p-3 flex items-center justify-center text-[16px] lg:mt-0 mt-8 mb-3 text-black"
                     >
                         <SparklesIcon className="w-5 h-5 mr-2" />
                         <p>Photo & Videography</p>
                     </div>
                     <h2
-                        data-aos="fade-left"
-                        className="select-none font-normal text-[44px]"
+                        className="select-none font-normal text-[32px] lg:text-[44px]"
                     >
                         Photography Services for Your
                         <span className="text-orange-500 ml-3">
@@ -53,13 +50,12 @@ const Section6 = () => {
                         </span>
                     </h2>
                     <p
-                        data-aos="fade-up"
                         data-aos-delay="100"
                         className="select-none text-[15px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black"
                     >
-                        Bringing Your Vision to Life with Exceptional
-                        Photography and <br /> Videography Services for Every
-                        Event
+                        Bringing your vision to life with exceptional
+                        photography and <br /> videography services for every
+                        event
                     </p>
                 </div>
             </section>

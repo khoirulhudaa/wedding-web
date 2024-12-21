@@ -133,7 +133,8 @@ const Section8 = () => {
                 </div>
                 <div className="flex items-center ml-auto w-max">
                     <div className="w-[1px] h-[140px] bg-black mx-20"></div>
-                    <div data-aos="fade-up" className="w-max h-max">
+                    <div 
+                        className="w-max h-max">
                         <h2 className="select-none font-bold text-[54px] mb-3">
                             1.304
                         </h2>
@@ -143,7 +144,6 @@ const Section8 = () => {
                     </div>
                     <div className="w-[1px] h-[160px] bg-black mx-20"></div>
                     <div
-                        data-aos="fade-up"
                         data-aos-delay="200"
                         className="w-max h-max"
                     >

@@ -7,10 +7,9 @@ const Section12 = () => {
         <React.Fragment>
             <section className="select-none relative w-screen min-h-[80vh] flex flex-col items-center justify-between overflow-hidden px-16 mt-[52px] mb-[44px]">
                 <h1
-                    data-aos="fade-right"
                     className="text-[54px] text-end mb-10 w-full text-black"
                 >
-                    Acrylic and luxurious decorations
+                    Acrylic and Luxurious Decorations
                 </h1>
                 <div className="w-full bg-[#FFD476] h-[480px] flex justify-center border border-black">
                     <div className="w-1/2 h-full flex pl-16">
@@ -20,10 +19,9 @@ const Section12 = () => {
                     </div>
                     <div className="relative w-1/2 flex flex-col justify-between">
                         <h2
-                            data-aos="fade-up"
                             className="select-none text-[30px] relative mt-16 w-[80%]"
                         >
-                            Providing Luxury Souvenirs and the Best Gifts
+                            Providing luxury souvenirs and the best gifts
                         </h2>
                         <div className="absolute top-[26%] right-16 border border-black flex items-center justify-center w-[54px] h-[54px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow rounded-full">
                             <LinkSquare02Icon className="" />

@@ -19,14 +19,12 @@ const Section10 = () => {
                 <div className="relative text-center w-full h-max">
                     <div className="w-full relative z-[99]">
                         <h2
-                            data-aos="fade-left"
                             className="select-none font-normal text-[44px]"
                         >
                             - The Ideal Place to Celebrate - <br /> Your True{" "}
                             <span className="text-orange-500">Love</span>
                         </h2>
                         <p
-                            data-aos="fade-right"
                             className="select-none text-[15px] text-black mx-auto my-6 leading-loose w-[70%]"
                         >
                             Make your dream wedding come true at our elegant

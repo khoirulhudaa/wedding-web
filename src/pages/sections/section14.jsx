@@ -12,7 +12,8 @@ const Section14 = () => {
             <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
 
             <section className="select-none relative w-screen overflow-hidden min-h-[70vh] px-16 mt-[44px] flex flex-col z-[99]">
-                <h3 data-aos="fade-left" className="text-[54px]">
+                <h3 
+                    className="text-[54px]">
                     All Your Questions Answered
                 </h3>
                 <p className="select-none text-lg text-gray-500">

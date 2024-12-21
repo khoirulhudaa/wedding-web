@@ -11,15 +11,13 @@ const Section9 = () => {
             <section className="select-none relative my-[100px] px-16 overflow-hidden flex items-center justify-center h-[80vh] border-y border-y-black">
                 <div className="w-[70%] py-16 h-full">
                     <h2
-                        data-aos="fade-left"
                         className="select-none text-[44px]"
                     >
-                        Why are we recommended?
+                        Why Are We Recommended?
                     </h2>
 
                     <div className="mt-10 w-full flex items-center justify-between pr-16">
                         <div
-                            data-aos="fade-up"
                             data-aos-delay="100"
                             className="bg-white w-[28%] h-[200px] p-4 border border-black"
                         >
@@ -34,7 +32,6 @@ const Section9 = () => {
                             </p>
                         </div>
                         <div
-                            data-aos="fade-up"
                             data-aos-delay="200"
                             className="bg-white w-[28%] h-[200px] p-4 border border-black"
                         >
@@ -49,7 +46,6 @@ const Section9 = () => {
                             </p>
                         </div>
                         <div
-                            data-aos="fade-up"
                             data-aos-delay="300"
                             className="bg-white w-[28%] h-[200px] p-4 border border-black"
                         >

@@ -183,14 +183,12 @@ const Section11 = () => {
                 )}
 
                 <h1
-                    data-aos="fade-left"
                     className="text-[54px] w-[72%] text-black"
                 >
                     Serving Delicious Meals, Making Every Moment.
                 </h1>
                 <div className="relative overflow-hidden  px-16 mt-12 ml-auto w-full flex items-center justify-between border-y border-black h-[70%]">
                     <div
-                        data-aos="fade-up"
                         onClick={() => {
                             setShowJunkFood(true);
                             setShowHealthFood(false);
@@ -211,8 +209,6 @@ const Section11 = () => {
                         />
                     </div>
                     <div
-                        data-aos="fade-up"
-                        data-aos-delay="200"
                         onClick={() => {
                             setShowJunkFood(false);
                             setShowHealthFood(true);
@@ -227,8 +223,6 @@ const Section11 = () => {
                 </div>
                 <div className="w-full flex items-center justify-between mt-[44px]">
                     <div
-                        data-aos="fade-up"
-                        data-aos-delay="100"
                         className="bg-whit w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <h2 className="select-none text-[20px] mb-1">
@@ -259,8 +253,6 @@ const Section11 = () => {
                         </div>
                     </div>
                     <div
-                        data-aos="fade-up"
-                        data-aos-delay="200"
                         className="relative bg-white w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[54px] h-[54px]">
@@ -298,8 +290,6 @@ const Section11 = () => {
                         </div>
                     </div>
                     <div
-                        data-aos="fade-up"
-                        data-aos-delay="300"
                         className="bg-white w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <h2 className="select-none text-[20px] mb-1">

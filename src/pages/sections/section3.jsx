@@ -9,12 +9,10 @@ const Section3 = () => {
             {/* Dress wedding */}
             <section
                 id="start"
-                className="select-none relative flex px-16 w-full border-t border-black h-[84vh]"
+                className="select-none relative lg:flex px-4 lg:px-16 w-full border-t border-black h-max lg:h-[84vh]"
             >
                 <div
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    className="relative w-[40%] h-full pt-32 border-x border-x-black"
+                    className="relative w-full lg:w-[40%] h-1/2 lg:h-full pt-14 lg:pt-32 border-x border-x-black"
                 >
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
@@ -27,28 +25,24 @@ const Section3 = () => {
                     />
                 </div>
 
-                <div className="select-none relative w-[60%] border-r border-black pl-8 h-full flex flex-col justify-center">
+                <div className="select-none lg:pt-0 pt-6 border-t border-t-black lg:border-t-0 overflow-hidden relative w-full lg:w-[60%] border-r border-black lg:pb-0 pb-8 pl-4 lg:pl-8 h-1/2 overflow-hiden lg:h-full flex flex-col lg:justify-center">
                     <div
-                        data-aos="fade-zoom-in"
-                        data-aos-easing="ease-in-back"
                         className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black"
                     >
                         <SparklesIcon className="w-5 h-5 mr-2" />
                         <p>Make-up Artist - Best of 2025</p>
                     </div>
                     <h2
-                        data-aos="fade-up"
-                        className="select-none font-normal text-[44px] w-full"
+                        className="select-none font-normal text-[28px] lg:text-[44px] w-[96%] lg:w-full"
                     >
-                        Flawless Make-Up and Dresses <br /> for Your
+                        Flawless Make-Up and Dresses <br className="lg:flex hidden" /> for Your
                         <span className="text-orange-500 ml-2">
                             Special Day
                         </span>
                     </h2>
                     <p
-                        data-aos="fade-zoom-in"
                         dat-aos-delay="300"
-                        className="select-none text-[15px] w-[70%] my-6 leading-loose text-black"
+                        className="select-non lg:flex hidden e text-[15px] w-[90%] lg:w-[70%] lg:my-6 leading-loose text-black"
                     >
                         Create unforgettable memories with our exquisite
                         collection of professional make-up and stunning wedding
@@ -57,7 +51,6 @@ const Section3 = () => {
                     </p>
 
                     {/* <div
-                        data-aos="fade-zoom-in"
                         className="absolute top-6 right-6 text-[16px] px-4 py-2 border border-black flex items-center justify-center hover:bg-glow hover:animate-glow"
                     >
                         <p>
@@ -67,7 +60,7 @@ const Section3 = () => {
                     </div> */}
 
                     <Link to={"/dress"}>
-                        <div className="relative border border-black hover:bg-glow hover:text-black hover:animate-glow active:scale-[0.97] hover:brightness-[90%] text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] text-black cursor-pointer">
+                        <div className="relative border lg:mt-0 mt-4 border-black hover:bg-glow hover:text-black hover:animate-glow active:scale-[0.97] hover:brightness-[90%] text-center lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] text-black cursor-pointer">
                             Order now{" "}
                             <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                         </div>

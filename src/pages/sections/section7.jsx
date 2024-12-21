@@ -1,18 +1,26 @@
-import { ArrowRight01Icon } from "hugeicons-react";
+import { ArrowRight01Icon, Cancel01Icon } from "hugeicons-react";
 import React, { useState } from "react";
-import { Gal1, Gal2 } from "../../assets";
+import { Gal1, Gal2, Gl1 } from "../../assets";
 
-const Section7 = ({ handleShowGallery }) => {
+const Section7 = () => {
     const [showGallery, setShowGallery] = useState(false);
+
+    const images = [
+        Gl1,
+        Gal2,
+        Gal2,
+        Gl1,
+        Gl1,
+        Gal2,
+    ]
 
     return (
         <React.Fragment>
-            <section className="select-none relative w-screen h-max mt-[44px]">
+            <section className="select-none relative w-screen h-max lg:mt-[44px]">
                 <h2
-                    data-aos="fade-left"
-                    className="select-none text-[54px] font-normal w-[65%] ml-16"
+                    className="select-none text-[32px] lg:text-[54px] font-normal w-[65%] ml-4 lg:ml-16"
                 >
-                    Timeless in the sophistication <br /> of our equipment.
+                    Timeless In The Sophistication <br /> of Our Equipment.
                 </h2>
                 <div>
                     <div className="w-[1px] h-[120px] ml-20 my-4 bg-black"></div>
@@ -68,13 +76,11 @@ const Section7 = ({ handleShowGallery }) => {
                     <div className="w-[80%] pr-2 ml-auto flex items-center">
                         <div className="w-[75%]">
                             <h2
-                                data-aos="fade-left"
                                 className="select-none text-[44px] w-max mb-4"
                             >
                                 Servive Quality
                             </h2>
                             <p
-                                data-aos="fade-up"
                                 className="select-none text-[13.2px] leading-loose w-[80%]"
                             >
                                 We take pride in offering exceptional service
@@ -83,8 +89,7 @@ const Section7 = ({ handleShowGallery }) => {
                             </p>
                         </div>
                         <div
-                            data-aos="fade-dowm"
-                            onClick={() => handleShowGallery(true)}
+                            onClick={() => setShowGallery(true)}
                             className="relative text-center active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer"
                         >
                             Explore images

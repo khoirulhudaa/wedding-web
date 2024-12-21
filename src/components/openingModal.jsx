@@ -14,7 +14,7 @@ const OpeningModal = ({ handleClose }) => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="w-[46vw] h-max bg-white p-6"
+                    className="w-[94vw] lg:w-[46vw] h-max bg-white p-4 lg:p-6"
                 >
                     {/* Gradient Effects - Background */}
                     <img
@@ -44,10 +44,10 @@ const OpeningModal = ({ handleClose }) => {
                     {step === 0 ? (
                         <div className="relative w-full flex flex-col justify-between h-[85vh]">
                             <div className="relative w-full h-max px-6 py-6 border border-black">
-                                <h2 className="select-none text-[32px] mb-2">
+                                <h2 className="select-none text-[26px] lg:text-[32px] mb-2">
                                     Your Perfect Wedding Starts Here{" "}
                                 </h2>
-                                <p className="select-none text-[16px] w-[80%] leading-loose text-black">
+                                <p className="select-none text-[14px] lg:text-[16px] w-[90%] lg:w-[80%] leading-loose text-black">
                                     Begin Your Love Journey With Us. Every great
                                     love story deserves a beautiful beginning.
                                 </p>
@@ -91,7 +91,7 @@ const OpeningModal = ({ handleClose }) => {
                             </div>
                             <div className="h-[40vh] flex flex-col justify-between pt-4">
                                 <div className="w-full">
-                                    <h2 className="select-none text-[32px] mb-2">
+                                    <h2 className="select-none text-[26px] lg:text-[32px] mb-2">
                                         The uniqueness of the website with
                                         interactive 3D{" "}
                                     </h2>

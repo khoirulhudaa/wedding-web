@@ -16,10 +16,9 @@ const Section13 = () => {
                 />
 
                 <h1
-                    data-aos="fade-left"
                     className="text-[54px] w-[72%] text-black"
                 >
-                    Our Customers Feedback.
+                    Our Customers Feedback
                 </h1>
                 <div className="w-full flex items-center">
                     <div className="w-[30%]">
@@ -38,20 +37,17 @@ const Section13 = () => {
                         <div className="w-full h-max px-16 border-y border-y-black ml-10 py-6">
                             <div className="w-full flex items-baseline justify-between">
                                 <p
-                                    data-aos="fade-left"
                                     className="select-none w-max flex font-semibold text-[24px] mb-4 text-black"
                                 >
                                     Customer LuvlyWed
                                 </p>
                                 <p
-                                    data-aos="fade-up"
                                     className="select-none w-max fle text-[18px] text-black"
                                 >
                                     Jardyn Danwart
                                 </p>
                             </div>
                             <p
-                                data-aos="fade-dowm"
                                 className="select-none w-full text-[20px] text-black ml-1 mt-10"
                             >
                                 Amaizing fast and reliable customer support! The

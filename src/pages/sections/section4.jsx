@@ -5,20 +5,17 @@ import { Link } from "react-router-dom";
 const Section4 = () => {
     return (
         <React.Fragment>
-            <section className="select-none relative mb-[100px] px-16 overflow-hidden flex items-center justify-center h-[84vh] border-y border-y-black">
-                <div className="w-[70%] py-16 h-full">
+            <section className="select-none relative mb-10 lg:mb-[100px] px-4 lg:px-16 overflow-hidden flex items-center lg:justify-center h-max lg:h-[84vh] border-y border-y-black">
+                <div className="w-[100%] lg:w-[70%] lg:py-16 h-full">
                     <h2
-                        data-aos="fade-left"
-                        className="select-none mt-10 text-[44px]"
+                        className="select-none mt-10 text-[28px] lg:text-[44px]"
                     >
                         Wedding Organizer Packages
                     </h2>
 
-                    <div className="mt-10 w-full flex items-center justify-between pr-16">
+                    <div className="mt-8 lg:mt-10 w-full lg:flex items-center lg:justify-between pr-0 lg:pr-16">
                         <div
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                            className="w-[29%] h-[260px] p-4 border border-black"
+                            className="w-full lg:w-[29%] h-[260px] lg:mb-0 mb-6 p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -37,9 +34,7 @@ const Section4 = () => {
                             </Link>
                         </div>
                         <div
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                            className="w-[29%] h-[260px] p-4 border border-black"
+                            className="w-full lg:w-[29%] h-[260px] lg:mb-0 mb-6 p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -57,9 +52,7 @@ const Section4 = () => {
                             </Link>
                         </div>
                         <div
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            className="w-[29%] h-[260px] p-4 border border-black"
+                            className="w-full lg:w-[29%] h-[260px] lg:mb-0 mb-6 p-4 border border-black"
                         >
                             <CrownIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -78,9 +71,9 @@ const Section4 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[30%] ml-auto justify-end h-full flex">
+                <div className="hidden w-[30%] ml-auto justify-end h-full lg:flex">
                     <div className="w-[40%] border-l-[1px] border-y-[1px] mt-auto border-b-0 border-black h-[80%] rounded-tl-full"></div>
-                    <div className="w-[1px] h-full bg-black"></div>
+                    <div className="w-[0.7px] h-full bg-black"></div>
                     <div className="w-[40%] border-r-[1px] border-y-[1px] border-t-0 border-black h-[80%] rounded-br-full"></div>
                 </div>
             </section>

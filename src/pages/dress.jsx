@@ -72,8 +72,8 @@ const Dress = () => {
                         Unveil Your Dream Wedding Dress
                     </h2>
                     <p className="w-[84%] text-[16px] mt-2 text-black leading-loose">
-                        500 wedding invitations + 500 souvenirs + Reception MC,
-                        cucumber lempah/lengser/music cassette dance
+                        Appear in your best outfit on one of the most historic days of your 
+                        life with your loved one
                     </p>
                 </div>
 

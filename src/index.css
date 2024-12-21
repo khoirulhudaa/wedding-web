@@ -95,9 +95,18 @@ small {
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .sponsor-container {
         animation: scrollSponsor 15s linear infinite;
+    }
+
+    .container-mask {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100vw;
+        height: max-content;
+        flex-direction: column;
     }
 }
 
