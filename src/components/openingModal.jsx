@@ -14,7 +14,7 @@ const OpeningModal = ({ handleClose }) => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="w-[94vw] lg:w-[46vw] h-max bg-white p-4 lg:p-6"
+                    className="w-[94vw] lg:w-[46vw] h-[90vh] lg:h-max bg-white p-4 lg:p-6"
                 >
                     {/* Gradient Effects - Background */}
                     <img

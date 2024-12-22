@@ -6,8 +6,8 @@ const ModalBuild = ({ handleClose }) => {
     return (
         <div className="fixed left-0 top-0 w-[100vw] overflow-hidden h-[100vh] z-[9999999999]">
             <div className="w-full h-full bg-black bg-opacity-80 flex justify-center items-center">
-                <div className="w-[70vw] h-[70vh] overflow-hidden flex">
-                    <div className="relative rounded-[20px] top-[-12px] bg-white items-end h-[86vh] w-[30%] shadow-md flex pt-20 justify-center">
+                <div className="w-full lg:w-[70vw] h-full lg:h-[70vh] overflow-hidden lg:flex">
+                    <div className="relative lg:rounded-[20px] lg:top-[-12px] bg-white lg:items-end h-1/2 lg:h-[86vh] w-full lg:w-[30%] shadow-md flex pt-20 justify-center">
                         <ThreeDModel
                             url={"/hotel3.glb"}
                             speed={1}
@@ -15,7 +15,7 @@ const ModalBuild = ({ handleClose }) => {
                             scaleCustom={[0.045, 0.045, 0.045]}
                         />
                     </div>
-                    <div className="w-[70%] h-full">
+                    <div className="w-full lg:w-[70%] h-full">
                         <div className="relative w-full h-[60%] bg-white p-8 text-black">
                             <h2 className="text-[24px] mb-2">
                                 Wedding Venue Rental
@@ -42,12 +42,13 @@ const ModalBuild = ({ handleClose }) => {
 
                             <div
                                 onClick={() => handleClose()}
-                                className="absolute cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 right-7 top-6 text-black border border-black w-[40px] h-[40px] flex items-center justify-center"
+                                className="lg:absolute cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 lg:inline flex items-center right-7 top-6 text-black border border-black w-max lg:px-0 px-10 lg:py-0 py-5 lg:mt-0 mt-6 lg:w-[40px] h-[40px] lg:justify-center"
                             >
                                 <Cancel01Icon className="w-6 h-6" />
+                                <p>Back to home</p>
                             </div>
                         </div>
-                        <div className="w-max border-r border-b border-white h-[20%] text-white text-[30px] flex items-center px-16">
+                        <div className="w-max border-r border-b border-white h-[20%] text-white text-[30px] hidden lg:flex items-center px-16">
                             <p>LuvlyWed Prymer, Indonesia</p>
                         </div>
                     </div>

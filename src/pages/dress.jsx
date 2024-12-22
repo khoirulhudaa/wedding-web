@@ -58,8 +58,8 @@ const Dress = () => {
             />
 
             <section className="relative lg:flex select-none w-screen border-b border-black pb-6 overflow-hidden min-h-screen pt-10 lg:pt-16 px-6 lg:px-16 mt-16">
-                <div className="w-full lg:w-[40%] h-max lg:h-[180vh] border-r border-black">
-                    <div className="flex border-b border-black pb-4 items-baseline w-[90%]">
+                <div className="w-full lg:w-[40%] h-max lg:h-[180vh] lg:border-r border-black">
+                    <div className="flex border-b border-black pb-4 items-baseline w-full lg:w-[90%]">
                         <Link to={"/"}>
                             <p className="text-blue-500 cursor-pointer hover:brightness-75">
                                 Homepage
@@ -68,7 +68,7 @@ const Dress = () => {
                         <p className="mx-2">/</p>
                         <p>Dress Luxury 2025</p>
                     </div>
-                    <h2 className="select-none pt-6 pb-7 w-[90%] mb-5 text-[32px] ;g:text-[48px] border-b border-black font-normal">
+                    <h2 className="select-none pt-6 pb-7 w-full lg:w-[90%] mb-5 text-[32px] lg:text-[48px] border-b border-black font-normal">
                         Unveil Your Dream Wedding Dress
                     </h2>
                     <p className="w-[84%] text-[16px] lg:pb-0 pb-5 mt-2 text-black leading-loose">
@@ -77,8 +77,8 @@ const Dress = () => {
                     </p>
                 </div>
 
-                <div className="relative border-t border-black pt-10 w-full lg:w-[60%] h-full flex lg:pl-10 justify-between flex-wrap">
-                    <div className="relative w-[48%] h-[320px] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                <div className="relative border-t border-black pt-10 w-full lg:w-[60%] h-full lg:flex lg:pl-10 justify-between flex-wrap">
+                    <div className="relative w-full lg:w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Dress1}
                             alt="dress-image"
@@ -96,7 +96,7 @@ const Dress = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[320px] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative w-full lg:w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Dress1}
                             alt="dress-image"
@@ -114,7 +114,7 @@ const Dress = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[320px] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative w-full lg:w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Dress1}
                             alt="dress-image"
@@ -132,7 +132,7 @@ const Dress = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[320px] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative w-full lg:w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Dress1}
                             alt="dress-image"
@@ -150,7 +150,7 @@ const Dress = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[320px] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative w-full lg:w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Dress1}
                             alt="dress-image"
@@ -168,7 +168,7 @@ const Dress = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[320px] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative w-full lg:w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Dress1}
                             alt="dress-image"

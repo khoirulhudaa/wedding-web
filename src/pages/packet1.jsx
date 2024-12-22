@@ -78,7 +78,7 @@ const Packet2 = () => {
                 </p>
 
                 <div className="w-full mt-4 mb-6 lg:flex items-baseline justify-between">
-                    <div className="flex items-baseline w-[70%]">
+                    <div className="flex items-baseline w-full lg:w-[70%]">
                         <Link to={"/"}>
                             <p className="text-blue-500 cursor-pointer hover:brightness-75">
                                 Homepage

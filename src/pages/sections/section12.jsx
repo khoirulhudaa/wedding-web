@@ -5,7 +5,7 @@ import ThreeDModel from "../../components/model";
 const Section12 = () => {
     return (
         <React.Fragment>
-            <section className="select-none relative w-screen lg:min-h-[80vh] flex flex-col items-center lg:justify-between overflow-hidden px-6 lg:px-16 lg:mt-[52px]  mb-[58px] lg:mb-[44px]">
+            <section className="select-none relative w-screen lg:min-h-[80vh] flex flex-col items-center lg:justify-between overflow-hidden px-6 lg:px-16 lg:mt-[52px] mb-[58px] lg:mb-[44px]">
                 <h1
                     className="text-[32px] lg:text-[54px] lg:text-end mb-7 lg:mb-10 w-full text-black"
                 >

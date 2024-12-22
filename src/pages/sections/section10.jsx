@@ -14,18 +14,18 @@ const Section10 = () => {
         <React.Fragment>
             <section
                 id="building"
-                className="relative px-6 lg:px-16 w-screen min-h-[100vh]lg:mt-[70px]"
+                className="relative px-6 lg:px-16 w-screen lg:min-h-[100vh] lg:mt-[70px]"
             >
-                <div className="relative text-center w-full h-max">
+                <div className="relative lg:text-center w-full h-max">
                     <div className="w-full relative z-[99]">
                         <h2
                             className="select-none font-normal text-[32px] lg:text-[44px]"
                         >
-                            - The Ideal Place to Celebrate - <br /> Your True{" "}
+                            The Ideal Place to Celebrate <br className="lg:flex hidden" /> Your True{" "}
                             <span className="text-orange-500">Love</span>
                         </h2>
                         <p
-                            className="select-none text-[15px] text-black mx-auto my-6 leading-loose w-[94%] lg:w-[70%]"
+                            className="select-none text-[15px] text-black mx-auto lg:mb-4 mb-6 my-4 lg:my-6 leading-loose w-full lg:w-[70%]"
                         >
                             Make your dream wedding come true at our elegant
                             venue with complete facilities.
@@ -34,7 +34,7 @@ const Section10 = () => {
                 </div>
 
                 <div
-                    className="relative w-full h-[500px] border border-black overflow-hidden"
+                    className="relative w-full h-[340px] lg:h-[500px] border border-black overflow-hidden"
                 >
                     <div className="w-max z-[4] lg:flex flex-col hidden h-max absolute left-8 top-8">
                         <div className="z-[99] bg-white p-1.5 active:scale-[0.97] hover:brightness-75 cursor-pointer mb-5 h-[54px] w-[54px] overflow-hidden">
@@ -103,7 +103,7 @@ const Section10 = () => {
                         src={Ballroom3}
                         loading="lazy"
                         alt="ballroom background"
-                        className="absolute top-0 left-0 brightness-[40%] duration-300 object-cover w-full h-full"
+                        className="absolute top-0 left-0 brightness-75 lg:brightness-[40%] duration-300 object-cover w-full h-full"
                     />
                 </div>
             </section>

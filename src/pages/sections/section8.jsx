@@ -69,7 +69,7 @@ const Section8 = () => {
                         </div>
                     </div>
                     <div className="relative w-max flex items-center">
-                        <div className="w-[70px] h-[70px] p-1.5 border border-black -ml-8 lg:ml-4 overflow-hidden">
+                        <div className="w-[70px] h-[70px] p-1.5 border border-black lg:ml-4 overflow-hidden">
                             <img
                                 loading="lazy"
                                 draggable="false"
@@ -134,24 +134,23 @@ const Section8 = () => {
                 <div className="lg:flex lg:items-center lg:mt-0 mt-12 lg:ml-auto w-full lg:w-max">
                     <div className="w-[1px] lg:flex hidden h-[50px] lg:h-[140px] bg-black mx-20"></div>
                     <div 
-                        className="w-full lg:pb-0 pb-6 lg:pt-0 pt-4 border-t lg:border-t-0 lg:mt-0 lg:border-b-0 border-b border-black lg:w-max h-max">
-                        <h2 className="select-none font-bold text-[54px] mb-3">
+                        className="w-full lg:block flex items-center justify-between lg:pb-0 pb-6 lg:pt-0 pt-4 border-t lg:border-t-0 lg:mt-0 lg:border-b-0 border-b border-black lg:w-max h-max">
+                        <h2 className="select-none font-bold text-[32px] lg:text-[54px] lg:mb-3">
                             1.304
                         </h2>
                         <p>
-                            satisfied male <br /> customer
+                            satisfied male <br className="lg:flex hidden" /> customer
                         </p>
                     </div>
                     <div className="w-[1px] lg:flex hidden h-[50px] lg:h-[160px] bg-black mx-20"></div>
                     <div
-                        data-aos-delay="200"
-                        className="w-full lg:pt-0 pt-4 lg:w-max h-max"
+                        className="w-full lg:block flex items-center justify-between lg:pt-0 pt-4 lg:w-max h-max"
                     >
-                        <h2 className="select-none font-bold text-[54px] mb-3">
+                        <h2 className="select-none font-bold text-[32px] lg:text-[54px] lg:mb-3">
                             1.304
                         </h2>
                         <p>
-                            satisfied female <br /> customer
+                            satisfied female <br className="lg:flex hidden" /> customer
                         </p>
                     </div>
                     <div className="w-[1px] lg:flex hidden h-[50px] lg:h-[140px] bg-black ml-20"></div>
