@@ -23,10 +23,12 @@ small {
     cursor: default;
 }
 
-.textStroke {
-    -webkit-text-stroke: 0.04em black;
-    paint-order: stroke fill;
-}
+/* Menambahkan efek stroke */
+/* .stroke-text {
+    -webkit-text-stroke: 0.1px black;  
+    text-stroke: 0.1px black;  
+    color: white;  
+} */
 
 .container-mask {
     display: flex;

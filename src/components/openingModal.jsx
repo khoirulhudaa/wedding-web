@@ -86,7 +86,7 @@ const OpeningModal = ({ handleClose }) => {
                                     autoPlay
                                     loop
                                     muted
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full lg:scale-[1.1] lg:object-cover object-contain"
                                 />
                             </div>
                             <div className="h-1/2 lg:h-[40vh] flex flex-col justify-between pt-4">

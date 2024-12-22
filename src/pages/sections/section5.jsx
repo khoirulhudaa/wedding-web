@@ -29,10 +29,10 @@ const Section5 = () => {
                             </div>
                             <div className="w-1/2 h-max lg:flex items-baseline">
                                 <div className="relative w-max h-max ml-6 lg:ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
-                                    <p>Free templates</p>
+                                    <p className='flex w-max'>Free templates</p>
                                 </div>
                                 <div className="relative w-max h-max ml-6 lg:ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
-                                    <p>Free revision</p>
+                                    <p className="flex w-max">Free revision</p>
                                 </div>
                             </div>
                         </div>
