@@ -13,7 +13,7 @@ const Section14 = () => {
 
             <section className="select-none relative w-screen overflow-hidden min-h-[70vh] px-6 lg:px-16 mt-[44px] flex flex-col z-[99]">
                 <h3 
-                    className="text-[32px] lg:text-[54px]">
+                    className="text-[24px] lg:text-[54px]">
                     All Your Questions Answered
                 </h3>
                 <p className="select-none lg:mt-0 mt-3 text-[16px] lg:text-lg">

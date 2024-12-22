@@ -104,15 +104,18 @@ const HeroSection = () => {
                             </h1>
                         </motion.div>
                         <h1
-                            className=" text-[2.2rem] lg:ml-0 ml-4 lg:text-[4.38rem] font-bold w-[90vw] mt-20 lg:mt-14 lg:w-[80vw] lg:text-center"
+                            className=" text-[2.1rem] lg:ml-0 ml-4 lg:text-[4.38rem] font-medium lg:font-bold w-[90vw] mt-20 lg:mt-14 lg:w-[80vw] lg:text-center"
                         >
                             From Planning to Celebration, <br /> We've Crafted Luxury
                         </h1>
                     </div>
-                    <p className="select-none text-black mb-3 relative mt-3 lg:mt-0 lg:top-[-18px] lg:ml-0 ml-4 lg:text-[16px] text-[16px] w-[90vw] lg:w-[50%]">
+                    <p className="select-none text-black mb-3 relative mt-3 lg:mt-0 lg:top-[-18px] lg:ml-0 ml-4 lg:text-[16px] text-[14px] w-[80vw] lg:w-[50%]">
                         Bringing your special day to life with love and ease.
-                        LuvlyWed, the place for elegant wedding planning and
-                        unforgettable moments
+                        LuvlyWed 
+                        <span className="lg:flex hidden ml-2">
+                            , the place for elegant wedding planning and
+                            unforgettable moments
+                        </span>
                     </p>
                     <a href="#start">
                         <div className="relative active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[94%] lg:mt-0 mt-3 text-center lg:w-max w-[90vw] mx-auto lg:mx-0 flex no-underline lg:ml-0 mb-[45px] px-4 lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] z-[99] border border-black text-black lg cursor-pointer">

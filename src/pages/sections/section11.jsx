@@ -20,15 +20,15 @@ const Section11 = () => {
                 {/* Junk Food */}
                 {showJunkFood ? (
                     <div
-                        className={`duration-300 w-full z-[99] flex h-[90vh] fixed ${
+                        className={`duration-300 w-full z-[99] flex flex-col-reverse lg:flex-row h-[92vh] lg:h-[90vh] fixed ${
                             showJunkFood ? "left-0" : "left-[-100%]"
                         } bottom-0 bg-white  border-t border-r border-black shadow-lg`}
                     >
-                        <div className="w-[65%] flex justify-between items-center overflow-hidden">
-                            <div className="flex w-full h-full relative -left-10">
-                                <div className="relative w-[40%] skew-x-6 h-full border-r border-white mb-4 overflow-hidden">
+                        <div className="w-full lg:w-[65%] lg:h-full h-1/2 flex justify-between items-center overflow-hidden">
+                            <div className="flex w-full h-full relative lg:-left-10">
+                                <div className="relative w-1/3 lg:w-[40%] lg:skew-x-6 h-full lg:border-r border-white mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 right-6 text-white">
-                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                        <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
                                         </h3>
                                     </div>
@@ -39,9 +39,9 @@ const Section11 = () => {
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
                                 </div>
-                                <div className="relative w-1/3 skew-x-6 border-x border-black h-full mb-4 overflow-hidden">
+                                <div className="relative w-1/3 lg:w-1/3 lg:skew-x-6 border-x border-black h-full mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 right-6 text-white">
-                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                        <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
                                         </h3>
                                     </div>
@@ -52,9 +52,9 @@ const Section11 = () => {
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
                                 </div>
-                                <div className="relative w-1/3 skew-x-6 border-r border-black h-full mb-4 overflow-hidden">
+                                <div className="relative w-1/3 lg:w-1/3 lg:skew-x-6 border-r border-black h-full mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 right-6 text-white">
-                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                        <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
                                         </h3>
                                     </div>
@@ -67,9 +67,9 @@ const Section11 = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[35%] h-full text-end flex flex-col justify-between py-6 pr-8 mr-16 border-r border-r-black">
+                        <div className="w-full lg:w-[35%] h-1/2 lg:h-full text-end flex flex-col justify-between py-6 pr-8 mr-16 border-r border-r-black">
                             <div className="w-full">
-                                <h2 className="border-b border-black pb-3 text-[32px] mb-6 ml-3">
+                                <h2 className="border-b border-black pb-3 text-[24px] mb-6 ml-3">
                                     Junk Food Menus
                                 </h2>
                                 <ul className="w-max ml-auto">
@@ -101,15 +101,15 @@ const Section11 = () => {
 
                 {showHealthFood ? (
                     <div
-                        className={`duration-300 w-full z-[99] flex h-[90vh] fixed ${
+                        className={`duration-300 w-full z-[99] lg:flex h-[92vh] lg:h-[90vh] fixed ${
                             showHealthFood
                                 ? "left-[0%] duration-300"
                                 : "left-[-100%]"
                         } bottom-0 bg-white border-t border-r border-black shadow-lg`}
                     >
-                        <div className="w-[35%] h-full pl-8 ml-16 border-l border-l-black flex flex-col justify-between p-6">
+                        <div className="w-full lg:w-[35%] h-1/2 lg:h-full lg:pl-8 lg:ml-16 lg:border-l border-l-black flex flex-col justify-between p-6">
                             <div className="w-full">
-                                <h2 className="border-b border-black pb-3 text-[32px] mb-6 ml-3">
+                                <h2 className="border-b border-black pb-3 text-[24px] mb-6 lg:ml-3">
                                     Health Food Menus
                                 </h2>
                                 <ul>
@@ -134,11 +134,11 @@ const Section11 = () => {
                                 <p className="ml-4 text-[16px]">Close</p>
                             </div>
                         </div>
-                        <div className="w-[65%] flex justify-between items-center overflow-hidden">
-                            <div className="flex w-full h-full relative left-10">
-                                <div className="relative w-1/3 -skew-x-6 h-full border-l border-black mb-4 overflow-hidden">
+                        <div className="w-full lg:w-[65%] h-1/2 lg:h-full flex lg:justify-between lg:items-center overflow-hidden">
+                            <div className="flex w-full h-full relative lg:left-10">
+                                <div className="relative w-full lg:w-1/3 lg:lg:-skew-x-6 h-full border-l border-black mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 left-6 text-white">
-                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                        <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
                                         </h3>
                                     </div>
@@ -149,9 +149,9 @@ const Section11 = () => {
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
                                 </div>
-                                <div className="relative w-1/3 -skew-x-6 h-full border-x border-black mb-4 overflow-hidden">
+                                <div className="relative w-full lg:w-1/3 lg:lg:-skew-x-6 h-full border-x border-black mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 left-6 text-white">
-                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                        <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
                                         </h3>
                                     </div>
@@ -162,9 +162,9 @@ const Section11 = () => {
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
                                 </div>
-                                <div className="relative w-[40%] -skew-x-6 h-full mb-4 overflow-hidden">
+                                <div className="relative w-full lg:w-1/3 lg:lg:w-[40%] lg:-skew-x-6 h-full mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 left-6 text-white">
-                                        <h3 className="text-[20px] mb-3 border-b border-white pt-4 pb-3.5">
+                                        <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
                                             Truffle Fries
                                         </h3>
                                     </div>
@@ -183,7 +183,7 @@ const Section11 = () => {
                 )}
 
                 <h1
-                    className="text-[32px] lg:text-[54px] w-[94%] lg:w-[72%] text-black"
+                    className="text-[24px] lg:text-[54px] w-[94%] lg:w-[72%] text-black"
                 >
                     Serving Delicious Meals, Making Every Moment.
                 </h1>

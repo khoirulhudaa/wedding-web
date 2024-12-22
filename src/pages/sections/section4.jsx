@@ -8,7 +8,7 @@ const Section4 = () => {
             <section className="select-none relative mb-10 lg:mb-[100px] px-4 lg:px-16 overflow-hidden flex items-center lg:justify-center h-max lg:h-[84vh] border-y border-y-black">
                 <div className="w-[100%] lg:w-[70%] lg:py-16 h-full">
                     <h2
-                        className="select-none mt-10 text-[28px] lg:text-[44px]"
+                        className="select-none mt-10 text-[24px] lg:text-[44px]"
                     >
                         Wedding Organizer Packages
                     </h2>

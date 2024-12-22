@@ -16,7 +16,7 @@ const Section13 = () => {
                 />
 
                 <h1
-                    className="text-[32px] lg:text-[54px] w-[72%] text-black"
+                    className="text-[28px] lg:text-[54px] w-[72%] text-black"
                 >
                     Our Customers Feedback
                 </h1>

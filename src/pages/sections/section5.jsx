@@ -10,7 +10,7 @@ const Section5 = () => {
                 <div className="relative w-full h-max lg:pb-0 pb-4 lg:w-[70%]">
                     <h2
                         data-aos="fade-left"
-                        className="select-none text-[32px] lg:text-[54px] font-normal w-[94%] lg:w-[80%] ml-4 lg:ml-16"
+                        className="select-none text-[24px] lg:text-[54px] font-normal w-[94%] lg:w-[80%] ml-4 lg:ml-16"
                     >
                         The Modern Way to Share Wedding Day
                     </h2>

@@ -42,7 +42,7 @@ const Section6 = () => {
                         <p>Photo & Videography</p>
                     </div>
                     <h2
-                        className="select-none font-normal text-[32px] lg:text-[44px]"
+                        className="select-none font-normal text-[24px] lg:text-[44px]"
                     >
                         Photography Services for Your
                         <span className="text-orange-500 ml-3">

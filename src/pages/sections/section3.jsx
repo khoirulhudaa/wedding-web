@@ -12,7 +12,7 @@ const Section3 = () => {
                 className="select-none relative lg:flex px-4 lg:px-16 w-full border-t border-black h-max lg:h-[84vh]"
             >
                 <div
-                    className="relative w-full lg:w-[40%] h-1/2 lg:h-full pt-14 lg:pt-32 border-x border-x-black"
+                    className="relative w-full lg:w-[40%] h-1/2 lg:h-full pt-14 lg:pt-32 lg:border-x border-x-black"
                 >
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
@@ -25,7 +25,7 @@ const Section3 = () => {
                     />
                 </div>
 
-                <div className="select-none lg:pt-0 pt-6 border-t border-t-black lg:border-t-0 overflow-hidden relative w-full lg:w-[60%] border-r border-black lg:pb-0 pb-8 pl-4 lg:pl-8 h-1/2 overflow-hiden lg:h-full flex flex-col lg:justify-center">
+                <div className="select-none pt-8 lg:pt-6 border-t border-t-black lg:border-t-0 overflow-hidden relative w-full lg:w-[60%] lg:border-r border-black lg:pb-0 pb-8 lg:pl-8 h-1/2 overflow-hiden lg:h-full flex flex-col lg:justify-center">
                     <div
                         className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] lg:bg-transparent bg-[#FFD476] mb-3 text-black"
                     >
@@ -33,7 +33,7 @@ const Section3 = () => {
                         <p>Make-up Artist - Best of 2025</p>
                     </div>
                     <h2
-                        className="select-none font-normal text-[28px] lg:text-[44px] w-[96%] lg:w-full"
+                        className="select-none font-normal text-[24px] lg:text-[44px] w-[94%] lg:w-full"
                     >
                         Flawless Make-Up and Dresses <br className="lg:flex hidden" /> for Your
                         <span className="text-orange-500 ml-2">
@@ -41,7 +41,6 @@ const Section3 = () => {
                         </span>
                     </h2>
                     <p
-                        dat-aos-delay="300"
                         className="select-non lg:flex hidden e text-[15px] w-[90%] lg:w-[70%] lg:my-6 leading-loose text-black"
                     >
                         Create unforgettable memories with our exquisite

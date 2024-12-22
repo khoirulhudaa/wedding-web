@@ -11,7 +11,7 @@ const Section9 = () => {
             <section className="select-none relative my-[40px] lg:my-[100px] px-6 lg:px-16 overflow-hidden lg:flex items-center justify-center lg:h-[80vh] border-y border-y-black">
                 <div className="w-full lg:w-[70%] py-10 lg:py-16 h-full">
                     <h2
-                        className="select-none text-[32px] lg:text-[44px]"
+                        className="select-none text-[24px] lg:text-[44px]"
                     >
                         Why Are We Recommended?
                     </h2>

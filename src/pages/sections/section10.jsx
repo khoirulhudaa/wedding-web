@@ -19,7 +19,7 @@ const Section10 = () => {
                 <div className="relative lg:text-center w-full h-max">
                     <div className="w-full relative z-[99]">
                         <h2
-                            className="select-none font-normal text-[32px] lg:text-[44px]"
+                            className="select-none font-normal text-[24px] lg:text-[44px]"
                         >
                             The Ideal Place to Celebrate <br className="lg:flex hidden" /> Your True{" "}
                             <span className="text-orange-500">Love</span>
@@ -60,10 +60,10 @@ const Section10 = () => {
                         </div>
                     </div>
 
-                    <div className="w-max z-[4] flex items-center h-max absolute right-8 top-8">
+                    <div className="w-full lg:w-max z-[4] flex items-center h-max absolute right-0 lg:px-0 px-4 justify-between lg:justify-end lg:right-8 top-4 lg:top-8">
                         <div
                             onClick={() => setShowModal(true)}
-                            className="z-[9] mr-5 active:scale-[0.97] duration-200 cursor-pointer text-[16px] h-[46px] px-4 border w-max bg-white right-5 border-black flex items-center justify-center hover:bg-glow hover:animate-glow"
+                            className="z-[9] lg:mr-5 active:scale-[0.97] duration-200 cursor-pointer text-[16px] h-[46px] px-4 border w-max bg-white lg:right-5 border-black flex items-center justify-center hover:bg-glow hover:animate-glow"
                         >
                             <EyeIcon className="w-5 h-5" />
                         </div>

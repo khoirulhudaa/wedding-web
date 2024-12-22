@@ -7,7 +7,7 @@ const Section12 = () => {
         <React.Fragment>
             <section className="select-none relative w-screen lg:min-h-[80vh] flex flex-col items-center lg:justify-between overflow-hidden px-6 lg:px-16 lg:mt-[52px] mb-[58px] lg:mb-[44px]">
                 <h1
-                    className="text-[32px] lg:text-[54px] lg:text-end mb-7 lg:mb-10 w-full text-black"
+                    className="text-[24px] lg:text-[54px] lg:text-end mb-7 lg:mb-10 w-full text-black"
                 >
                     Acrylic and Luxurious Decorations
                 </h1>

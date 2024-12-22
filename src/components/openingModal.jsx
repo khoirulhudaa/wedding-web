@@ -9,12 +9,12 @@ const OpeningModal = ({ handleClose }) => {
 
     return (
         <React.Fragment>
-            <section className="select-none fixed top-0 left-0 z-[999999999] w-screen h-screen overflow-hidden bg-black bg-opacity-70 flex items-center justify-center">
+            <section className="select-none fixed top-0 left-0 z-[999999999] w-screen h-[100vh] lg:h-screen overflow-hidden bg-black bg-opacity-70 flex lg:items-center lg:justify-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="w-[94vw] lg:w-[46vw] h-[80vh] lg:h-max bg-white p-4 lg:p-6"
+                    className="w-[100vw] lg:w-[46vw] h-full lg:h-max bg-white p-4 lg:p-6"
                 >
                     {/* Gradient Effects - Background */}
                     <img
@@ -79,7 +79,7 @@ const OpeningModal = ({ handleClose }) => {
                             </div>
                         </div>
                     ) : (
-                        <div className="relative w-full h-[100%]">
+                        <div className="relative w-full h-full">
                             <div className="w-full overflow-hidden h-1/2 lg:h-[45vh] lg:border border-black">
                                 <video
                                     src={Video} // Ganti dengan path atau URL video MP4 Anda

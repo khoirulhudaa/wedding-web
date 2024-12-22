@@ -19,7 +19,7 @@ const Section7 = () => {
             <section className="select-none relative w-screen h-max lg:mt-[44px]">
                 <div className="w-full h-1/2 lg:h-max">
                     <h2
-                        className="select-none text-[28px] lg:text-[54px] font-normal w-[90%] lg:w-[65%] ml-4 lg:ml-16"
+                        className="select-none text-[24px] lg:text-[54px] font-normal w-[88%] lg:w-[65%] ml-4 lg:ml-16"
                     >
                         Timeless In The Sophistication <br className="lg:flex hidden" /> of Our Equipment.
                     </h2>
@@ -78,7 +78,7 @@ const Section7 = () => {
                     <div className="w-full lg:w-[80%] pr-2 ml-auto lg:flex items-center">
                         <div className="w-full lg:w-[75%]">
                             <h2
-                                className="select-none text-[32px] lg:text-[44px] w-max mb-4"
+                                className="select-none text-[24px] lg:text-[44px] w-max mb-4"
                             >
                                 Servive Quality
                             </h2>
@@ -105,7 +105,7 @@ const Section7 = () => {
                 <div className="fixed top-0 left-0 z-[999999] w-screen h-screen bg-black bg-opacity-70 flex items-center justify-center">
                     <div className="bg-white w-[70vw] h-[85vh] overflow-hidden p-6">
                         <div className="w-full flex items-baseline pr-1 justify-between">
-                            <h2 className="border-b border-black pb-3 text-[32px] mb-6 ml-3">
+                            <h2 className="border-b border-black pb-3 text-[28px] mb-6 ml-3">
                                 Gallery LuvlyWed
                             </h2>
                             <div
