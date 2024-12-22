@@ -161,11 +161,11 @@ const Homepage = () => {
                     <Section14 />
 
                     {/* Modal - Opening */}
-                    <OpeningModal handleClose={() => handleCloseModal()} />
-                    {/* {!localStorage.getItem("sessionOpen") && start ? (
+                    {!localStorage.getItem("sessionOpen") && start ? (
+                        <OpeningModal handleClose={() => handleCloseModal()} />
                     ) : (
                         <></>
-                    )} */}
+                    )}
 
                     {showModalBuild ? (
                         <ModalBuild

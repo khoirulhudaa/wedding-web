@@ -42,7 +42,7 @@ const OpeningModal = ({ handleClose }) => {
                         className="gr2"
                     />
                     {step === 0 ? (
-                        <div className="relative w-full flex flex-col justify-between h-full">
+                        <div className="relative w-full flex flex-col justify-between h-[84%] lg:h-full">
                             <div className="relative w-full h-max px-6 py-6 border border-black">
                                 <h2 className="select-none text-[26px] lg:text-[32px] mb-2">
                                     Your Perfect Wedding Starts Here{" "}
@@ -79,14 +79,14 @@ const OpeningModal = ({ handleClose }) => {
                             </div>
                         </div>
                     ) : (
-                        <div className="relative w-full h-full">
+                        <div className="relative w-full h-[84%] lg:h-full">
                             <div className="w-full overflow-hidden h-1/2 lg:h-[45vh] lg:border border-black">
                                 <video
                                     src={Video} // Ganti dengan path atau URL video MP4 Anda
                                     autoPlay
                                     loop
                                     muted
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
                             <div className="h-1/2 lg:h-[40vh] flex flex-col justify-between pt-4">
