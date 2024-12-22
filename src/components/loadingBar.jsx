@@ -53,7 +53,7 @@ const LoadingBar = ({ progress }) => {
             <div className="w-[1px] h-screen absolute top-0 left-[100%] bg-[#cccccc]"></div>
 
             {/* Loading Bar Container */}
-            <div className="relative w-[40vw] h-max flex flex-col justify-end z-50">
+            <div className="relative w-[90vw] lg:w-[40vw] h-max flex flex-col justify-end z-50">
                 <div className="relative py-6 border-x border-t border-black">
                     <img
                         src={Logo}

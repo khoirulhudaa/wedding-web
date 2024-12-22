@@ -14,18 +14,18 @@ const Section10 = () => {
         <React.Fragment>
             <section
                 id="building"
-                className="relative px-16 w-screen min-h-[100vh] mt-[70px]"
+                className="relative px-6 lg:px-16 w-screen min-h-[100vh]lg:mt-[70px]"
             >
                 <div className="relative text-center w-full h-max">
                     <div className="w-full relative z-[99]">
                         <h2
-                            className="select-none font-normal text-[44px]"
+                            className="select-none font-normal text-[32px] lg:text-[44px]"
                         >
                             - The Ideal Place to Celebrate - <br /> Your True{" "}
                             <span className="text-orange-500">Love</span>
                         </h2>
                         <p
-                            className="select-none text-[15px] text-black mx-auto my-6 leading-loose w-[70%]"
+                            className="select-none text-[15px] text-black mx-auto my-6 leading-loose w-[94%] lg:w-[70%]"
                         >
                             Make your dream wedding come true at our elegant
                             venue with complete facilities.
@@ -36,7 +36,7 @@ const Section10 = () => {
                 <div
                     className="relative w-full h-[500px] border border-black overflow-hidden"
                 >
-                    <div className="w-max z-[4] h-max absolute left-8 top-8">
+                    <div className="w-max z-[4] lg:flex flex-col hidden h-max absolute left-8 top-8">
                         <div className="z-[99] bg-white p-1.5 active:scale-[0.97] hover:brightness-75 cursor-pointer mb-5 h-[54px] w-[54px] overflow-hidden">
                             <img
                                 src={Ballroom}
@@ -79,7 +79,7 @@ const Section10 = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="absolute bottom-3 right-6 w-max text-[12.5px] border border-black z-[99] bg-white py-3 mb-4 px-4 shadow-md flex items-start mt-3">
+                    <div className="absolute bottom-3 right-6 w-max text-[12.5px] border border-black z-[99] bg-white py-3 mb-4 px-4 shadow-md hidden lg:flex items-start mt-3">
                         <div className="flex items-center border-b border-white">
                             <div className="w-[24px] h-[24px] text-[16px] p-1 flex items-center justify-center bg-transparent">
                                 <CheckmarkCircle02Icon className="text-blue-700 w-8 h-8" />

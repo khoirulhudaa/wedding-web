@@ -68,16 +68,16 @@ const Packet2 = () => {
                 className="gr2"
             />
 
-            <section className="relative select-none w-screen min-h-screen pt-16 px-16 mt-8">
-                <h2 className="select-none pb-3 w-[60%] text-[54px] border-b border-black font-normal">
+            <section className="relative select-none w-screen min-h-screen pt-14 lg:pt-16 px-6 lg:px-16 mt-8">
+                <h2 className="select-none pb-3 w-[94%] lg:w-[60%] text-[32px] lg:text-[54px] border-b border-black font-normal">
                     Create Wedding with the Classical Package
                 </h2>
-                <p className="w-[70%] text-[16px] mt-2 text-black leading-loose">
+                <p className="w-[94%] lg:w-[70%] text-[16px] mt-2 text-black leading-loose">
                     500 wedding invitations + 500 souvenirs + Reception MC,
                     cucumber lempah/lengser/music cassette dance
                 </p>
 
-                <div className="w-full mt-4 mb-6 flex items-baseline justify-between">
+                <div className="w-full mt-4 mb-6 lg:flex items-baseline justify-between">
                     <div className="flex items-baseline w-[70%]">
                         <Link to={"/"}>
                             <p className="text-blue-500 cursor-pointer hover:brightness-75">
@@ -87,12 +87,12 @@ const Packet2 = () => {
                         <p className="mx-2">/</p>
                         <p>Packet-Classical</p>
                     </div>
-                    <div className="flex items-center">
-                        <div className="active:scale-[0.97] cursor-pointer relative z-[3] text-[16px] py-1 w-max ml-auto px-3 bg-[#FFD476] text-black flex items-center border-r-0 border border-black justify-center">
+                    <div className="flex items-center lg:mt-0 mt-6">
+                        <div className="active:scale-[0.97] cursor-pointer relative z-[3] text-[16px] py-1 w-max lg:ml-auto px-3 bg-[#FFD476] text-black flex items-center border-r-0 border border-black justify-center">
                             <Chatting01Icon className="w-4 h-4" />
                             <p className="ml-3">Booking Now</p>
                         </div>
-                        <div className="relative z-[3] text-[16px] py-1 w-max ml-auto px-3 bg-transparent text-black flex items-center border border-black justify-center">
+                        <div className="relative z-[3] text-[16px] py-1 w-max lg:ml-auto px-3 bg-transparent text-black flex items-center border border-black justify-center">
                             <GridIcon className="w-4 h-4" />
                             <p className="ml-3">Classical</p>
                         </div>
@@ -100,9 +100,9 @@ const Packet2 = () => {
                 </div>
 
                 <div className="w-full h-max bg-white border border-black">
-                    <div className="w-full flex h-max">
-                        <div className="w-1/3 h-max p-8">
-                            <h3 className="text-[20px] mb-4 border-b border-black pb-2 w-[90%]">
+                    <div className="w-full lg:flex h-max">
+                        <div className="w-full lg:w-1/3 h-max px-8 py-3 lg:p-8">
+                            <h3 className="lg:mt-0 mt-3 text-[20px] mb-4 border-b border-black pb-2 w-[90%]">
                                 Bridal and Groom
                             </h3>
 
@@ -143,8 +143,8 @@ const Packet2 = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="w-1/3 h-max border-x border-black p-8">
-                            <h3 className="text-[20px] mb-4 border-b border-black pb-2 w-[90%]">
+                        <div className="w-full lg:w-1/3 h-max px-8 py-3 lg:border-x border-black p-8">
+                            <h3 className="lg:mt-0 mt-3 text-[20px] mb-4 border-b border-black pb-2 w-[90%]">
                                 Decorations
                             </h3>
 
@@ -212,8 +212,8 @@ const Packet2 = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="w-1/3 h-max p-8">
-                            <h3 className="text-[20px] mb-4 border-b border-black pb-2 w-[90%]">
+                        <div className="w-full lg:w-1/3 h-max px-8 py-3 lg:p-8">
+                            <h3 className="lg:mt-0 mt-3 text-[20px] mb-4 border-b border-black pb-2 w-[90%]">
                                 Documentations
                             </h3>
 

@@ -5,25 +5,25 @@ import ThreeDModel from "../../components/model";
 const Section12 = () => {
     return (
         <React.Fragment>
-            <section className="select-none relative w-screen min-h-[80vh] flex flex-col items-center justify-between overflow-hidden px-16 mt-[52px] mb-[44px]">
+            <section className="select-none relative w-screen min-h-[80vh] flex flex-col items-center justify-between overflow-hidden px-6 lg:px-16 lg:mt-[52px] mb-[44px]">
                 <h1
-                    className="text-[54px] text-end mb-10 w-full text-black"
+                    className="text-[32px] lg:text-[54px] lg:text-end mb-10 w-full text-black"
                 >
                     Acrylic and Luxurious Decorations
                 </h1>
-                <div className="w-full bg-[#FFD476] h-[480px] flex justify-center border border-black">
-                    <div className="w-1/2 h-full flex pl-16">
+                <div className="w-full bg-[#FFD476] lg:pb-0 pb-8 h-max lg:h-[480px] lg:flex justify-center border border-black">
+                    <div className="w-1/2 h-full hidden lg:flex pl-16">
                         <div className="w-[30%] border-l-[2px] border-y-[2px] mt-auto border-b-0 border-white bg-[#FFD476] h-[80%] rounded-tl-full"></div>
                         <div className="w-[2px] h-full bg-white"></div>
                         <div className="w-[30%] border-r-[2px] border-y-[2px] border-t-0 border-white bg-[#FFD476] h-[80%] rounded-br-full"></div>
                     </div>
-                    <div className="relative w-1/2 flex flex-col justify-between">
+                    <div className="relative w-full lg:px-0 px-6 lg:w-1/2 flex flex-col justify-between">
                         <h2
-                            className="select-none text-[30px] relative mt-16 w-[80%]"
+                            className="select-none text-[26px] lg:text-[30px] relative mt-24 lg:mt-16 lg:mb-0 mb-6 w-full lg:w-[80%]"
                         >
                             Providing luxury souvenirs and the best gifts
                         </h2>
-                        <div className="absolute top-[26%] right-16 border border-black flex items-center justify-center w-[54px] h-[54px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow rounded-full">
+                        <div className="absolute top-[6%] lg:top-[26%] right-6 lg:right-16 border border-black flex items-center justify-center w-[48px] lg:w-[54px] h-[48px] lg:h-[54px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow rounded-full">
                             <LinkSquare02Icon className="" />
                         </div>
                         <div className="relative bg-white h-1/2 mt-auto">

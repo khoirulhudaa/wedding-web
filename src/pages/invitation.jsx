@@ -56,8 +56,8 @@ const Invitation = () => {
                 className="gr2"
             />
 
-            <section className="relative flex select-none w-screen border-b border-black pb-6 overflow-hidden min-h-screen pt-16 px-16 mt-16">
-                <div className="w-[40%] h-[180vh] border-r border-black">
+            <section className="relative lg:flex select-none w-screen border-b border-black pb-6 overflow-hidden min-h-screen pt-10 lg:pt-16 px-6 lg:px-16 mt-16">
+                <div className="w-full lg:w-[40%] lg:h-[180vh] lg:border-r border-black">
                     <div className="flex border-b border-black pb-4 items-baseline w-[90%]">
                         <Link to={"/"}>
                             <p className="text-blue-500 cursor-pointer hover:brightness-75">
@@ -67,17 +67,17 @@ const Invitation = () => {
                         <p className="mx-2">/</p>
                         <p>Invitation Digital</p>
                     </div>
-                    <h2 className="select-none pt-6 pb-7 w-[90%] mb-5 text-[48px] border-b border-black font-normal">
+                    <h2 className="select-none pt-6 pb-7 w-[90%] mb-5 text-[32px] lg:text-[48px] border-b border-black font-normal">
                         Custom and Unique Digital Invitation
                     </h2>
-                    <p className="w-[84%] text-[16px] mt-2 text-black leading-loose">
+                    <p className="w-[84%] text-[16px] lg:pb-0 pb-5 mt-2 text-black leading-loose">
                         Create unforgettable moments with our custom digital
                         invitations, designed to perfectly match
                     </p>
                 </div>
 
-                <div className="relative border-t border-black pt-10 w-[60%] h-full flex pl-10 justify-between flex-wrap">
-                    <div className="relative w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                <div className="relative border-t border-black pt-10 w-full lg:w-[60%] h-full lg:flex lg:pl-10 justify-between flex-wrap">
+                    <div className="relative lg:w-[48%] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Prod}
                             alt="dress-image"
@@ -95,7 +95,7 @@ const Invitation = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative lg:w-[48%] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Prod}
                             alt="dress-image"
@@ -113,7 +113,7 @@ const Invitation = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative lg:w-[48%] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Prod}
                             alt="dress-image"
@@ -131,7 +131,7 @@ const Invitation = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative lg:w-[48%] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Prod}
                             alt="dress-image"
@@ -149,7 +149,7 @@ const Invitation = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative lg:w-[48%] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Prod}
                             alt="dress-image"
@@ -167,7 +167,7 @@ const Invitation = () => {
                             </div>
                         </a>
                     </div>
-                    <div className="relative w-[48%] h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
+                    <div className="relative lg:w-[48%] lg:h-[400px] mb-6 border border-black cursor-pointer overflow-hidden active:scale-[0.97] hover:brightness-[90%]">
                         <img
                             src={Prod}
                             alt="dress-image"

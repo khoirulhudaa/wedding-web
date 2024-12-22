@@ -5,37 +5,37 @@ import { ArrowUp01Icon } from "hugeicons-react";
 const Footer = ({ scrollToTop }) => {
     return (
         <React.Fragment>
-            <footer className="relative w-full h-[320px] border-t border-t-black bg-white mt-28 flex items-center">
+            <footer className="relative w-full lg:h-[320px] border-t border-t-black bg-white mt-28 lg:flex items-center">
                 {/* Content Footer */}
-                <div className="relative w-[30%] h-full flex border-r border-r-black items-center justify-center">
+                <div className="relative w-full lg:w-[30%] lg:py-0 py-12 lg:px-0 px-6 h-full lg:flex border-r border-r-black items-center justify-center">
                     <img src={Logo} alt="logo-luvlywed" />
                 </div>
-                <div className="relative w-[70%] h-full flex items-center justify-end pr-16">
-                    <div className="w-1/3 h-full flex flex-col justify-center items-end text-left">
+                <div className="relative w-full lg:w-[70%] lg:px-0 px-6 h-full lg:flex lg:items-center lg:justify-end lg:pr-16">
+                    <div className="lg:mb-0 mb-10 w-full lg:w-1/3 h-full flex flex-col justify-center lg:items-end text-left">
                         <p className="font-semibold border-b border-b-black pb-2 mb-4">
                             Wedding Organizer
                         </p>
-                        <ul className="text-end">
+                        <ul className="lg:text-end">
                             <li className="mb-5">Event Planning</li>
                             <li className="mb-5">Venue Decoration</li>
                             <li>Coordination on the Day</li>
                         </ul>
                     </div>
-                    <div className="w-1/3 h-full flex flex-col justify-center items-end text-left">
+                    <div className="lg:mb-0 mb-10 w-full lg:w-1/3 h-full flex flex-col justify-center lg:items-end text-left">
                         <p className="font-semibold border-b border-b-black pb-2 mb-4">
                             Make-up Artist
                         </p>
-                        <ul className="text-end">
+                        <ul className="lg:text-end">
                             <li className="mb-5">Hair Styling</li>
                             <li className="mb-5">Bridal Makeup</li>
                             <li>Bridesmaids Makeup</li>
                         </ul>
                     </div>
-                    <div className="w-1/3 h-full flex flex-col justify-center items-end text-left">
+                    <div className="lg:mb-0 mb-10 w-full lg:w-1/3 h-full flex flex-col justify-center lg:items-end text-left">
                         <p className="font-semibold border-b border-b-black pb-2 mb-4">
                             Catering
                         </p>
-                        <ul className="text-end">
+                        <ul className="lg:text-end">
                             <li className="mb-5">Buffet Service</li>
                             <li className="mb-5">Wedding Cake</li>
                             <li>Drinks and Beverages</li>
@@ -49,7 +49,7 @@ const Footer = ({ scrollToTop }) => {
                 {/* Back-to-top */}
                 <div
                     onClick={() => scrollToTop()}
-                    className="absolute w-[54px] h-[54px] active:scale-[0.97] cursor-pointer hover:brightness-[90%] bg-white border border-black flex items-center justify-center shadow-lg bottom-0 right-16 z-[9999999]"
+                    className="absolute w-[46px] lg:w-[54px] h-[46px] lg:h-[54px] active:scale-[0.97] cursor-pointer hover:brightness-[90%] bg-white border-x border-t border-black flex items-center justify-center shadow-lg bottom-0 right-6 lg:right-16 z-[9999999]"
                 >
                     <ArrowUp01Icon />
                 </div>

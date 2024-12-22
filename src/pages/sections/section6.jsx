@@ -11,7 +11,7 @@ const Section6 = () => {
             >
                 <div
                     // data-aos-easing="ease-in-back"
-                    className="relative bg-white w-full lg:w-1/2 h-[380px] lg:pt-12 border border-black"
+                    className="relative bg-white w-full lg:w-1/2 h-[320px] lg:h-[380px] pt-20 lg:pt-12 border border-black"
                 >
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
@@ -51,7 +51,7 @@ const Section6 = () => {
                     </h2>
                     <p
                         data-aos-delay="100"
-                        className="select-none text-[15px] w-full pb-6 border-b border-b-black mt-6 leading-loose text-black"
+                        className="select-none text-[15px] w-full lg:pb-6 lg:border-b border-b-black mt-6 leading-loose text-black"
                     >
                         Bringing your vision to life with exceptional
                         photography and <br /> videography services for every

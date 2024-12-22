@@ -9,13 +9,13 @@ const Section11 = () => {
 
     return (
         <React.Fragment>
-            <div className="relative ml-16 w-[1px] h-[100px] bg-black"></div>
+            <div className="relative ml-6 lg:ml-16 w-[1px] h-[40px] lg:h-[100px] bg-black"></div>
 
             <section
                 id="catering"
-                className="select-none relative mb-10 mt-6 px-16 min-h-[70vh] py-2 pb-10 overflow-hidden"
+                className="select-none relative lg:mb-10 mt-6 px-6 lg:px-16 min-h-[70vh] py-2 pb-10 overflow-hidden"
             >
-                <div className="absolute right-16 top-[-100px] w-[1px] h-[200px] bg-black"></div>
+                <div className="absolute lg:flex hidden right-16 top-[-100px] w-[1px] h-[200px] bg-black"></div>
 
                 {/* Junk Food */}
                 {showJunkFood ? (
@@ -183,11 +183,11 @@ const Section11 = () => {
                 )}
 
                 <h1
-                    className="text-[54px] w-[72%] text-black"
+                    className="text-[32px] lg:text-[54px] w-[94%] lg:w-[72%] text-black"
                 >
                     Serving Delicious Meals, Making Every Moment.
                 </h1>
-                <div className="relative overflow-hidden  px-16 mt-12 ml-auto w-full flex items-center justify-between border-y border-black h-[70%]">
+                <div className="relative overflow-hidden lg:px-16 mt-12 ml-auto w-full flex items-center justify-between lg:border-y border-black h-[70%]">
                     <div
                         onClick={() => {
                             setShowJunkFood(true);
@@ -200,7 +200,7 @@ const Section11 = () => {
                         </div>
                         <p className="select-none flex w-max">Junk Food</p>
                     </div>
-                    <div className="relative h-[200px] top-[30px]">
+                    <div className="relative lg:flex hidden h-[200px] top-[30px]">
                         <ThreeDModel
                             url={"/eat.glb"}
                             intensity={3}
@@ -209,6 +209,7 @@ const Section11 = () => {
                         />
                     </div>
                     <div
+                       lgy="200"
                         onClick={() => {
                             setShowJunkFood(false);
                             setShowHealthFood(true);
@@ -221,9 +222,10 @@ const Section11 = () => {
                         <p className="select-none flex w-max">Health Food</p>
                     </div>
                 </div>
-                <div className="w-full flex items-center justify-between mt-[44px]">
+                <div className="w-full lg:flex items-center justify-between mt-[44px]">
                     <div
-                        className="bg-whit w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
+                       lgy="100"
+                        className="bg-whit w-full lg:mb-0 mb-6 lg:w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <h2 className="select-none text-[20px] mb-1">
                             The Elegance
@@ -253,7 +255,8 @@ const Section11 = () => {
                         </div>
                     </div>
                     <div
-                        className="relative bg-white w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
+                       lgy="200"
+                        className="relative bg-white w-full lg:mb-0 mb-6 lg:w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <div className="absolute flex items-center justify-center top-0 right-0 border-l border-b border-black w-[54px] h-[54px]">
                             <FavouriteIcon />
@@ -290,7 +293,8 @@ const Section11 = () => {
                         </div>
                     </div>
                     <div
-                        className="bg-white w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
+                       lgy="300"
+                        className="bg-white w-full lg:mb-0 mb-6 lg:w-[30%] h-max border border-black p-4 cursor-pointer hover:brightness-[97%]"
                     >
                         <h2 className="select-none text-[20px] mb-1">
                             Opulent Bliss

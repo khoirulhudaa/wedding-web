@@ -27,7 +27,7 @@ const Section5 = () => {
                                     <p>Free consult</p>
                                 </div>
                             </div>
-                            <div className="1/2 h-max flex items-baseline">
+                            <div className="w-1/2 h-max lg:flex items-baseline">
                                 <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
                                     <p>Free templates</p>
                                 </div>
@@ -38,7 +38,7 @@ const Section5 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative w-full lg:w-[80%] ml-auto lg:mt-[-30px] h-max lg:h-[200px] px-4 lg:px-14 lg:pb-0 pb-8 pt-8 bg-[#FFD476] border-x-0 lg:border-x lg:border border-black text-[#030605]">
+                <div className="relative w-full lg:w-[80%] ml-auto lg:mt-[-30px] h-max lg:h-[200px] px-6 lg:px-14 lg:pb-0 pb-8 pt-8 bg-[#FFD476] border-x-0 lg:border-x lg:border border-black text-[#030605]">
                     <div className="w-full lg:w-[80%] lg:pb-0">
                         <p className="select-none text-[16px] leading-loose w-[94%] lg:w-[70%] mb-4">
                             Spread your wedding invitations quickly and

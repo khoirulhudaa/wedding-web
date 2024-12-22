@@ -17,16 +17,18 @@ const Section7 = () => {
     return (
         <React.Fragment>
             <section className="select-none relative w-screen h-max lg:mt-[44px]">
-                <h2
-                    className="select-none text-[32px] lg:text-[54px] font-normal w-[65%] ml-4 lg:ml-16"
-                >
-                    Timeless In The Sophistication <br /> of Our Equipment.
-                </h2>
-                <div>
-                    <div className="w-[1px] h-[120px] ml-20 my-4 bg-black"></div>
-                </div>
-                <div className="relative w-full h-[200px] flex justify-between items-center px-14 pb-14 pt-10 bg-[#FFD476] border border-black text-[#030605]">
-                    <div className="absolute right-16 top-[-101%] w-max h-[200px] border-x border-t border-black flex items-center justify-center">
+                <div className="w-full h-1/2 lg:h-max">
+                    <h2
+                        className="select-none text-[28px] lg:text-[54px] font-normal w-[90%] lg:w-[65%] ml-4 lg:ml-16"
+                    >
+                        Timeless In The Sophistication <br className="lg:flex hidden" /> of Our Equipment.
+                    </h2>
+                    <div>
+                        <div className="w-[1px] h-[70px] lg:h-[120px] ml-20 my-4 bg-black"></div>
+                    </div>
+                </div>   
+                <div className="relative w-full h-1/2 lg:h-[200px] flex lg:justify-between items-center px-6 lg:px-14 pb-14 pt-10 bg-[#FFD476] border border-black text-[#030605]">
+                    <div className="absolute right-16 lg:top-[-101%] w-max h-[200px] border-x border-t border-black hidden lg:flex items-center justify-center">
                         <div className="w-[120px] h-full">
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
                                 <img
@@ -73,10 +75,10 @@ const Section7 = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-[80%] pr-2 ml-auto flex items-center">
-                        <div className="w-[75%]">
+                    <div className="w-full lg:w-[80%] pr-2 ml-auto lg:flex items-center">
+                        <div className="w-full lg:w-[75%]">
                             <h2
-                                className="select-none text-[44px] w-max mb-4"
+                                className="select-none text-[32px] lg:text-[44px] w-max mb-4"
                             >
                                 Servive Quality
                             </h2>
@@ -90,7 +92,7 @@ const Section7 = () => {
                         </div>
                         <div
                             onClick={() => setShowGallery(true)}
-                            className="relative text-center active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[90%] lg:w-max w-max flex no-underline px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer"
+                            className="relative text-center active:scale-[0.97] hover:bg-glow hover:animate-glow hover:brightness-[90%] lg:w-max w-max flex no-underline lg:mt-0 mt-5 px-4 h-max lg:px-6 py-3.5 font-medium text-[16px] lg:text-[15px] bg-[#28887A] text-white cursor-pointer"
                         >
                             Explore images
                             <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />

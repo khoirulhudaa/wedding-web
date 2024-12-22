@@ -104,8 +104,7 @@ const HeroSection = () => {
                             </h1>
                         </motion.div>
                         <h1
-                            data-aos="fade-zoom-in"
-                            className=" text-[2.2rem] lg:ml-0 ml-4 lg:text-[4.38rem] font-bold w-[90vw] mt-16 lg:mt-14 lg:w-[80vw] lg:text-center"
+                            className=" text-[2.2rem] lg:ml-0 ml-4 lg:text-[4.38rem] font-bold w-[90vw] mt-20 lg:mt-14 lg:w-[80vw] lg:text-center"
                         >
                             From Planning to Celebration, <br /> We've Crafted Luxury
                         </h1>

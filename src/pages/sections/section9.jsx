@@ -8,18 +8,18 @@ import React from "react";
 const Section9 = () => {
     return (
         <React.Fragment>
-            <section className="select-none relative my-[100px] px-16 overflow-hidden flex items-center justify-center h-[80vh] border-y border-y-black">
-                <div className="w-[70%] py-16 h-full">
+            <section className="select-none relative my-[40px] lg:my-[100px] px-6 lg:px-16 overflow-hidden lg:flex items-center justify-center lg:h-[80vh] border-y border-y-black">
+                <div className="w-full lg:w-[70%] py-10 lg:py-16 h-full">
                     <h2
-                        className="select-none text-[44px]"
+                        className="select-none text-[32px] lg:text-[44px]"
                     >
                         Why Are We Recommended?
                     </h2>
 
-                    <div className="mt-10 w-full flex items-center justify-between pr-16">
+                    <div className="mt-10 w-full lg:flex lg:items-center lg:justify-between lg:pr-16">
                         <div
                             data-aos-delay="100"
-                            className="bg-white w-[28%] h-[200px] p-4 border border-black"
+                            className="bg-white w-full lg:mb-0 mb-6 lg:w-[28%] h-[200px] p-4 border border-black"
                         >
                             <DollarSquareIcon />
                             <p className="select-none text-[16px] mt-2">
@@ -33,7 +33,7 @@ const Section9 = () => {
                         </div>
                         <div
                             data-aos-delay="200"
-                            className="bg-white w-[28%] h-[200px] p-4 border border-black"
+                            className="bg-white w-full lg:mb-0 mb-6 lg:w-[28%] h-[200px] p-4 border border-black"
                         >
                             <Time01Icon />
                             <p className="select-none text-[16px] mt-2">
@@ -47,7 +47,7 @@ const Section9 = () => {
                         </div>
                         <div
                             data-aos-delay="300"
-                            className="bg-white w-[28%] h-[200px] p-4 border border-black"
+                            className="bg-white w-full lg:mb-0 mb-6 lg:w-[28%] h-[200px] p-4 border border-black"
                         >
                             <CheckmarkSquare01Icon />
                             <p className="select-none text-[16px] mt-2">
