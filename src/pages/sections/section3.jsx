@@ -27,7 +27,7 @@ const Section3 = () => {
 
                 <div className="select-none lg:pt-0 pt-6 border-t border-t-black lg:border-t-0 overflow-hidden relative w-full lg:w-[60%] border-r border-black lg:pb-0 pb-8 pl-4 lg:pl-8 h-1/2 overflow-hiden lg:h-full flex flex-col lg:justify-center">
                     <div
-                        className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] mb-3 text-black"
+                        className="w-max h-max border border-black p-3 flex items-center justify-center text-[16px] lg:bg-transparent bg-[#FFD476] mb-3 text-black"
                     >
                         <SparklesIcon className="w-5 h-5 mr-2" />
                         <p>Make-up Artist - Best of 2025</p>

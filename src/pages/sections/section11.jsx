@@ -9,11 +9,11 @@ const Section11 = () => {
 
     return (
         <React.Fragment>
-            <div className="relative ml-6 lg:ml-16 w-[1px] h-[60px] lg:h-[100px] bg-black"></div>
+            <div className="relative lg:flex hidden ml-6 lg:ml-16 w-[1px] h-[60px] lg:h-[100px] bg-black"></div>
 
             <section
                 id="catering"
-                className="select-none relative lg:mb-10 mt-3 lg:mt-6 px-6 lg:px-16 min-h-[70vh] py-2 pb-10 overflow-hidden"
+                className="select-none relative lg:mb-10 mt-7 lg:mt-6 px-6 lg:px-16 min-h-[70vh] py-2 pb-10 overflow-hidden"
             >
                 <div className="absolute lg:flex hidden right-16 top-[-100px] w-[1px] h-[200px] bg-black"></div>
 

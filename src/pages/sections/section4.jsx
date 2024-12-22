@@ -27,7 +27,7 @@ const Section4 = () => {
                                 share
                             </p>
                             <Link to={"/packet-classical"}>
-                                <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                <div className="active:scale-[0.97] duration-200 cursor-pointer bg-[#FFD476] text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
                                     <p>Check</p>
                                     <ArrowRight01Icon className="w-5 h-5 ml-3" />
                                 </div>
@@ -45,7 +45,7 @@ const Section4 = () => {
                                 Friendly service with a quick response to cust
                             </p>
                             <Link to={"/packet-exquisite"}>
-                                <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                <div className="active:scale-[0.97] duration-200 cursor-pointer bg-[#FFD476] text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
                                     <p>Check</p>
                                     <ArrowRight01Icon className="w-5 h-5 ml-3" />
                                 </div>
@@ -63,7 +63,7 @@ const Section4 = () => {
                                 We offer a variety of modern theme templates.
                             </p>
                             <Link to={"/packet-opulence"}>
-                                <div className="active:scale-[0.97] duration-200 cursor-pointer text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
+                                <div className="active:scale-[0.97] duration-200 cursor-pointer bg-[#FFD476] text-[16px] px-4 mt-7 py-2 border w-max border-black flex items-center justify-center hover:bg-glow hover:animate-glow">
                                     <p>Check</p>
                                     <ArrowRight01Icon className="w-5 h-5 ml-3" />
                                 </div>

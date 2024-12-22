@@ -15,23 +15,23 @@ const Section5 = () => {
                         The Modern Way to Share Wedding Day
                     </h2>
                     <div className="relative top-5 h-max">
-                        <div className="w-max h-max lg:h-[140px] ml-4 lg:ml-16 flex my-4 border-l border-l-black">
+                        <div className="w-max h-max lg:h-[140px] lg:ml-16 flex my-4 lg:border-l border-l-black">
                             <div className="h-max lg:h-[200px] flex flex-col justify-between">
-                                <div className="relative lg:mb-0 mb-5 w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
+                                <div className="relative lg:mb-0 mb-5 w-max h-max ml-6 lg:ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
                                     <p>Free hosting</p>
                                 </div>
-                                <div className="relative lg:mb-0 mb-5 w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
+                                <div className="relative lg:mb-0 mb-5 w-max h-max ml-6 lg:ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
                                     <p>Free domain</p>
                                 </div>
-                                <div className="relative lg:mb-0 mb-5 w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
+                                <div className="relative lg:mb-0 mb-5 w-max h-max ml-6 lg:ml-8 border border-black p-3 flex items-center justify-center text-[16px] text-black">
                                     <p>Free consult</p>
                                 </div>
                             </div>
                             <div className="w-1/2 h-max lg:flex items-baseline">
-                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
+                                <div className="relative w-max h-max ml-6 lg:ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
                                     <p>Free templates</p>
                                 </div>
-                                <div className="relative w-max h-max ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
+                                <div className="relative w-max h-max ml-6 lg:ml-8 border border-black p-3 flex items-center justify-center text-[16px] mb-5 text-black">
                                     <p>Free revision</p>
                                 </div>
                             </div>

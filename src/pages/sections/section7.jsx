@@ -24,10 +24,10 @@ const Section7 = () => {
                         Timeless In The Sophistication <br className="lg:flex hidden" /> of Our Equipment.
                     </h2>
                     <div>
-                        <div className="w-[1px] h-[70px] lg:h-[120px] ml-20 my-4 bg-black"></div>
+                        <div className="w-[1px] h-[70px] lg:flex hidden lg:h-[120px] ml-20 my-4 bg-black"></div>
                     </div>
                 </div>   
-                <div className="relative w-full h-1/2 lg:h-[200px] flex lg:justify-between items-center px-6 lg:px-14 pb-14 pt-10 bg-[#FFD476] border border-black text-[#030605]">
+                <div className="relative w-full h-1/2 lg:h-[200px] lg:mt-0 mt-8 flex lg:justify-between items-center px-6 lg:px-14 pb-14 pt-10 bg-[#FFD476] border border-black text-[#030605]">
                     <div className="absolute right-16 lg:top-[-101%] w-max h-[200px] border-x border-t border-black hidden lg:flex items-center justify-center">
                         <div className="w-[120px] h-full">
                             <div className="w-full h-1/2 p-3 flex items-center justify-center overflow-hidden">
