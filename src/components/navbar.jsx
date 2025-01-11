@@ -58,7 +58,7 @@ const Navbar = () => {
                                 <div className="w-full flex justify-between items-center"> 
                                     <img
                                         src={Logo}
-                                        alt="Logo Luvlywed"
+                                        alt="Logo LuvlyWed"
                                         className="w-[7rem] cursor-pointer active:scale-[0.97] hover:brightness-75"
                                         />
                                     <div onClick={() => setShowSidebar(false)} className="relative ml-auto w-[44px] h-[44px] border border-black flex items-center justify-center cursor-pointer active:scale-[0.97]">

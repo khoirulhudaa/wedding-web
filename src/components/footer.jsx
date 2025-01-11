@@ -8,7 +8,7 @@ const Footer = ({ scrollToTop }) => {
             <footer className="relative w-full lg:h-[320px] border-t border-t-black bg-white mt-28 lg:flex items-center">
                 {/* Content Footer */}
                 <div className="relative w-full lg:w-[30%] lg:py-0 py-12 lg:px-0 px-6 h-full lg:flex border-r border-r-black items-center justify-center">
-                    <img src={Logo} alt="logo-luvlywed" />
+                    <img src={Logo} alt="logo-LuvlyWed" />
                 </div>
                 <div className="relative w-full lg:w-[70%] lg:px-0 px-6 h-full lg:flex lg:items-center lg:justify-end lg:pr-16">
                     <div className="lg:mb-0 mb-10 w-full lg:w-1/3 h-full flex flex-col justify-center lg:items-end text-left">
