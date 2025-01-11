@@ -1,11 +1,17 @@
 import { motion } from "framer-motion";
 import { SparklesIcon } from "hugeicons-react";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Gradient1, Gradient2, Gradient4 } from "../assets";
 import Video from "../assets/video/video.mp4";
 
 const OpeningModal = ({ handleClose }) => {
     const [step, setStep] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
+    const videoRef = useRef(null); // Menggunakan ref untuk mengakses elemen video
+
+    useEffect(() => {
+        setIsLoading(false); // Setelah video bisa diputar, set loading ke false
+    }, [videoRef]); // Menjalankan useEffect hanya sekali saat komponen pertama kali dimuat
 
     return (
         <React.Fragment>
@@ -51,7 +57,7 @@ const OpeningModal = ({ handleClose }) => {
                                     Begin Your Love Journey With Us. Every great
                                     love story deserves a beautiful beginning.
                                 </p>
-                                <div className="w-full h-[0.8px] bg-black my-5"></div>
+                                <div className="w-full h-[0.5px] bg-black my-5"></div>
                                 <ul className="ml-5">
                                     <li className="list-disc mb-4">
                                         Make-up Artist
@@ -81,13 +87,18 @@ const OpeningModal = ({ handleClose }) => {
                     ) : (
                         <div className="relative w-full h-[84%] lg:h-full">
                             <div className="w-full overflow-hidden h-1/2 lg:h-[45vh] lg:border border-black">
+                            {isLoading ? (
+                                <div className="w-full h-full animate-pulse bg-gray-300"></div>
+                            ) : (
                                 <video
-                                    src={Video} // Ganti dengan path atau URL video MP4 Anda
+                                    ref={videoRef} // Menambahkan ref ke elemen video
+                                    src={Video}
                                     autoPlay
                                     loop
                                     muted
                                     className="w-full h-full lg:scale-[1.1] lg:object-cover object-contain"
                                 />
+                            )}
                             </div>
                             <div className="h-1/2 lg:h-[40vh] flex flex-col justify-between pt-4">
                                 <div className="w-full">
