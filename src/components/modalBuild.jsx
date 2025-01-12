@@ -45,7 +45,6 @@ const ModalBuild = ({ handleClose }) => {
                                 className="lg:absolute cursor-pointer active:scale-[0.96] hover:brightness-[90%] duration-100 lg:inline flex items-center right-7 top-6 text-black border border-black w-max lg:px-0 px-10 lg:py-0 py-5 lg:mt-0 mt-6 lg:w-[40px] h-[40px] lg:justify-center"
                             >
                                 <Cancel01Icon className="w-6 h-6" />
-                                <p>Back to home</p>
                             </div>
                         </div>
                         <div className="w-max border-r border-b border-white h-[20%] text-white text-[30px] hidden lg:flex items-center px-16">

@@ -1,4 +1,4 @@
-import{y as o}from"./navbar-DWSa54-k.js";/**
+import{y as o}from"./navbar-Bp5XhvIS.js";/**
  * @license hugeicons-react v0.2.0
  *
  * See the LICENSE file in the root directory of this source tree.
