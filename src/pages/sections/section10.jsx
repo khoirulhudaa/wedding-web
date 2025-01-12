@@ -63,7 +63,7 @@ const Section10 = () => {
                     <div className="w-full lg:w-max z-[4] flex items-center h-max absolute right-0 lg:px-0 px-4 justify-between lg:justify-end lg:right-8 top-4 lg:top-8">
                         <div
                             onClick={() => setShowModal(true)}
-                            className="z-[9] lg:mr-5 active:scale-[0.97] duration-200 cursor-pointer text-[16px] h-[46px] px-4 border w-max bg-white lg:right-5 border-black flex items-center justify-center hover:bg-glow hover:animate-glow"
+                            className="z-[9] lg:mr-5 active:scale-[0.97] duration-200 cursor-pointer text-[16px] h-[46px] px-4 border w-max bg-white lg:right-5 border-black hidden lg:flex items-center justify-center hover:bg-glow hover:animate-glow"
                         >
                             <EyeIcon className="w-5 h-5" />
                         </div>
