@@ -84,7 +84,7 @@ const OpeningModal = ({ handleClose }) => {
                         <div className="relative w-full h-[84%] lg:h-full">
                             <div className="w-full overflow-hidden h-1/2 lg:h-[45vh] border-t">
                                 <Suspense fallback={<LoadingModal />}>
-                                    <LazyVideoComponent src={Video} className="w-full h-full lg:border-0 border-t-[1.2px] border-black lg:scale-[1.1] lg:object-cover object-contain" />
+                                    <LazyVideoComponent src={Video} className="w-full h-full border-0 lg:scale-[1.1] lg:object-cover object-contain" />
                                 </Suspense>
                             </div>
                             <div className="h-1/2 lg:h-[40vh] flex flex-col justify-between pt-4">

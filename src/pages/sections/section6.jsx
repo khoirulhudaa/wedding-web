@@ -7,11 +7,11 @@ const Section6 = () => {
         <React.Fragment>
             <section
                 id="photography"
-                className="select-none relative border-y border-black lg:mt-[140px] mb-8 lg:mb-20 lg:flex items-center overflow-x-auto px-4 lg:px-16 w-full h-max py-12 lg:py-20"
+                className="select-none relative border-y border-black lg:mt-[140px] mb-8 lg:mb-20 lg:flex items-center overflow-x-auto px-4 lg:px-16 w-full h-max pt-4 pb-12 lg:pb-20 lg:pt-20"
             >
                 <div
                     // data-aos-easing="ease-in-back"
-                    className="relative bg-white w-full lg:w-1/2 h-[320px] lg:h-[380px] pt-20 lg:pt-12 border border-black"
+                    className="relative hidden lg:flex bg-white w-full lg:w-1/2 h-[320px] lg:h-[380px] pt-20 lg:pt-12 border border-black"
                 >
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>

@@ -76,7 +76,7 @@ const HeroSection = () => {
                 />
 
                 {/* Main Content - Hero */}
-                <div className="relative w-full mt-0 h-max lg:h-[80vh] mb-4 lg:text-center z-[98888] mx-auto flex flex-col justify-center lg:items-center">
+                <div className="relative w-full mt-0 h-max lg:h-[80vh] lg:mb-4 lg:text-center z-[98888] mx-auto flex flex-col justify-center lg:items-center">
                     <div className="absolute top-0 lg bg-white flex border-b border-b-black lg:text-[16px] text-[15px] text-black h-max w-full lg:w-screen lg:px-3 px-5 py-3 mb-6 lg:mb-2 items-center lg:justify-center">
                         <AiMagicIcon className="mr-1" />
                         Version 1.0.0 - new released

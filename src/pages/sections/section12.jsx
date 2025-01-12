@@ -23,10 +23,10 @@ const Section12 = () => {
                         >
                             Providing luxury souvenirs and the best gifts
                         </h2>
-                        <div className="absolute top-[6%] lg:top-[26%] right-6 lg:right-16 border border-black flex items-center justify-center w-[48px] lg:w-[54px] h-[48px] lg:h-[54px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow rounded-full">
+                        <div className="absolute top-[12%] lg:top-[26%] right-6 lg:right-16 border border-black flex items-center justify-center w-[48px] lg:w-[54px] h-[48px] lg:h-[54px] cursor-pointer active:scale-[0.97] hover:bg-glow hover:animate-glow rounded-full">
                             <LinkSquare02Icon className="" />
                         </div>
-                        <div className="relative bg-white h-1/2 mt-auto">
+                        <div className="relative hidden lg:flex bg-white h-1/2 mt-auto">
                             <ThreeDModel
                                 url={"/ring.glb"}
                                 intensity={30}
