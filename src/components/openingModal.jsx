@@ -3,7 +3,7 @@ import { SparklesIcon } from "hugeicons-react";
 import React, { Suspense, useState } from "react";
 import { Gradient1, Gradient2, Gradient4 } from "../assets";
 import Video from "../assets/video/video2.mp4";
-import Loading from "./loading";
+import LoadingModal from "./loadingModal";
 
 const LazyVideoComponent = React.lazy(() => import("./videoComponent"));
 
@@ -83,7 +83,7 @@ const OpeningModal = ({ handleClose }) => {
                     ) : (
                         <div className="relative w-full h-[84%] lg:h-full">
                             <div className="w-full overflow-hidden h-1/2 lg:h-[45vh] border-t">
-                                <Suspense fallback={<Loading />}>
+                                <Suspense fallback={<LoadingModal />}>
                                     <LazyVideoComponent src={Video} className="w-full h-full lg:border-0 border-t-[1.2px] border-black lg:scale-[1.1] lg:object-cover object-contain" />
                                 </Suspense>
                             </div>

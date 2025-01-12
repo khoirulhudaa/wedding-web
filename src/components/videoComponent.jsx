@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
-import Loading from "./loading";
+import React, { useEffect, useRef, useState } from "react";
+import LoadingModal from "./loadingModal";
 
 const VideoComponent = ({ src, className }) => {
     const videoRef = useRef(null);
@@ -21,8 +21,8 @@ const VideoComponent = ({ src, className }) => {
     }, []);
 
     return (
-        <>
-            {!isVideoLoaded && <Loading />}
+        <div className="w-full h-full">
+            {!isVideoLoaded && <LoadingModal />}
             <video
                 ref={videoRef}
                 src={src}
@@ -31,7 +31,7 @@ const VideoComponent = ({ src, className }) => {
                 muted
                 className={`${className} ${isVideoLoaded ? "block" : "hidden"}`}
             />
-        </>
+        </div>
     );
 };
 
