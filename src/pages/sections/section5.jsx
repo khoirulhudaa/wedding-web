@@ -53,7 +53,7 @@ const Section5 = () => {
                         </Link>
                         <Link to={"https://luvlywed-invitation-example.vercel.app/"}>
                             <div className="relative ml-6 hover:bg-glow hover:text-black hover:animate-glow active:scale-[0.97] hover:brightness-[90%] text-center lg:w-max w-max flex no-underline px-3 h-max lg:px-6  py-3 lg:py-3.5 font-medium text-[16px] lg:text-[15px] bg-white border-white border text-black cursor-pointer">
-                                Check Sample{" "}
+                                Visit example{" "}
                                 <ArrowRight01Icon className="ml-2 w-4 h-4 relative top-[4px]" />
                             </div>
                         </Link>
