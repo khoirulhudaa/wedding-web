@@ -1,17 +1,14 @@
 import { motion } from "framer-motion";
 import { SparklesIcon } from "hugeicons-react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useState } from "react";
 import { Gradient1, Gradient2, Gradient4 } from "../assets";
 import Video from "../assets/video/video2.mp4";
+import Loading from "./loading";
+
+const LazyVideoComponent = React.lazy(() => import("./videoComponent"));
 
 const OpeningModal = ({ handleClose }) => {
     const [step, setStep] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
-    const videoRef = useRef(null); // Menggunakan ref untuk mengakses elemen video
-
-    useEffect(() => {
-        setIsLoading(false); // Setelah video bisa diputar, set loading ke false
-    }, [videoRef]); // Menjalankan useEffect hanya sekali saat komponen pertama kali dimuat
 
     return (
         <React.Fragment>
@@ -22,7 +19,6 @@ const OpeningModal = ({ handleClose }) => {
                     transition={{ duration: 0.3 }}
                     className="w-[100vw] lg:w-[46vw] h-full lg:h-max bg-white p-4 lg:p-6"
                 >
-                    {/* Gradient Effects - Background */}
                     <img
                         loading="lazy"
                         draggable="false"
@@ -87,18 +83,9 @@ const OpeningModal = ({ handleClose }) => {
                     ) : (
                         <div className="relative w-full h-[84%] lg:h-full">
                             <div className="w-full overflow-hidden h-1/2 lg:h-[45vh] border-t">
-                            {isLoading ? (
-                                <div className="w-full h-full animate-pulse bg-gray-300"></div>
-                            ) : (
-                                <video
-                                    ref={videoRef} // Menambahkan ref ke elemen video
-                                    src={Video}
-                                    autoPlay
-                                    loop
-                                    muted
-                                    className="w-full h-full lg:border-0 border-t-[1.2px] border-black lg:scale-[1.1] lg:object-cover object-contain"
-                                />
-                            )}
+                                <Suspense fallback={<Loading />}>
+                                    <LazyVideoComponent src={Video} className="w-full h-full lg:border-0 border-t-[1.2px] border-black lg:scale-[1.1] lg:object-cover object-contain" />
+                                </Suspense>
                             </div>
                             <div className="h-1/2 lg:h-[40vh] flex flex-col justify-between pt-4">
                                 <div className="w-full">
