@@ -143,7 +143,7 @@ const Packet2 = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="w-full lg:w-1/3 h-max px-8 py-3 lg:border-x border-black p-8">
+                        <div className="w-full lg:w-1/3 h-max px-8 py-3 lg:border-x border-black lg:p-8">
                             <h3 className="lg:mt-0 mt-3 text-[20px] mb-4 border-b border-black pb-2 w-[90%]">
                                 Decorations
                             </h3>

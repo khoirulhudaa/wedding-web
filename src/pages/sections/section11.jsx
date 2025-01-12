@@ -1,6 +1,6 @@
 import { FavouriteIcon, LinkSquare02Icon } from "hugeicons-react";
 import React, { useState } from "react";
-import { Jk1, Jk2, Jk3 } from "../../assets";
+import { Ht1, Ht2, Ht3, Jk1, Jk2, Jk3 } from "../../assets";
 import ThreeDModel from "../../components/model";
 
 const Section11 = () => {
@@ -109,18 +109,18 @@ const Section11 = () => {
                     >
                         <div className="w-full lg:w-[35%] h-1/2 lg:h-full lg:pl-8 lg:ml-16 lg:border-l border-l-black flex flex-col justify-between p-6">
                             <div className="w-full">
-                                <h2 className="border-b border-black pb-3 text-[24px] mb-6 lg:ml-3">
+                                <h2 className="border-b border-black pb-3 text-[24px] mb-6">
                                     Health Food Menus
                                 </h2>
                                 <ul>
                                     <li className="mb-8 list-none">
-                                        Truffle Fries
+                                        Sushi Japan
                                     </li>
                                     <li className="mb-8 list-none">
-                                        Burger King
+                                        Health Cake
                                     </li>
                                     <li className="mb-8 list-none">
-                                        Lobster Red
+                                        Sushi Japan 2
                                     </li>
                                 </ul>
                             </div>
@@ -139,12 +139,12 @@ const Section11 = () => {
                                 <div className="relative w-full lg:w-1/3 lg:lg:-skew-x-6 h-full border-l border-black mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 left-6 text-white">
                                         <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
-                                            Truffle Fries
+                                            Sushi Japan
                                         </h3>
                                     </div>
                                     <img
                                         loading="lazy"
-                                        src={Jk1}
+                                        src={Ht1}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
@@ -152,12 +152,12 @@ const Section11 = () => {
                                 <div className="relative w-full lg:w-1/3 lg:lg:-skew-x-6 h-full border-x border-black mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 left-6 text-white">
                                         <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
-                                            Truffle Fries
+                                            Health Cake
                                         </h3>
                                     </div>
                                     <img
                                         loading="lazy"
-                                        src={Jk3}
+                                        src={Ht3}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />
@@ -165,12 +165,12 @@ const Section11 = () => {
                                 <div className="relative w-full lg:w-1/3 lg:lg:w-[40%] lg:-skew-x-6 h-full mb-4 overflow-hidden">
                                     <div className="absolute z-[99] top-6 left-6 text-white">
                                         <h3 className="text-[20px] mb-3 lg:flex hidden border-b border-white pt-4 pb-3.5">
-                                            Truffle Fries
+                                            Sushi Japan 2
                                         </h3>
                                     </div>
                                     <img
                                         loading="lazy"
-                                        src={Jk2}
+                                        src={Ht1}
                                         alt="image-food"
                                         className="w-full brightness-50 h-full object-cover duration-300"
                                     />

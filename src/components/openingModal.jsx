@@ -86,7 +86,7 @@ const OpeningModal = ({ handleClose }) => {
                         </div>
                     ) : (
                         <div className="relative w-full h-[84%] lg:h-full">
-                            <div className="w-full overflow-hidden h-1/2 lg:h-[45vh] lg:border border-black">
+                            <div className="w-full overflow-hidden h-1/2 lg:h-[45vh] border-t">
                             {isLoading ? (
                                 <div className="w-full h-full animate-pulse bg-gray-300"></div>
                             ) : (
@@ -96,7 +96,7 @@ const OpeningModal = ({ handleClose }) => {
                                     autoPlay
                                     loop
                                     muted
-                                    className="w-full h-full lg:scale-[1.1] lg:object-cover object-contain"
+                                    className="w-full h-full lg:border-0 border-t-[1.2px] border-black lg:scale-[1.1] lg:object-cover object-contain"
                                 />
                             )}
                             </div>
