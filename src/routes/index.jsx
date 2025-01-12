@@ -12,11 +12,7 @@ const Packet3 = React.lazy(() => import("../pages/packet3"));
 const Routes = createBrowserRouter([
     {
         path: "/",
-        element: (
-          <Suspense fallback={<Loading />}>
-            <Homepage />
-          </Suspense>
-        ),
+        element: <Homepage />,
     },
     {
         path: "/packet-classical",
