@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SparklesIcon } from "hugeicons-react";
 import React, { useEffect, useRef, useState } from "react";
 import { Gradient1, Gradient2, Gradient4 } from "../assets";
-import Video from "../assets/video/video.mp4";
+import Video from "../assets/video/video2.mp4";
 
 const OpeningModal = ({ handleClose }) => {
     const [step, setStep] = useState(0);
