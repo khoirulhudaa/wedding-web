@@ -11,6 +11,7 @@ import Gradient2 from './gr2.svg'
 import Gradient4 from './gr4.svg'
 import Gradient3 from './grr2.svg'
 import HP from './hp.png'
+import HP2 from './hp2.png'
 import Lines from './lines.svg'
 import People from './people.png'
 import Petik from './petik.svg'
@@ -48,6 +49,7 @@ export {
     Gradient3,
     Gradient4, 
     HP, 
+    HP2, 
     Lines,
     Logo, 
     Dress1,

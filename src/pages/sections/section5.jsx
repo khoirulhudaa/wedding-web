@@ -1,6 +1,6 @@
 import { ArrowRight01Icon } from "hugeicons-react";
 import React from "react";
-import { HP } from "../../assets";
+import { HP2 } from "../../assets";
 import { Link } from "react-router-dom";
 
 const Section5 = () => {
@@ -57,7 +57,7 @@ const Section5 = () => {
                         data-aos-delay="300"
                         draggable="false"
                         onContextMenu={(e) => e.preventDefault()}
-                        src={HP}
+                        src={HP2}
                         alt="handphone"
                         className="select-none lg:flex hidden absolute top-[-177%] right-16 w-[32%] h-auto"
                     />
