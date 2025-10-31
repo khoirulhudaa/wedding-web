@@ -12,16 +12,16 @@ const Section3 = () => {
                 className="select-none relative lg:flex px-4 lg:px-16 w-full border-t border-black h-max  lg:py-0 py-2 lg:h-[84vh]"
             >
                 <div
-                    className="relative hidden lg:flex w-full lg:w-[40%] h-1/2 lg:h-full pt-14 lg:pt-32 lg:border-x border-x-black"
+                    className="relative bg-gray-800 hidden lg:flex w-full lg:w-[40%] h-1/2 lg:h-full pt-14 lg:pt-32 lg:border-x border-x-black"
                 >
                     <div className="absolute z-[99] top-4 left-4 w-[30px] h-[30px] bg-[#FFD476] text-white font-bold flex items-center justify-center">
                         <p>3D</p>
                     </div>
                     <ThreeDModel
-                        url={"/dress3.glb"}
-                        intensity={30}
-                        speed={1}
-                        scaleCustom={[2.1, 2.1, 2.1]}
+                        url={"/test.glb"}
+                        intensity={2}
+                        speed={0.1}
+                        scaleCustom={[4, 4, 4]}
                     />
                 </div>
 
